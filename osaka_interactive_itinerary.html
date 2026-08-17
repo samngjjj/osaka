@@ -6,7 +6,7 @@
   <title>大阪關西 9 天 8 夜極致行程 ‧ OSAKA VIBES 2026</title>
   
   <!-- Meta for Mobile & SEO -->
-  <meta name="description" content="大阪關西 9 天 8 夜沉浸式行程指南（25號抵達～2號返程）：通天閣MEGA唐吉訶德、難波心齋橋、梅田商圈、USJ任天堂世界、黑門市場、阿倍野HARUKAS、伏見稻荷、清水寺、奈良餵鹿、海遊館鯨鯊、臨空城Outlet。">
+  <meta name="description" content="大阪關西 9 天 8 夜沉浸式行程指南（25號抵達～2號返程）：每日天氣、星期標註、今晚早瞓建議、通天閣MEGA唐吉訶德、難波心齋橋、梅田商圈、USJ任天堂世界、黑門市場、阿倍野HARUKAS、伏見稻荷、清水寺、奈良餵鹿、海遊館鯨鯊、臨空城Outlet。">
   <meta name="theme-color" content="#080c16">
 
   <!-- Google Fonts: Syne & Plus Jakarta Sans & Noto Sans TC & Zen Old Mincho -->
@@ -495,7 +495,7 @@
 
     .tab-item-btn {
       flex: 1;
-      min-width: 90px;
+      min-width: 95px;
       padding: 10px 8px;
       background: transparent;
       border: none;
@@ -511,13 +511,13 @@
     }
 
     .tab-item-btn .tab-num {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 900;
       font-family: inherit;
     }
 
     .tab-item-btn .tab-sub {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
       opacity: 0.85;
     }
@@ -549,7 +549,7 @@
     }
 
     .day-header-box {
-      background: linear-gradient(135deg, rgba(26, 36, 64, 0.8) 0%, rgba(14, 20, 36, 0.9) 100%);
+      background: linear-gradient(135deg, rgba(26, 36, 64, 0.85) 0%, rgba(14, 20, 36, 0.95) 100%);
       border: 1px solid var(--border-light);
       border-radius: var(--radius-2xl);
       padding: 22px 24px;
@@ -586,10 +586,68 @@
       border-radius: var(--radius-full);
     }
 
+    .day-weather-badge-top {
+      background: rgba(255, 184, 0, 0.15);
+      border: 1px solid rgba(255, 184, 0, 0.4);
+      color: #ffd166;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     .day-itinerary-route {
       color: var(--text-muted);
       font-size: 0.92rem;
       line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    /* Sleep Advice Box (早瞓建議) */
+    .sleep-advice-card {
+      background: rgba(10, 15, 28, 0.8);
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 12px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+
+    .sleep-advice-card.urgent {
+      border-color: rgba(255, 42, 109, 0.45);
+      background: rgba(255, 42, 109, 0.08);
+    }
+
+    .sleep-advice-card.relax {
+      border-color: rgba(0, 230, 118, 0.4);
+      background: rgba(0, 230, 118, 0.08);
+    }
+
+    .sleep-card-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .sleep-card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .sleep-card-title {
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .sleep-card-desc {
+      color: #cbd5e1;
+      line-height: 1.45;
     }
 
     /* Timeline */
@@ -1009,7 +1067,7 @@
             <span class="osaka-sub-badge"><i class="fa-solid fa-plane-departure"></i> 9 DAYS 8 NIGHTS (25號~2號)</span>
           </div>
           <h1 class="hero-title">OSAKA <span class="neon-accent">JOURNEY 2026</span></h1>
-          <p class="hero-desc">大阪關西 9 天 8 夜全景指南 ‧ 點到點通勤耗時 ‧ 雙地圖無縫導航 ‧ 實時雙向匯率</p>
+          <p class="hero-desc">大阪關西 9 天 8 夜全景指南 ‧ 每日天氣 ＆ 早瞓提示 ‧ 點到點通勤耗時 ‧ 雙地圖無縫導航</p>
         </div>
       </div>
     </div>
@@ -1102,51 +1160,61 @@
     <div class="tabs-sticky-wrapper">
       <div class="day-tabs-slider">
         <button class="tab-item-btn active" onclick="switchDay(1)">
-          <span class="tab-num">Day 1</span>
-          <span class="tab-sub">25 抵達Donki</span>
+          <span class="tab-num">Day 1 ‧ 25(二)</span>
+          <span class="tab-sub">抵達Donki</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(2)">
-          <span class="tab-num">Day 2</span>
-          <span class="tab-sub">26 難波梅田</span>
+          <span class="tab-num">Day 2 ‧ 26(三)</span>
+          <span class="tab-sub">難波梅田</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(3)">
-          <span class="tab-num">Day 3</span>
-          <span class="tab-sub">27 環球USJ</span>
+          <span class="tab-num">Day 3 ‧ 27(四)</span>
+          <span class="tab-sub">環球USJ</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(4)">
-          <span class="tab-num">Day 4</span>
-          <span class="tab-sub">28 黑門/阿倍野</span>
+          <span class="tab-num">Day 4 ‧ 28(五)</span>
+          <span class="tab-sub">黑門/阿倍野</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(5)">
-          <span class="tab-num">Day 5</span>
-          <span class="tab-sub">29 稻荷/清水/奈良</span>
+          <span class="tab-num">Day 5 ‧ 29(六)</span>
+          <span class="tab-sub">稻荷/清水/奈良</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(6)">
-          <span class="tab-num">Day 6</span>
-          <span class="tab-sub">30 海遊館鯨鯊</span>
+          <span class="tab-num">Day 6 ‧ 30(日)</span>
+          <span class="tab-sub">海遊館鯨鯊</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(7)">
-          <span class="tab-num">Day 7</span>
-          <span class="tab-sub">31 美國村自由</span>
+          <span class="tab-num">Day 7 ‧ 31(一)</span>
+          <span class="tab-sub">美國村自由</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(8)">
-          <span class="tab-num">Day 8</span>
-          <span class="tab-sub">1 Outlet購物</span>
+          <span class="tab-num">Day 8 ‧ 1(二)</span>
+          <span class="tab-sub">Outlet購物</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(9)">
-          <span class="tab-num">Day 9</span>
-          <span class="tab-sub">2 伴手禮/返程</span>
+          <span class="tab-num">Day 9 ‧ 2(三)</span>
+          <span class="tab-sub">伴手禮/返程</span>
         </button>
       </div>
     </div>
 
-    <!-- DAY 1 (25號) -->
+    <!-- DAY 1 (25號 週二) -->
     <div id="day-1" class="day-panel active">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 1 ‧ 25 號 <span class="day-badge-pill">抵達 ＆ 通天閣 MEGA Donki</span></h2>
+          <h2 class="day-main-title">Day 1 ‧ 25 號 (星期二) <span class="day-badge-pill">抵達 ＆ 通天閣 MEGA Donki</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 晴時多雲 19°C ~ 26°C</span>
         </div>
         <p class="day-itinerary-route">關西國際機場 ➔ 南海電鐵直達新今宮 ➔ 民宿 Check-in ➔ 步行 3 分鐘逛通天閣新世界 ＆ MEGA 唐吉訶德（24H 採購）</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card">
+          <div class="sleep-card-icon">🛌</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#67e8f9;">【適中就寢 ‧ 約 24:00 入睡】</span></div>
+            <div class="sleep-card-desc">抵達首日先在民宿附近 Donki 買好宵夜與飲品，明天主要為難波道頓堀與梅田商圈逛街採買，今晚早點洗澡休息，養足體力！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1196,10 +1264,12 @@
               <div class="spot-details-grid">
                 <div class="detail-item">
                   <i class="fa-solid fa-store"></i>
-                  <div><span class="detail-lbl">MEGA Donki：</span><span class="detail-val">24 小時營業（全年無休）</span></div></div>
+                  <div><span class="detail-lbl">MEGA Donki：</span><span class="detail-val">24 小時營業（全年無休）</span></div>
+                </div>
                 <div class="detail-item">
                   <i class="fa-solid fa-person-walking"></i>
-                  <div><span class="detail-lbl">交通距離：</span><span class="detail-val">民宿步行 3～5 分鐘即達</span></div></div>
+                  <div><span class="detail-lbl">交通距離：</span><span class="detail-val">民宿步行 3～5 分鐘即達</span></div>
+                </div>
               </div>
 
               <div class="spot-actions-row">
@@ -1212,13 +1282,23 @@
       </div>
     </div>
 
-    <!-- DAY 2 (26號: 難波道頓堀 ＆ 梅田商圈 - 原 Day 4) -->
+    <!-- DAY 2 (26號 週三: 難波道頓堀 ＆ 梅田商圈) -->
     <div id="day-2" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 2 ‧ 26 號 <span class="day-badge-pill">難波道頓堀 ＆ 梅田購物狂歡</span></h2>
+          <h2 class="day-main-title">Day 2 ‧ 26 號 (星期三) <span class="day-badge-pill">難波道頓堀 ＆ 梅田購物狂歡</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-sun"></i> ☀️ 陽光普照 20°C ~ 27°C</span>
         </div>
         <p class="day-itinerary-route">難波道頓堀固力果打卡 ＆ 心齋橋逛街 ➔ 梅田核心百貨群（LUCUA、阪急、友都八喜大採買）</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card urgent">
+          <div class="sleep-card-icon">⚡</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#ff2a6d;">【🔥 強烈建議早瞓！23:00 前入睡】</span></div>
+            <div class="sleep-card-desc">明天是 **USJ 環球影城全日大戰**！清晨需要 07:00 起床出門搶瑪利歐任天堂整理券，今晚務必提早洗澡睡覺，充飽 100% 體力！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1286,13 +1366,23 @@
       </div>
     </div>
 
-    <!-- DAY 3 (27號: USJ ＆ LAMU 超市 - 原 Day 2) -->
+    <!-- DAY 3 (27號 週四: USJ ＆ LAMU 超市) -->
     <div id="day-3" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 3 ‧ 27 號 <span class="day-badge-pill">環球影城 ＆ 超狂平價超市</span></h2>
+          <h2 class="day-main-title">Day 3 ‧ 27 號 (星期四) <span class="day-badge-pill">環球影城 ＆ 超狂平價超市</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-sun"></i> ☀️ 晴朗微風 19°C ~ 26°C</span>
         </div>
         <p class="day-itinerary-route">全日狂歡日本環球影城（USJ） ➔ 回程安治川口 LAMU 24H 超市超值大採購</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card relax">
+          <div class="sleep-card-icon">🛁</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#00e676;">【舒緩放鬆 ‧ 泡澡好眠】</span></div>
+            <div class="sleep-card-desc">今天 USJ 走了近兩萬步，今晚在民宿泡熱水澡貼休足時間。明天 09:30 才前往黑門市場吃早午餐，可以睡到 08:30 再起床！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1354,13 +1444,23 @@
       </div>
     </div>
 
-    <!-- DAY 4 (28號: 早上黑門市場 ＆ 下午阿倍野 HARUKAS - 原 Day 3) -->
+    <!-- DAY 4 (28號 週五: 早上黑門市場 ＆ 下午阿倍野 HARUKAS) -->
     <div id="day-4" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 4 ‧ 28 號 <span class="day-badge-pill">早上黑門市場 ＆ 下午阿倍野</span></h2>
+          <h2 class="day-main-title">Day 4 ‧ 28 號 (星期五) <span class="day-badge-pill">早上黑門市場 ＆ 下午阿倍野</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 舒適多雲 18°C ~ 25°C</span>
         </div>
         <p class="day-itinerary-route">【合體精華】早上黑門市場美食街現烤和牛生魚片 ➔ 下午阿倍野 HARUKAS 300 展望 ＆ Q's Mall 購物圈</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card urgent">
+          <div class="sleep-card-icon">👟</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#ff2a6d;">【🔥 強烈建議早瞓！23:30 前就寢】</span></div>
+            <div class="sleep-card-desc">明天跨越京都（伏見稻荷千本鳥居、清水寺老街石板路）與奈良摸鹿，步行量極大！建議 07:30 出發避開人潮，今晚務必早睡！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1422,13 +1522,23 @@
       </div>
     </div>
 
-    <!-- DAY 5 (29號: 稻荷神社 ➔ 清水寺 ➔ 最後奈良摸鹿) -->
+    <!-- DAY 5 (29號 週六: 稻荷神社 ➔ 清水寺 ➔ 最後奈良摸鹿) -->
     <div id="day-5" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 5 ‧ 29 號 <span class="day-badge-pill">伏見稻荷 ➔ 清水寺 ➔ 最後奈良</span></h2>
+          <h2 class="day-main-title">Day 5 ‧ 29 號 (星期六) <span class="day-badge-pill">伏見稻荷 ➔ 清水寺 ➔ 最後奈良</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-sun"></i> ☀️ 清爽晴天 17°C ~ 24°C</span>
         </div>
         <p class="day-itinerary-route">上午京都伏見稻荷千本鳥居 ➔ 中午清水寺・三年坂老街 ➔ 下午前往奈良公園親人小鹿餵食 ＆ 東大寺</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card relax">
+          <div class="sleep-card-icon">💤</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#00e676;">【今晚盡情放鬆 ‧ 睡到自然醒】</span></div>
+            <div class="sleep-card-desc">京都奈良雙城行程結束！明天上午全體放空悠閒自由時間（下午 13:40 才去海遊館），今晚可以吃居酒屋宵夜、晚點睡沒問題！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1527,13 +1637,23 @@
       </div>
     </div>
 
-    <!-- DAY 6 (30號) -->
+    <!-- DAY 6 (30號 週日: 海遊館) -->
     <div id="day-6" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 6 ‧ 30 號 <span class="day-badge-pill">悠閒早晨 ＆ 世界級海遊館</span></h2>
+          <h2 class="day-main-title">Day 6 ‧ 30 號 (星期日) <span class="day-badge-pill">悠閒早晨 ＆ 世界級海遊館</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-cloud"></i> ⛅ 涼爽多雲 18°C ~ 25°C</span>
         </div>
         <p class="day-itinerary-route">上午悠閒自由活動 ➔ 下午前往大阪港海遊館觀賞巨型鯨鯊 ＆ 天保山港灣摩天輪</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card">
+          <div class="sleep-card-icon">🛍️</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#67e8f9;">【正常作息 ‧ 24:00 入睡】</span></div>
+            <div class="sleep-card-desc">明天是美國村與心齋橋潮流自由日，節奏自由輕快，今晚正常作息即可。</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1579,13 +1699,23 @@
       </div>
     </div>
 
-    <!-- DAY 7 (31號) -->
+    <!-- DAY 7 (31號 週一: 美國村自由探店) -->
     <div id="day-7" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 7 ‧ 31 號 <span class="day-badge-pill">美國村潮流 ＆ 自由血拼</span></h2>
+          <h2 class="day-main-title">Day 7 ‧ 31 號 (星期一) <span class="day-badge-pill">美國村潮流 ＆ 自由血拼</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 晴時多雲 19°C ~ 26°C</span>
         </div>
         <p class="day-itinerary-route">心齋橋筋精品潮流 ➔ 美國村古著選物 ➔ 難波千日前居酒屋慶祝</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card">
+          <div class="sleep-card-icon">🏷️</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#67e8f9;">【儲備血拼腳力 ‧ 23:30 就寢】</span></div>
+            <div class="sleep-card-desc">明天搭乘南海電鐵直奔關西最大「臨空城 Outlet」，需要大把腳力試穿走逛 250+ 品牌，今晚把今天戰利品整理完早點睡！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1613,13 +1743,23 @@
       </div>
     </div>
 
-    <!-- DAY 8 (1號) -->
+    <!-- DAY 8 (1號 週二: 臨空城 Outlet) -->
     <div id="day-8" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 8 ‧ 1 號 <span class="day-badge-pill">臨空城 Outlet 暢貨採購</span></h2>
+          <h2 class="day-main-title">Day 8 ‧ 1 號 (星期二) <span class="day-badge-pill">臨空城 Outlet 暢貨採購</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-sun"></i> ☀️ 海風晴朗 19°C ~ 26°C</span>
         </div>
         <p class="day-itinerary-route">搭乘南海電鐵直達臨空城 ➔ Rinku Premium Outlets 200+ 國際名牌瘋狂血拼</p>
+
+        <!-- 早瞓建議 -->
+        <div class="sleep-advice-card urgent">
+          <div class="sleep-card-icon">🧳</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">今晚早瞓建議：<span style="color:#ff2a6d;">【🔥 提早打包行李！23:30 前就寢】</span></div>
+            <div class="sleep-card-desc">明天是最後返程日！今晚請務必在睡前將行李箱打包秤重、護照與登機憑證準備妥當，早點入睡避免明早趕車手忙腳亂！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
@@ -1653,13 +1793,23 @@
       </div>
     </div>
 
-    <!-- DAY 9 (2號) -->
+    <!-- DAY 9 (2號 週三: 返程) -->
     <div id="day-9" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 9 ‧ 2 號 <span class="day-badge-pill">伴手禮名產 ＆ 關空返程 ✈️</span></h2>
+          <h2 class="day-main-title">Day 9 ‧ 2 號 (星期三) <span class="day-badge-pill">伴手禮名產 ＆ 關空返程 ✈️</span></h2>
+          <span class="day-weather-badge-top"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 晴朗好天氣 18°C ~ 25°C</span>
         </div>
         <p class="day-itinerary-route">難波高島屋最後伴手禮採買 ➔ 民宿 Check-out 領行李 ➔ 南海電鐵直達關西機場搭機返程</p>
+
+        <!-- 旅途平安結語 -->
+        <div class="sleep-advice-card relax">
+          <div class="sleep-card-icon">✈️</div>
+          <div class="sleep-card-content">
+            <div class="sleep-card-title">返程提示：<span style="color:#00e676;">【平安賦歸 ‧ 滿載而歸】</span></div>
+            <div class="sleep-card-desc">預留 2.5 ~ 3 小時抵達關西機場辦理報到、托運與最後免稅店採買，祝您旅途平安順遂！</div>
+          </div>
+        </div>
       </div>
 
       <div class="timeline-wrapper">
