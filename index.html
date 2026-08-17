@@ -860,9 +860,9 @@
     <!-- Horizontal Day Selector Slider (Day 1 to Day 9) -->
     <div class="day-selector-slider">
       <button class="day-pill-btn active" onclick="switchDay(1)">Day 1 ‧ 25抵達Donki</button>
-      <button class="day-pill-btn" onclick="switchDay(2)">Day 2 ‧ 26環球USJ</button>
-      <button class="day-pill-btn" onclick="switchDay(3)">Day 3 ‧ 27黑門/阿倍野</button>
-      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 28難波梅田</button>
+      <button class="day-pill-btn" onclick="switchDay(2)">Day 2 ‧ 26難波梅田</button>
+      <button class="day-pill-btn" onclick="switchDay(3)">Day 3 ‧ 27環球USJ</button>
+      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 28黑門/阿倍野</button>
       <button class="day-pill-btn" onclick="switchDay(5)">Day 5 ‧ 29奈良鹿/京都</button>
       <button class="day-pill-btn" onclick="switchDay(6)">Day 6 ‧ 30海遊館</button>
       <button class="day-pill-btn" onclick="switchDay(7)">Day 7 ‧ 31美國村自由</button>
@@ -975,171 +975,11 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 2 (26號: USJ ＆ LAMU 超市)
+         DAY 2 (26號: 難波道頓堀 ＆ 梅田商圈狂歡 - 原 Day 4)
          ========================================================================== -->
     <div id="day-2" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--neon-pink);"></i> Day 2 ‧ 26號 環球影城 ＆ LAMU超市</div>
-        <p class="day-summary-desc">全日狂歡日本環球影城（USJ） ➔ 回程安治川口 LAMU 24H 量販超市大採購</p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="transit-step-box">
-          <i class="fa-solid fa-train"></i>
-          <span>新今宮 ➔ JR環狀線至西九條 ➔ 轉櫻島線至環球城</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 25 分鐘</span>
-        </div>
-
-        <div class="timeline-spot-item highlight">
-          <div class="timeline-dot"></div>
-          <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/usj_nintendo.jpg', '日本環球影城')">
-              <img src="./images/usj_nintendo.jpg" alt="日本環球影城" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-gamepad"></i> 超級任天堂世界 ＆ 哈利波特</span>
-            </div>
-            <div class="spot-card-content">
-              <div class="spot-meta-bar">
-                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 08:30 - 20:00</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd2_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
-              </div>
-              <h3 class="spot-name-heading">日本環球影城（Universal Studios Japan）</h3>
-              <p class="spot-desc-text">超級任天堂世界（瑪利歐賽車、能量手環）、哈利波特魔法城堡與飛天翼龍！</p>
-              
-              <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">開園時間：</span><span class="val">約 08:30 - 21:00（當日公告）</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-lightbulb"></i><div><span class="label">入園提示：</span><span class="val">進園即開 App 抽任天堂整理券</span></div></div>
-              </div>
-
-              <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Universal+Studios+Japan" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="transit-step-box">
-          <i class="fa-solid fa-train"></i>
-          <span>環球城站 ➔ JR 櫻島線（1 站）➔ 安治川口站</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
-        </div>
-
-        <div class="timeline-spot-item">
-          <div class="timeline-dot"></div>
-          <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/lamu_supermarket.jpg', 'LAMU 24小時量販超市')">
-              <img src="./images/lamu_supermarket.jpg" alt="LAMU超市" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-store"></i> 24 小時量販超市</span>
-            </div>
-            <div class="spot-card-content">
-              <div class="spot-meta-bar">
-                <span class="time-badge"><i class="fa-regular fa-clock"></i> 20:30 - 22:00</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd2_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
-              </div>
-              <h3 class="spot-name-heading">LAMU 此花店（ラ・ムー 此花店）</h3>
-              <p class="spot-desc-text">超便宜平價量販超市！熟食炸物、壽司便當超划算，門口附設 100 円章魚燒與霜淇淋攤。</p>
-              
-              <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">24 小時營業（全年無休）</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必買神物：</span><span class="val">¥100 爆漿章魚燒、宵夜便當</span></div></div>
-              </div>
-
-              <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=LAMU+Konohana+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=LAMU+Konohana+Osaka" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==========================================================================
-         DAY 3 (27號: 早上黑門市場 ＆ 下午阿倍野 HARUKAS 商圈)
-         ========================================================================== -->
-    <div id="day-3" class="day-panel">
-      <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-utensils" style="color:var(--neon-pink);"></i> Day 3 ‧ 27號 早上黑門市場 ＆ 下午阿倍野</div>
-        <p class="day-summary-desc">【合體精華】早上黑門市場美食街現烤和牛與生魚片 ➔ 下午阿倍野 HARUKAS 300 展望 ＆ Q's Mall 購物</p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="transit-step-box">
-          <i class="fa-solid fa-train-subway"></i>
-          <span>動物園前站 ➔ 堺筋線搭 2 站 ➔ 日本橋站（10 號出口直達黑門市場）</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
-        </div>
-
-        <div class="timeline-spot-item highlight">
-          <div class="timeline-dot"></div>
-          <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/kuromon_market.jpg', '黑門市場美食街')">
-              <img src="./images/kuromon_market.jpg" alt="黑門市場" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-bowl-food"></i> 大阪人的廚房 黑門市場</span>
-            </div>
-            <div class="spot-card-content">
-              <div class="spot-meta-bar">
-                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 09:30 - 13:00</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
-              </div>
-              <h3 class="spot-name-heading">黑門市場 美食街早午餐巡禮</h3>
-              <p class="spot-desc-text">擁有百年歷史的大阪美食地標！沿路品嚐現烤神戶和牛串、生蠔、海膽、炙燒鮭魚與新鮮草莓白桃。</p>
-              
-              <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">約 09:00 - 17:00</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必吃推薦：</span><span class="val">現烤和牛、海膽生蠔、鰻魚串</span></div></div>
-              </div>
-
-              <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Kuromon+Ichiba+Market" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="transit-step-box">
-          <i class="fa-solid fa-train-subway"></i>
-          <span>日本橋站 ➔ 轉乘御堂筋線 ➔ 天王寺站（阿倍野商圈）</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 10 分鐘</span>
-        </div>
-
-        <div class="timeline-spot-item">
-          <div class="timeline-dot"></div>
-          <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/abeno_harukas.jpg', '阿倍野 HARUKAS')">
-              <img src="./images/abeno_harukas.jpg" alt="阿倍野 HARUKAS" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-mountain-city"></i> 阿倍野 HARUKAS ＆ 天王寺</span>
-            </div>
-            <div class="spot-card-content">
-              <div class="spot-meta-bar">
-                <span class="time-badge"><i class="fa-regular fa-clock"></i> 13:30 - 18:00</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
-              </div>
-              <h3 class="spot-name-heading">阿倍野 HARUKAS ＆ Q's Mall 購物圈</h3>
-              <p class="spot-desc-text">近鐵百貨總店、Abeno Q's Mall（Uniqlo、GU、Bic Camera），可登上 300 公尺高空透明走廊俯瞰全景。</p>
-              
-              <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">百貨營業：</span><span class="val">10:00 - 20:00（餐廳至 23:00）</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-eye"></i><div><span class="label">展望台：</span><span class="val">HARUKAS 300 (09:00 - 22:00)</span></div></div>
-              </div>
-
-              <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Abeno+Harukas+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Abeno+Harukas" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==========================================================================
-         DAY 4 (28號: 難波道頓堀 ＆ 梅田購物)
-         ========================================================================== -->
-    <div id="day-4" class="day-panel">
-      <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-bag-shopping" style="color:var(--neon-pink);"></i> Day 4 ‧ 28號 難波道頓堀 ＆ 梅田購物狂歡</div>
+        <div class="day-summary-title"><i class="fa-solid fa-bag-shopping" style="color:var(--neon-pink);"></i> Day 2 ‧ 26號 難波道頓堀 ＆ 梅田購物狂歡</div>
         <p class="day-summary-desc">難波道頓堀打卡 ＆ 心齋橋逛街 ➔ 下午前往梅田核心百貨群（LUCUA、阪急、友都八喜大採買）</p>
       </div>
 
@@ -1160,7 +1000,7 @@
             <div class="spot-card-content">
               <div class="spot-meta-bar">
                 <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 10:00 - 14:30</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd2_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
               <h3 class="spot-name-heading">道頓堀 ＆ 心齋橋筋 ＆ 難波商圈</h3>
               <p class="spot-desc-text">經典打卡固力果跑跑人看板、心齋橋筋商店街採買服飾美妝，午餐品嚐道地一蘭拉麵、章魚燒或千日前元祖串炸！</p>
@@ -1194,7 +1034,7 @@
             <div class="spot-card-content">
               <div class="spot-meta-bar">
                 <span class="time-badge"><i class="fa-regular fa-clock"></i> 15:00 - 21:30</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd2_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
               <h3 class="spot-name-heading">梅田核心百貨群（LUCUA / 阪急 / Yodobashi）</h3>
               <p class="spot-desc-text">大阪最大時尚旗艦地帶！LUCUA 1100 日系潮牌選物、阪急百貨國際精品美妝、友都八喜超大電器城，晚餐於 LUCUA B2F「巴魯地下街」宵夜美食街享用！</p>
@@ -1216,6 +1056,166 @@
           <i class="fa-solid fa-train-subway"></i>
           <span>梅田站 ➔ 御堂筋線直達 ➔ 返回動物園前 / 新今宮民宿</span>
           <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 15 分鐘</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 3 (27號: USJ ＆ LAMU 超市 - 原 Day 2)
+         ========================================================================== -->
+    <div id="day-3" class="day-panel">
+      <div class="day-summary-banner">
+        <div class="day-summary-title"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--neon-pink);"></i> Day 3 ‧ 27號 環球影城 ＆ LAMU超市</div>
+        <p class="day-summary-desc">全日狂歡日本環球影城（USJ） ➔ 回程安治川口 LAMU 24H 量販超市大採購</p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train"></i>
+          <span>新今宮 ➔ JR環狀線至西九條 ➔ 轉櫻島線至環球城</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 25 分鐘</span>
+        </div>
+
+        <div class="timeline-spot-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-cover" onclick="openLightbox('./images/usj_nintendo.jpg', '日本環球影城')">
+              <img src="./images/usj_nintendo.jpg" alt="日本環球影城" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-gamepad"></i> 超級任天堂世界 ＆ 哈利波特</span>
+            </div>
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 08:30 - 20:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">日本環球影城（Universal Studios Japan）</h3>
+              <p class="spot-desc-text">超級任天堂世界（瑪利歐賽車、能量手環）、哈利波特魔法城堡與飛天翼龍！</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">開園時間：</span><span class="val">約 08:30 - 21:00（當日公告）</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-lightbulb"></i><div><span class="label">入園提示：</span><span class="val">進園即開 App 抽任天堂整理券</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Universal+Studios+Japan" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train"></i>
+          <span>環球城站 ➔ JR 櫻島線（1 站）➔ 安治川口站</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
+        </div>
+
+        <div class="timeline-spot-item">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-cover" onclick="openLightbox('./images/lamu_supermarket.jpg', 'LAMU 24小時量販超市')">
+              <img src="./images/lamu_supermarket.jpg" alt="LAMU超市" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-store"></i> 24 小時量販超市</span>
+            </div>
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge"><i class="fa-regular fa-clock"></i> 20:30 - 22:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">LAMU 此花店（ラ・ムー 此花店）</h3>
+              <p class="spot-desc-text">超便宜平價量販超市！熟食炸物、壽司便當超划算，門口附設 100 円章魚燒與霜淇淋攤。</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">24 小時營業（全年無休）</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必買神物：</span><span class="val">¥100 爆漿章魚燒、宵夜便當</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=LAMU+Konohana+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=LAMU+Konohana+Osaka" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 4 (28號: 早上黑門市場 ＆ 下午阿倍野 HARUKAS 商圈 - 原 Day 3)
+         ========================================================================== -->
+    <div id="day-4" class="day-panel">
+      <div class="day-summary-banner">
+        <div class="day-summary-title"><i class="fa-solid fa-utensils" style="color:var(--neon-pink);"></i> Day 4 ‧ 28號 早上黑門市場 ＆ 下午阿倍野</div>
+        <p class="day-summary-desc">【合體精華】早上黑門市場美食街現烤和牛生魚片 ➔ 下午阿倍野 HARUKAS 300 展望 ＆ Q's Mall 購物</p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train-subway"></i>
+          <span>動物園前站 ➔ 堺筋線搭 2 站 ➔ 日本橋站（10 號出口直達黑門市場）</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
+        </div>
+
+        <div class="timeline-spot-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-cover" onclick="openLightbox('./images/kuromon_market.jpg', '黑門市場美食街')">
+              <img src="./images/kuromon_market.jpg" alt="黑門市場" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-bowl-food"></i> 大阪人的廚房 黑門市場</span>
+            </div>
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 09:30 - 13:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">黑門市場 美食街早午餐巡禮</h3>
+              <p class="spot-desc-text">擁有百年歷史的大阪美食地標！沿路品嚐現烤神戶和牛串、生蠔、海膽、炙燒鮭魚與新鮮草莓白桃。</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">約 09:00 - 17:00</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必吃推薦：</span><span class="val">現烤和牛、海膽生蠔、鰻魚串</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Kuromon+Ichiba+Market" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train-subway"></i>
+          <span>日本橋站 ➔ 轉乘御堂筋線 ➔ 天王寺站（阿倍野商圈）</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 10 分鐘</span>
+        </div>
+
+        <div class="timeline-spot-item">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-cover" onclick="openLightbox('./images/abeno_harukas.jpg', '阿倍野 HARUKAS')">
+              <img src="./images/abeno_harukas.jpg" alt="阿倍野 HARUKAS" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-mountain-city"></i> 阿倍野 HARUKAS ＆ 天王寺</span>
+            </div>
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge"><i class="fa-regular fa-clock"></i> 13:30 - 18:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">阿倍野 HARUKAS ＆ Q's Mall 購物圈</h3>
+              <p class="spot-desc-text">近鐵百貨總店、Abeno Q's Mall（Uniqlo、GU、Bic Camera），可登上 300 公尺高空透明走廊俯瞰全景。</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">百貨營業：</span><span class="val">10:00 - 20:00（餐廳至 23:00）</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-eye"></i><div><span class="label">展望台：</span><span class="val">HARUKAS 300 (09:00 - 22:00)</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Abeno+Harukas+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Abeno+Harukas" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
