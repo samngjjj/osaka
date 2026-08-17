@@ -1966,28 +1966,6 @@
     <img id="lightboxImg" src="" alt="Zoomed Photo">
   </div>
 
-  <!-- Toast -->
-  <div class="toast-msg" id="toastMsg">通知訊息</div>
-
-  <!-- Scripts -->
-  <script>
-    let curCurrency = 'HKD';
-    const RATES = { HKD: 0.0493, TWD: 0.208 };
-
-    function setCurrency(mode) {
-      curCurrency = mode;
-      document.getElementById('sheetBtnHKD').style.background = mode === 'HKD' ? 'rgba(0,230,118,0.2)' : 'rgba(255,255,255,0.05)';
-      document.getElementById('sheetBtnHKD').style.borderColor = mode === 'HKD' ? '#00e676' : 'rgba(255,255,255,0.08)';
-      document.getElementById('sheetBtnTWD').style.background = mode === 'TWD' ? 'rgba(0,230,118,0.2)' : 'rgba(255,255,255,0.05)';
-      document.getElementById('sheetBtnTWD').style.borderColor = mode === 'TWD' ? '#00e676' : 'rgba(255,255,255,0.08)';
-      
-      const label = document.getElementById('sheetForeignLabel');
-      const rateText = document.getElementById('sheetRateText');
-      if (mode === 'HKD') {
-        label.innerText = '換算結果 (HKD $)';
-        rateText.innerText = `1 JPY ≈ ${RATES.HKD} HKD`;
-      } else {
-        label.innerText = '換算結果 (TWD NT$)';
   <!-- Floating Mobile Quick Day Navigation -->
   <div class="floating-quick-nav" id="floatingQuickNav">
     <button class="quick-nav-pill-btn" onclick="prevDay()" id="btnPrevDay" aria-label="前一天" style="opacity:0.4;">
@@ -2000,6 +1978,9 @@
       後一日 <i class="fa-solid fa-chevron-right"></i>
     </button>
   </div>
+
+  <!-- Toast -->
+  <div class="toast-msg" id="toastMsg">通知訊息</div>
 
   <!-- Scripts -->
   <script>
