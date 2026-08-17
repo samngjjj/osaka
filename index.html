@@ -11,6 +11,9 @@
   <meta name="apple-mobile-web-app-title" content="大阪行程">
   <meta name="theme-color" content="#070a12">
   <meta name="description" content="專為手機打造的大阪關西 9 天 8 夜全方位隨身旅遊指南（25號抵達～2號返程）：星期標註、今晚早瞓建議、即時匯率計算、地鐵轉乘時間、雙地圖一鍵導航。">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
   <!-- Google Fonts: Plus Jakarta Sans & Noto Sans TC & Zen Old Mincho -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1984,71 +1987,83 @@
 
   <!-- Scripts -->
   <script>
-    let curCurrency = 'HKD';
-    const RATES = { HKD: 0.0493, TWD: 0.208 };
-    let currentActiveDay = 1;
-    const TOTAL_DAYS = 9;
+    window.curCurrency = 'HKD';
+    window.RATES = { HKD: 0.0493, TWD: 0.208 };
+    window.currentActiveDay = 1;
+    window.TOTAL_DAYS = 9;
 
     // Mobile Haptic Vibration Helper
-    function triggerHaptic(duration = 10) {
+    window.triggerHaptic = function(duration = 10) {
       if (typeof navigator !== 'undefined' && navigator.vibrate) {
         try { navigator.vibrate(duration); } catch(e) {}
       }
-    }
+    };
 
-    function setCurrency(mode) {
-      curCurrency = mode;
-      document.getElementById('sheetBtnHKD').style.background = mode === 'HKD' ? 'rgba(0,230,118,0.2)' : 'rgba(255,255,255,0.05)';
-      document.getElementById('sheetBtnHKD').style.borderColor = mode === 'HKD' ? '#00e676' : 'rgba(255,255,255,0.08)';
-      document.getElementById('sheetBtnTWD').style.background = mode === 'TWD' ? 'rgba(0,230,118,0.2)' : 'rgba(255,255,255,0.05)';
-      document.getElementById('sheetBtnTWD').style.borderColor = mode === 'TWD' ? '#00e676' : 'rgba(255,255,255,0.08)';
+    window.setCurrency = function(mode) {
+      window.curCurrency = mode;
+      const btnHKD = document.getElementById('sheetBtnHKD');
+      const btnTWD = document.getElementById('sheetBtnTWD');
+      if (btnHKD) {
+        btnHKD.style.background = mode === 'HKD' ? 'rgba(0,230,118,0.2)' : 'rgba(255,255,255,0.05)';
+        btnHKD.style.borderColor = mode === 'HKD' ? '#00e676' : 'rgba(255,255,255,0.08)';
+      }
+      if (btnTWD) {
+        btnTWD.style.background = mode === 'TWD' ? 'rgba(0,230,118,0.2)' : 'rgba(255,255,255,0.05)';
+        btnTWD.style.borderColor = mode === 'TWD' ? '#00e676' : 'rgba(255,255,255,0.08)';
+      }
       
       const label = document.getElementById('sheetForeignLabel');
       const rateText = document.getElementById('sheetRateText');
       if (mode === 'HKD') {
-        label.innerText = '換算結果 (HKD $)';
-        rateText.innerText = `1 JPY ≈ ${RATES.HKD} HKD`;
+        if (label) label.innerText = '換算結果 (HKD $)';
+        if (rateText) rateText.innerText = `1 JPY ≈ ${window.RATES.HKD} HKD`;
       } else {
-        label.innerText = '換算結果 (TWD NT$)';
-        rateText.innerText = `1 JPY ≈ ${RATES.TWD} TWD`;
+        if (label) label.innerText = '換算結果 (TWD NT$)';
+        if (rateText) rateText.innerText = `1 JPY ≈ ${window.RATES.TWD} TWD`;
       }
-      calcSheetJPY();
-    }
+      window.calcSheetJPY();
+    };
 
-    function calcSheetJPY() {
-      const jpy = parseFloat(document.getElementById('sheetJpy').value) || 0;
-      const rate = RATES[curCurrency];
-      const res = (jpy * rate).toFixed(curCurrency === 'HKD' ? 1 : 0);
-      document.getElementById('sheetForeign').value = res;
-    }
+    window.calcSheetJPY = function() {
+      const jpyEl = document.getElementById('sheetJpy');
+      const jpy = parseFloat(jpyEl ? jpyEl.value : 0) || 0;
+      const rate = window.RATES[window.curCurrency];
+      const res = (jpy * rate).toFixed(window.curCurrency === 'HKD' ? 1 : 0);
+      const foreignEl = document.getElementById('sheetForeign');
+      if (foreignEl) foreignEl.value = res;
+    };
 
-    function calcSheetForeign() {
-      const foreign = parseFloat(document.getElementById('sheetForeign').value) || 0;
-      const rate = RATES[curCurrency];
+    window.calcSheetForeign = function() {
+      const foreignEl = document.getElementById('sheetForeign');
+      const foreign = parseFloat(foreignEl ? foreignEl.value : 0) || 0;
+      const rate = window.RATES[window.curCurrency];
       const jpy = Math.round(foreign / rate);
-      document.getElementById('sheetJpy').value = jpy;
-    }
+      const jpyEl = document.getElementById('sheetJpy');
+      if (jpyEl) jpyEl.value = jpy;
+    };
 
-    function setSheetQuick(amt) {
-      document.getElementById('sheetJpy').value = amt;
-      calcSheetJPY();
-    }
+    window.setSheetQuick = function(amt) {
+      const jpyEl = document.getElementById('sheetJpy');
+      if (jpyEl) jpyEl.value = amt;
+      window.calcSheetJPY();
+    };
 
-    // Day switching (Day 1 to Day 9) with direction animations & auto-centering tab
-    function switchDay(dayNum, direction = null) {
+    // Day switching (Day 1 to Day 9)
+    window.switchDay = function(dayNum, direction = null) {
       if (dayNum < 1) dayNum = 1;
-      if (dayNum > TOTAL_DAYS) dayNum = TOTAL_DAYS;
+      if (dayNum > window.TOTAL_DAYS) dayNum = window.TOTAL_DAYS;
       
-      const isChanged = (currentActiveDay !== dayNum);
-      currentActiveDay = dayNum;
-      triggerHaptic(12);
+      window.currentActiveDay = dayNum;
+      window.triggerHaptic(12);
 
       const btns = document.querySelectorAll('.day-pill-btn');
       btns.forEach((btn, idx) => {
         const isActive = (idx === dayNum - 1);
         btn.classList.toggle('active', isActive);
         if (isActive) {
-          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          try {
+            btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          } catch(e) {}
         }
       });
 
@@ -2069,7 +2084,7 @@
       }
 
       // Update progress bar
-      const progressPercent = (dayNum / TOTAL_DAYS) * 100;
+      const progressPercent = (dayNum / window.TOTAL_DAYS) * 100;
       const fill = document.getElementById('swipeProgressFill');
       if (fill) fill.style.width = progressPercent + '%';
       const text = document.getElementById('currentDayProgressText');
@@ -2079,42 +2094,44 @@
       const prevBtn = document.getElementById('btnPrevDay');
       const nextBtn = document.getElementById('btnNextDay');
       if (prevBtn) prevBtn.style.opacity = dayNum === 1 ? '0.4' : '1';
-      if (nextBtn) nextBtn.style.opacity = dayNum === TOTAL_DAYS ? '0.4' : '1';
-    }
+      if (nextBtn) nextBtn.style.opacity = dayNum === window.TOTAL_DAYS ? '0.4' : '1';
+    };
 
-    function prevDay() {
-      if (currentActiveDay > 1) {
-        switchDay(currentActiveDay - 1, 'right');
+    window.prevDay = function() {
+      if (window.currentActiveDay > 1) {
+        window.switchDay(window.currentActiveDay - 1, 'right');
       } else {
-        showToast('📍 已是第 1 天行程！');
+        window.showToast('📍 已是第 1 天行程！');
       }
-    }
+    };
 
-    function nextDay() {
-      if (currentActiveDay < TOTAL_DAYS) {
-        switchDay(currentActiveDay + 1, 'left');
+    window.nextDay = function() {
+      if (window.currentActiveDay < window.TOTAL_DAYS) {
+        window.switchDay(window.currentActiveDay + 1, 'left');
       } else {
-        showToast('📍 已是最後 1 天返程！');
+        window.showToast('📍 已是最後 1 天返程！');
       }
-    }
+    };
 
-    function scrollToTop() {
+    window.scrollToTop = function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    };
 
-    function switchBottomTab(tab) {
+    window.switchBottomTab = function(tab) {
       if (tab === 'itinerary') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-    }
+    };
 
-    // Touch Swipe Gesture Listener (Left & Right to switch days)
+    // Touch & Mouse Swipe Gesture Listener (Left & Right to switch days)
     let touchStartX = 0;
     let touchStartY = 0;
     let touchEndX = 0;
     let touchEndY = 0;
+    let isMouseDown = false;
     const SWIPE_MIN_DISTANCE = 45;
 
+    // Touch events for mobile
     document.addEventListener('touchstart', function(e) {
       if (e.target.closest('.day-selector-slider') || e.target.closest('.bottom-sheet') || e.target.closest('input')) {
         return;
@@ -2132,83 +2149,103 @@
       handleSwipeGesture();
     }, { passive: true });
 
+    // Mouse events for desktop dragging
+    document.addEventListener('mousedown', function(e) {
+      if (e.target.closest('.day-selector-slider') || e.target.closest('.bottom-sheet') || e.target.closest('input') || e.target.closest('button') || e.target.closest('a')) {
+        return;
+      }
+      isMouseDown = true;
+      touchStartX = e.screenX;
+      touchStartY = e.screenY;
+    });
+
+    document.addEventListener('mouseup', function(e) {
+      if (!isMouseDown) return;
+      isMouseDown = false;
+      touchEndX = e.screenX;
+      touchEndY = e.screenY;
+      handleSwipeGesture();
+    });
+
     function handleSwipeGesture() {
       const deltaX = touchEndX - touchStartX;
       const deltaY = touchEndY - touchStartY;
 
-      // Ensure horizontal swipe is dominant and exceeds distance threshold
-      if (Math.abs(deltaX) > SWIPE_MIN_DISTANCE && Math.abs(deltaX) > Math.abs(deltaY) * 1.3) {
+      if (Math.abs(deltaX) > SWIPE_MIN_DISTANCE && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
         if (deltaX < 0) {
-          // Swipe Left -> Next Day
-          nextDay();
+          window.nextDay();
         } else {
-          // Swipe Right -> Previous Day
-          prevDay();
+          window.prevDay();
         }
       }
     }
 
     // Sheets
-    function openSheet(id) {
-      triggerHaptic(8);
-      document.getElementById(id).classList.add('active');
-    }
+    window.openSheet = function(id) {
+      window.triggerHaptic(8);
+      const sheet = document.getElementById(id);
+      if (sheet) sheet.classList.add('active');
+    };
 
-    function closeSheet(id) {
-      document.getElementById(id).classList.remove('active');
-    }
+    window.closeSheet = function(id) {
+      const sheet = document.getElementById(id);
+      if (sheet) sheet.classList.remove('active');
+    };
 
-    function closeSheetOutside(e, id) {
+    window.closeSheetOutside = function(e, id) {
       if (e.target.id === id) {
-        closeSheet(id);
+        window.closeSheet(id);
       }
-    }
+    };
 
     // Lightbox
-    function openLightbox(src, caption) {
-      triggerHaptic(8);
+    window.openLightbox = function(src, caption) {
+      window.triggerHaptic(8);
       const modal = document.getElementById('lightboxModal');
       const img = document.getElementById('lightboxImg');
-      img.src = src;
-      modal.classList.add('active');
-    }
+      if (img) img.src = src;
+      if (modal) modal.classList.add('active');
+    };
 
-    function closeLightbox(e) {
-      document.getElementById('lightboxModal').classList.remove('active');
-    }
+    window.closeLightbox = function(e) {
+      const modal = document.getElementById('lightboxModal');
+      if (modal) modal.classList.remove('active');
+    };
 
-    function showToast(msg) {
+    window.showToast = function(msg) {
       const toast = document.getElementById('toastMsg');
-      toast.innerText = msg;
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 2200);
-    }
+      if (toast) {
+        toast.innerText = msg;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2200);
+      }
+    };
 
-    function copyText(text, msg) {
-      triggerHaptic(15);
+    window.copyText = function(text, msg) {
+      window.triggerHaptic(15);
       navigator.clipboard.writeText(text).then(() => {
-        showToast(msg || '已複製！');
+        window.showToast(msg || '已複製！');
       }).catch(() => {
-        showToast('複製完成！');
+        window.showToast('複製完成！');
       });
-    }
+    };
 
-    function toggleCheckin(btn, spotId) {
-      triggerHaptic(20);
+    window.toggleCheckin = function(btn, spotId) {
+      window.triggerHaptic(20);
       btn.classList.toggle('done');
       const isDone = btn.classList.contains('done');
       if (isDone) {
         btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> 已打卡';
-        showToast('🎉 打卡成功！太棒了！');
+        window.showToast('🎉 打卡成功！太棒了！');
       } else {
         btn.innerHTML = '<i class="fa-regular fa-circle-check"></i> 打卡';
       }
       try {
         localStorage.setItem('mobile_checkin_' + spotId, isDone ? '1' : '0');
       } catch (e) {}
-    }
+    };
 
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.btn-checkin').forEach(btn => {
