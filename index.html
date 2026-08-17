@@ -255,6 +255,43 @@
       color: #fff;
     }
 
+    /* Quick Action Hub (田字結構 2x2 Grid) */
+    .quick-grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 12px 0 20px;
+    }
+
+    .quick-grid-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 12px 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s var(--ease-spring);
+    }
+
+    .quick-grid-btn:active {
+      transform: scale(0.96);
+      background: var(--bg-card-elevated);
+      border-color: var(--neon-cyan);
+    }
+
+    .quick-grid-btn i {
+      font-size: 1rem;
+      color: var(--neon-cyan);
+    }
+
     /* Day Panels & Timeline Spots */
     .day-panel {
       display: none;
@@ -843,6 +880,22 @@
           <div class="hero-headline">關西 7 天 6 夜極致行程</div>
         </div>
       </div>
+    </div>
+
+    <!-- Quick Utility Bar (田字結構 2x2 Grid) -->
+    <div class="quick-grid-2x2">
+      <button class="quick-grid-btn" onclick="openSheet('toolsSheet')">
+        <i class="fa-solid fa-clipboard-check"></i> 出發行前清單
+      </button>
+      <button class="quick-grid-btn" onclick="openSheet('toolsSheet')">
+        <i class="fa-solid fa-language"></i> 常用日語速查
+      </button>
+      <button class="quick-grid-btn" onclick="openSheet('hotelSheet')">
+        <i class="fa-solid fa-hotel"></i> 全程住宿大本營
+      </button>
+      <a class="quick-grid-btn" href="https://translate.google.com/?sl=zh-TW&tl=ja&op=translate" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-google"></i> Google 翻譯
+      </a>
     </div>
 
     <!-- ==========================================================================

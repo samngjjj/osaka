@@ -202,10 +202,10 @@
       max-width: 650px;
     }
 
-    /* Quick Action Hub */
+    /* Quick Action Hub (田字結構 2x2 Grid) */
     .quick-action-bar {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
       margin-bottom: 24px;
     }
@@ -1034,7 +1034,7 @@
       </div>
     </div>
 
-    <!-- Quick Utility Bar -->
+    <!-- Quick Utility Bar (田字結構 2x2 Grid) -->
     <div class="quick-action-bar">
       <button class="action-btn-chip" onclick="openDrawer('checklistDrawer')">
         <i class="fa-solid fa-clipboard-check"></i> 出發行前清單
@@ -1045,6 +1045,9 @@
       <button class="action-btn-chip" onclick="scrollToHotel()">
         <i class="fa-solid fa-hotel"></i> 全程住宿大本營
       </button>
+      <a class="action-btn-chip" href="https://translate.google.com/?sl=zh-TW&tl=ja&op=translate" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-google"></i> Google 翻譯
+      </a>
     </div>
 
     <!-- Currency Converter Widget -->
