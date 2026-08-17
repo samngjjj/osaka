@@ -534,18 +534,113 @@
       transform: translateY(-1px);
     }
 
+    /* Swipe Progress & Hint Bar */
+    .swipe-progress-bar-container {
+      padding: 6px 12px 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .swipe-progress-track {
+      width: 100%;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .swipe-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--osaka-cyan), var(--osaka-pink));
+      border-radius: var(--radius-full);
+      transition: width 0.35s var(--ease-spring);
+    }
+
+    .swipe-hint-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    /* Floating Quick Day Navigation */
+    .floating-quick-nav {
+      position: fixed;
+      bottom: 24px;
+      right: 18px;
+      left: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      z-index: 180;
+    }
+
+    .quick-nav-pill-btn {
+      pointer-events: auto;
+      background: rgba(14, 20, 36, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      transition: all 0.25s var(--ease-spring);
+    }
+
+    .quick-nav-pill-btn:active {
+      transform: scale(0.92);
+      background: var(--bg-surface-elevated);
+      border-color: var(--osaka-cyan);
+    }
+
+    .quick-nav-pill-btn.scroll-top-btn {
+      padding: 10px 14px;
+      background: rgba(5, 217, 232, 0.15);
+      border-color: var(--border-neon);
+      color: var(--osaka-cyan);
+    }
+
     /* Day Panels */
     .day-panel {
       display: none;
       opacity: 0;
       transform: translateY(12px);
-      transition: opacity 0.35s var(--ease-spring), transform 0.35s var(--ease-spring);
+      transition: opacity 0.3s var(--ease-spring), transform 0.3s var(--ease-spring);
     }
 
     .day-panel.active {
       display: block;
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .day-panel.slide-left {
+      animation: slideInFromRight 0.32s var(--ease-spring);
+    }
+
+    .day-panel.slide-right {
+      animation: slideInFromLeft 0.32s var(--ease-spring);
+    }
+
+    @keyframes slideInFromRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInFromLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
     .day-header-box {
@@ -1182,6 +1277,17 @@
           <span class="tab-num">Day 9 ‧ 2(三)</span>
           <span class="tab-sub">伴手禮/返程</span>
         </button>
+      </div>
+
+      <!-- Swipe Progress & Visual Hint Bar -->
+      <div class="swipe-progress-bar-container">
+        <div class="swipe-progress-track">
+          <div class="swipe-progress-fill" id="swipeProgressFill" style="width: 11.1%;"></div>
+        </div>
+        <div class="swipe-hint-text">
+          <span><i class="fa-solid fa-arrows-left-right" style="color:var(--osaka-cyan);"></i> 左右滑動螢幕切換日期</span>
+          <span id="currentDayProgressText" style="color:var(--osaka-cyan); font-weight:800;">Day 1 / 9</span>
+        </div>
       </div>
     </div>
 
@@ -2023,11 +2129,32 @@
     </div>
   </div>
 
+  <!-- Floating Mobile Quick Day Navigation -->
+  <div class="floating-quick-nav" id="floatingQuickNav">
+    <button class="quick-nav-pill-btn" onclick="prevDay()" id="btnPrevDay" aria-label="前一天" style="opacity:0.4;">
+      <i class="fa-solid fa-chevron-left"></i> 前一日
+    </button>
+    <button class="quick-nav-pill-btn scroll-top-btn" onclick="scrollToTop()" aria-label="返回頂部">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <button class="quick-nav-pill-btn" onclick="nextDay()" id="btnNextDay" aria-label="後一天">
+      後一日 <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
   <div class="toast-popup" id="toastBox">通知訊息</div>
 
   <script>
     let currentCurrencyMode = 'HKD';
     const RATES = { HKD: 0.0493, TWD: 0.208 };
+    let currentActiveDay = 1;
+    const TOTAL_DAYS = 9;
+
+    function triggerHaptic(duration = 10) {
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        try { navigator.vibrate(duration); } catch(e) {}
+      }
+    }
 
     function setCurrencyMode(mode) {
       currentCurrencyMode = mode;
@@ -2066,24 +2193,111 @@
       calculateFromJPY();
     }
 
-    function switchDay(dayNum) {
+    function switchDay(dayNum, direction = null) {
+      if (dayNum < 1) dayNum = 1;
+      if (dayNum > TOTAL_DAYS) dayNum = TOTAL_DAYS;
+
+      currentActiveDay = dayNum;
+      triggerHaptic(12);
+
       const buttons = document.querySelectorAll('.tab-item-btn');
       buttons.forEach((btn, idx) => {
-        btn.classList.toggle('active', idx === dayNum - 1);
+        const isActive = (idx === dayNum - 1);
+        btn.classList.toggle('active', isActive);
+        if (isActive) {
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
       });
 
       const panels = document.querySelectorAll('.day-panel');
       panels.forEach((panel) => {
-        panel.classList.remove('active');
+        panel.classList.remove('active', 'slide-left', 'slide-right');
       });
 
       const activePanel = document.getElementById('day-' + dayNum);
       if (activePanel) {
         activePanel.classList.add('active');
+        if (direction === 'left') {
+          activePanel.classList.add('slide-left');
+        } else if (direction === 'right') {
+          activePanel.classList.add('slide-right');
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Update progress bar
+      const progressPercent = (dayNum / TOTAL_DAYS) * 100;
+      const fill = document.getElementById('swipeProgressFill');
+      if (fill) fill.style.width = progressPercent + '%';
+      const text = document.getElementById('currentDayProgressText');
+      if (text) text.innerText = `Day ${dayNum} / 9`;
+
+      // Update floating button opacity states
+      const prevBtn = document.getElementById('btnPrevDay');
+      const nextBtn = document.getElementById('btnNextDay');
+      if (prevBtn) prevBtn.style.opacity = dayNum === 1 ? '0.4' : '1';
+      if (nextBtn) nextBtn.style.opacity = dayNum === TOTAL_DAYS ? '0.4' : '1';
+    }
+
+    function prevDay() {
+      if (currentActiveDay > 1) {
+        switchDay(currentActiveDay - 1, 'right');
+      } else {
+        showToast('📍 已是第 1 天行程！');
+      }
+    }
+
+    function nextDay() {
+      if (currentActiveDay < TOTAL_DAYS) {
+        switchDay(currentActiveDay + 1, 'left');
+      } else {
+        showToast('📍 已是最後 1 天返程！');
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Touch Swipe Gesture Listener (Left & Right to switch days)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    const SWIPE_MIN_DISTANCE = 45;
+
+    document.addEventListener('touchstart', function(e) {
+      if (e.target.closest('.day-tabs-slider') || e.target.closest('.drawer-modal') || e.target.closest('input')) {
+        return;
+      }
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', function(e) {
+      if (e.target.closest('.day-tabs-slider') || e.target.closest('.drawer-modal') || e.target.closest('input')) {
+        return;
+      }
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipeGesture();
+    }, { passive: true });
+
+    function handleSwipeGesture() {
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+
+      if (Math.abs(deltaX) > SWIPE_MIN_DISTANCE && Math.abs(deltaX) > Math.abs(deltaY) * 1.3) {
+        if (deltaX < 0) {
+          nextDay();
+        } else {
+          prevDay();
+        }
       }
     }
 
     function openLightbox(src, caption) {
+      triggerHaptic(8);
       const modal = document.getElementById('lightboxModal');
       const img = document.getElementById('lightboxImg');
       const cap = document.getElementById('lightboxCaption');
@@ -2099,6 +2313,7 @@
     }
 
     function openDrawer(id) {
+      triggerHaptic(8);
       document.getElementById(id).classList.add('active');
     }
 
@@ -2120,6 +2335,7 @@
     }
 
     function copyText(text, successMsg) {
+      triggerHaptic(15);
       navigator.clipboard.writeText(text).then(() => {
         showToast(successMsg || '已複製至剪貼簿！');
       }).catch(() => {
@@ -2137,6 +2353,7 @@
     }
 
     function toggleCheckin(btn, spotId) {
+      triggerHaptic(20);
       btn.classList.toggle('done');
       const isDone = btn.classList.contains('done');
       if (isDone) {
