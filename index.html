@@ -1640,14 +1640,14 @@
       </div>
     </div>
 
-    <!-- DAY 7 (31號 週一: 心齋橋美國村潮流選物自由行) -->
+    <!-- DAY 7 (31號 週一: 全日自由活動) -->
     <div id="day-7" class="day-panel">
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 31 號 (星期一)</span>
         </div>
-        <div class="day-summary-title"><i class="fa-solid fa-shirt" style="color:var(--neon-pink);"></i> Day 7 ‧ 美國村潮流 ＆ 自由血拼</div>
-        <p class="day-summary-desc">心齋橋筋精品潮流 ➔ 美國村古著選物 ➔ 難波千日前居酒屋慶祝</p>
+        <div class="day-summary-title"><i class="fa-solid fa-compass" style="color:var(--neon-pink);"></i> Day 7 ‧ 全日自由活動</div>
+        <p class="day-summary-desc">享受無拘無束的探索時光 我想點就點 大地任我行！</p>
 
         <!-- 早瞓建議 -->
         <div class="sleep-advice-box">
@@ -1660,26 +1660,24 @@
       </div>
 
       <div class="timeline-container">
-        <div class="transit-step-box">
-          <i class="fa-solid fa-train-subway"></i>
-          <span>動物園前站 ➔ 御堂筋線搭 2 站 ➔ 心齋橋站（7 號出口直達美國村）</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 6 分鐘</span>
-        </div>
-
         <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
-          <div class="mobile-spot-card spot-card-free">
+          <div class="mobile-spot-card spot-card-free" style="border-style: solid; border-color: rgba(0, 230, 118, 0.5); background: linear-gradient(135deg, rgba(0, 230, 118, 0.15) 0%, rgba(14, 20, 36, 0.9) 100%);">
             <div class="spot-meta-bar">
               <span class="time-badge" style="color:var(--neon-green);"><i class="fa-regular fa-clock"></i> 全日自由活動</span>
-              <button class="btn-checkin" onclick="toggleCheckin(this, 'd7_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              <button class="btn-checkin done" onclick="toggleCheckin(this, 'd7_free')"><i class="fa-solid fa-circle-check"></i> 打卡完成</button>
             </div>
-            <h3 class="spot-name-heading"><i class="fa-solid fa-bag-shopping"></i> 心齋橋美國村 ＆ 潮流古著探店</h3>
-            <p class="spot-desc-text">漫步三角公園、品嚐甲賀流章魚燒、採買日系潮流潮牌、二手古著與潮流波鞋，享受無拘無束的探索時光！</p>
+            <h3 class="spot-name-heading" style="color:var(--neon-green); font-size:1.1rem;"><i class="fa-solid fa-person-walking"></i> 全日自由探索時光</h3>
+            <p class="spot-desc-text" style="font-size:0.95rem; font-weight:700; color:#fff; margin-top:6px;">
+              享受無拘無束的探索時光 我想點就點 大地任我行！
+            </p>
+            <p class="spot-desc-text" style="color:var(--text-dim); margin-top:4px;">
+              心齋橋潮流選物、美國村古著探店、道頓堀街頭漫步，或隨時點擊下方「美食清單」挑選今天想吃的大阪美食！
+            </p>
             
-            <div class="spot-btn-grid" style="margin-top:12px;">
-              <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=America-mura+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-              <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=America-mura+Osaka" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-            </div>
+            <button class="btn-taxi-copy" onclick="openSheet('foodSheet')" style="background:linear-gradient(135deg, #ffb800 0%, #ff8c00 100%); margin-top:14px; height:44px; font-weight:800; color:#000;">
+              <i class="fa-solid fa-bowl-food"></i> 彈出查看 10 大必吃美食清單 ➔
+            </button>
           </div>
         </div>
       </div>
@@ -1821,7 +1819,7 @@
       <i class="fa-solid fa-hotel"></i>
       <span>住宿</span>
     </button>
-    <button class="nav-tab-item" onclick="switchDay(7)">
+    <button class="nav-tab-item" onclick="openSheet('foodSheet')">
       <i class="fa-solid fa-bowl-food" style="color:var(--neon-gold);"></i>
       <span>美食清單</span>
     </button>
@@ -1910,14 +1908,7 @@
         <button class="sheet-close-btn" onclick="closeSheet('toolsSheet')"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
-      <div style="margin-bottom:16px;">
-        <div style="font-size:0.85rem; font-weight:800; color:#fff; margin-bottom:8px;"><i class="fa-solid fa-utensils" style="color:var(--neon-gold);"></i> 大阪必吃美食清單</div>
-        <button class="btn-taxi-copy" style="background:linear-gradient(135deg, #ffb800 0%, #ff8c00 100%); height:40px; font-size:0.85rem; margin-bottom:8px;" onclick="closeSheet('toolsSheet'); switchDay(7);">
-          <i class="fa-solid fa-bowl-food"></i> 查看 Day 7 10 大必吃美食清單 ➔
-        </button>
-      </div>
-
-      <div style="margin-bottom:16px;">
+      <div>
         <div style="font-size:0.85rem; font-weight:800; color:#fff; margin-bottom:8px;"><i class="fa-solid fa-clipboard-check" style="color:var(--neon-green);"></i> 出發必備確認</div>
         <div style="display:flex; flex-direction:column; gap:8px;">
           <label style="display:flex; align-items:center; gap:8px; font-size:0.82rem;"><input type="checkbox" checked> 護照（效期 6 個月以上）</label>
@@ -1928,7 +1919,7 @@
         </div>
       </div>
 
-      <div>
+      <div style="margin-top:16px;">
         <div style="font-size:0.85rem; font-weight:800; color:#fff; margin-bottom:8px;"><i class="fa-solid fa-language" style="color:var(--neon-cyan);"></i> 點餐常用日語</div>
         <div style="display:flex; flex-direction:column; gap:8px; font-size:0.82rem;">
           <div style="background:rgba(255,255,255,0.04); padding:8px 10px; border-radius:8px;">
@@ -1948,6 +1939,126 @@
             <div style="color:var(--neon-cyan);">トイレはどこですか？ (Toire wa doko desu ka?)</div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Food Wishlist Bottom Sheet (彈出美食清單) -->
+  <div class="sheet-backdrop" id="foodSheet" onclick="closeSheetOutside(event, 'foodSheet')">
+    <div class="bottom-sheet" style="max-height: 86vh;">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="sheet-title"><i class="fa-solid fa-bowl-food" style="color:var(--neon-gold);"></i> 大阪 10 大必吃美食清單</div>
+        <button class="sheet-close-btn" onclick="closeSheet('foodSheet')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div style="background:rgba(255,184,0,0.12); border:1px solid rgba(255,184,0,0.35); border-radius:10px; padding:10px 14px; margin-bottom:14px; font-size:0.82rem; color:#ffd166; font-weight:700; display:flex; align-items:center; gap:8px;">
+        <i class="fa-solid fa-sparkles" style="font-size:1rem; flex-shrink:0;"></i>
+        <span>享受無拘無束的探索時光 我想點就點 大地任我行！</span>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px; padding-bottom:10px;">
+        
+        <!-- 1. 藏壽司 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-fish" style="color:var(--neon-cyan);"></i> 1. 藏壽司（くら寿司）</div>
+            <span style="font-size:0.7rem; background:rgba(5,217,232,0.15); color:var(--neon-cyan); border-radius:4px; padding:2px 6px;">扭蛋迴轉壽司</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">每投 5 盤抽扭蛋！平價新鮮，必吃炙燒鮭魚、茶碗蒸與熟食。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Kura+Sushi+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋鄰近分店</a>
+        </div>
+
+        <!-- 2. 壽司郎 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-fish-fins" style="color:var(--neon-pink);"></i> 2. 壽司郎（スシロー）</div>
+            <span style="font-size:0.7rem; background:rgba(255,42,109,0.15); color:var(--neon-pink); border-radius:4px; padding:2px 6px;">迴轉壽司王者</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">厚切鮮甜鮪魚大腹、甜蝦、炸蝦天婦羅壽司與季節甜點。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Sushiro+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋鄰近分店</a>
+        </div>
+
+        <!-- 3. 金龍拉麵 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-dragon" style="color:var(--neon-gold);"></i> 3. 金龍拉麵（金龍ラーメン）</div>
+            <span style="font-size:0.7rem; background:rgba(255,184,0,0.15); color:var(--neon-gold); border-radius:4px; padding:2px 6px;">道頓堀地標 24H</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">榻榻米露天立食！清爽豚骨湯底，無限量免費辣韭菜、泡菜與蒜泥。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Kinryu+Ramen+Dotonbori" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋道頓堀店</a>
+        </div>
+
+        <!-- 4. 一蘭拉麵 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-bowl-rice" style="color:var(--neon-green);"></i> 4. 一蘭拉麵（天然豚骨）</div>
+            <span style="font-size:0.7rem; background:rgba(0,230,118,0.15); color:var(--neon-green); border-radius:4px; padding:2px 6px;">味集中個人座</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">無干擾沉浸式吃麵！特製赤紅秘傳辣醬、濃郁天然豚骨白湯。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Ichiran+Ramen+Dotonbori" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋道頓堀店</a>
+        </div>
+
+        <!-- 5. 沾麵 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-utensils" style="color:#67e8f9;"></i> 5. 沾麵（つけ麺）</div>
+            <span style="font-size:0.7rem; background:rgba(103,232,249,0.15); color:#67e8f9; border-radius:4px; padding:2px 6px;">魚介豚骨太麵</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">濃厚魚介豚骨沾汁裹滿 Q 彈冰鎮粗太麵（三田製麵所 / 雀 沾麵）。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Tsukemen+Osaka+Namba" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋難波沾麵</a>
+        </div>
+
+        <!-- 6. 天丼 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-shrimp" style="color:#fbbf24;"></i> 6. 天丼（炸蝦天婦羅蓋飯）</div>
+            <span style="font-size:0.7rem; background:rgba(251,191,36,0.15); color:#fbbf24; border-radius:4px; padding:2px 6px;">天丼てんや / 蝦丼</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">現點現炸大蝦、穴子魚與蔬菜天婦羅，淋上秘傳甘甜醬汁。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Tendon+Tenya+Osaka+Namba" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋天丼</a>
+        </div>
+
+        <!-- 7. 王將餃子 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-circle-dot" style="color:#f472b6;"></i> 7. 王將餃子（餃子の王将）</div>
+            <span style="font-size:0.7rem; background:rgba(244,114,182,0.15); color:#f472b6; border-radius:4px; padding:2px 6px;">薄皮爆汁煎餃</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">底層金黃酥脆！搭配特製餃子醋醬、天津飯與炸雞塊超滿足。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Gyoza+no+Ohsho+Osaka+Namba" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋餃子王將</a>
+        </div>
+
+        <!-- 8. 大阪燒 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-cookie-bite" style="color:var(--neon-gold);"></i> 8. 大阪燒（お好み焼き）</div>
+            <span style="font-size:0.7rem; background:rgba(255,184,0,0.15); color:var(--neon-gold); border-radius:4px; padding:2px 6px;">千房 / 味乃家</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">鐵板現煎高麗菜豬肉海鮮！刷滿濃郁甜醬、美乃滋與跳動柴魚片。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Ajinoya+Okonomiyaki+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋味乃家大阪燒</a>
+        </div>
+
+        <!-- 9. 章魚丸 -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-circle" style="color:var(--neon-pink);"></i> 9. 章魚丸（たこ焼き）</div>
+            <span style="font-size:0.7rem; background:rgba(255,42,109,0.15); color:var(--neon-pink); border-radius:4px; padding:2px 6px;">本家大たこ / 甲賀流</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">大阪靈魂街頭小吃！外酥內爆漿，大塊新鮮章魚肉與青蔥。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Kogaryu+Takoyaki+America-mura" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋甲賀流章魚燒</a>
+        </div>
+
+        <!-- 10. 居酒屋(自製) -->
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <div style="font-weight:800; color:#fff; font-size:0.92rem;"><i class="fa-solid fa-wine-glass" style="color:var(--neon-cyan);"></i> 10. 居酒屋 (自製 / 鳥貴族)</div>
+            <span style="font-size:0.7rem; background:rgba(5,217,232,0.15); color:var(--neon-cyan); border-radius:4px; padding:2px 6px;">鳥貴族 / 民宿小酌</span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-bottom:8px;">鳥貴族均一價現烤雞肉串燒、生啤酒，或在 LAMU 超市自選生魚片小菜。</div>
+          <a class="btn-map-action btn-google-maps" style="height:36px; font-size:0.78rem;" href="https://www.google.com/maps/search/?api=1&query=Torikizoku+Osaka+Namba" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖搜尋鳥貴族</a>
+        </div>
+
       </div>
     </div>
   </div>
