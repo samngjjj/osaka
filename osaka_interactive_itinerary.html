@@ -6,7 +6,7 @@
   <title>大阪關西 9 天 8 夜極致行程 ‧ OSAKA VIBES 2026</title>
   
   <!-- Meta for Mobile & SEO -->
-  <meta name="description" content="大阪關西 9 天 8 夜沉浸式行程指南（25號抵達～2號返程）：通天閣MEGA唐吉訶德、難波心齋橋、梅田商圈、USJ任天堂世界、黑門市場、阿倍野HARUKAS、奈良餵鹿、京都清水寺、海遊館鯨鯊、臨空城Outlet。">
+  <meta name="description" content="大阪關西 9 天 8 夜沉浸式行程指南（25號抵達～2號返程）：通天閣MEGA唐吉訶德、難波心齋橋、梅田商圈、USJ任天堂世界、黑門市場、阿倍野HARUKAS、伏見稻荷、清水寺、奈良餵鹿、海遊館鯨鯊、臨空城Outlet。">
   <meta name="theme-color" content="#080c16">
 
   <!-- Google Fonts: Syne & Plus Jakarta Sans & Noto Sans TC & Zen Old Mincho -->
@@ -1119,7 +1119,7 @@
         </button>
         <button class="tab-item-btn" onclick="switchDay(5)">
           <span class="tab-num">Day 5</span>
-          <span class="tab-sub">29 奈良摸鹿/京都</span>
+          <span class="tab-sub">29 稻荷/清水/奈良</span>
         </button>
         <button class="tab-item-btn" onclick="switchDay(6)">
           <span class="tab-num">Day 6</span>
@@ -1196,12 +1196,10 @@
               <div class="spot-details-grid">
                 <div class="detail-item">
                   <i class="fa-solid fa-store"></i>
-                  <div><span class="detail-lbl">MEGA Donki：</span><span class="detail-val">24 小時營業（全年無休）</span></div>
-                </div>
+                  <div><span class="detail-lbl">MEGA Donki：</span><span class="detail-val">24 小時營業（全年無休）</span></div></div>
                 <div class="detail-item">
                   <i class="fa-solid fa-person-walking"></i>
-                  <div><span class="detail-lbl">交通距離：</span><span class="detail-val">民宿步行 3～5 分鐘即達</span></div>
-                </div>
+                  <div><span class="detail-lbl">交通距離：</span><span class="detail-val">民宿步行 3～5 分鐘即達</span></div></div>
               </div>
 
               <div class="spot-actions-row">
@@ -1424,20 +1422,79 @@
       </div>
     </div>
 
-    <!-- DAY 5 (29號) -->
+    <!-- DAY 5 (29號: 稻荷神社 ➔ 清水寺 ➔ 最後奈良摸鹿) -->
     <div id="day-5" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 5 ‧ 29 號 <span class="day-badge-pill">奈良公園餵鹿 ＆ 京都古都</span></h2>
+          <h2 class="day-main-title">Day 5 ‧ 29 號 <span class="day-badge-pill">伏見稻荷 ➔ 清水寺 ➔ 最後奈良</span></h2>
         </div>
-        <p class="day-itinerary-route">早上前往奈良公園與萌鹿親密互動 ➔ 下午京都伏見稻荷千本鳥居 ➔ 清水寺 ＆ 祇園漫步</p>
+        <p class="day-itinerary-route">上午京都伏見稻荷千本鳥居 ➔ 中午清水寺・三年坂老街 ➔ 下午前往奈良公園親人小鹿餵食 ＆ 東大寺</p>
       </div>
 
       <div class="timeline-wrapper">
+        <!-- 1. 伏見稻荷大社 -->
         <div class="transit-ticket">
           <i class="fa-solid fa-train transit-icon"></i>
-          <span>新今宮 ➔ JR 大和路線快速 直達 ➔ JR 奈良站</span>
-          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 38 分鐘</span>
+          <span>新今宮 ➔ JR快速至京都 ➔ 轉 JR 奈良線（或京阪電車）➔ 伏見稻荷站</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 45 分鐘</span>
+        </div>
+
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-torii-gate"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/fushimi_inari.jpg', '伏見稻荷大社 千本鳥居')">
+              <img src="./images/fushimi_inari.jpg" alt="伏見稻荷大社" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-torii-gate"></i> 第一站：伏見稻荷 千本鳥居</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 08:30 - 11:00</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">伏見稻荷大社（千本鳥居）</h3>
+              <p class="spot-summary">早晨漫步於朱紅色綿延不絕的千本鳥居長廊，摸摸狐狸神使、祈求開運御守與白狐繪馬祈願。</p>
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha+Kyoto" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Fushimi+Inari+Taisha" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. 清水寺 ＆ 祇園 -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train-subway transit-icon"></i>
+          <span>伏見稻荷 ➔ 京阪電車搭 4 站 ➔ 清水五條 / 祇園四條（步行至清水寺）</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 15 分鐘</span>
+        </div>
+
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-vihara"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/kiyomizu_dera.jpg', '世界文化遺產 清水寺')">
+              <img src="./images/kiyomizu_dera.jpg" alt="清水寺" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-landmark"></i> 第二站：世界文化遺產 清水寺</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 11:30 - 14:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">清水寺 ＆ 二年坂・三年坂 ＆ 祇園</h3>
+              <p class="spot-summary">登上清水舞台遠眺京都古城全景，探訪音羽靈泉；漫步二年坂三年坂老街石板路、品嚐抹茶甜品與京料理午餐，漫步至花見小路。</p>
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera+Kyoto" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Kiyomizu-dera" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. 最後前往奈良摸鹿 -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train transit-icon"></i>
+          <span>京都 / 祇園 ➔ 搭乘 近鐵特急/急行 或 JR 奈良線 直達 ➔ 奈良站</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 40 分鐘</span>
         </div>
 
         <div class="timeline-item-card highlight">
@@ -1445,15 +1502,15 @@
           <div class="spot-card">
             <div class="spot-card-photo" onclick="openLightbox('./images/nara_deer.jpg', '奈良公園與親人小鹿')">
               <img src="./images/nara_deer.jpg" alt="奈良小鹿" loading="lazy">
-              <span class="photo-tag-overlay"><i class="fa-solid fa-paw"></i> 奈良公園 ＆ 萌鹿互動</span>
+              <span class="photo-tag-overlay"><i class="fa-solid fa-paw"></i> 最後壓軸：奈良公園 ＆ 萌鹿互動</span>
             </div>
             <div class="spot-card-body">
               <div class="spot-top-meta">
-                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 08:30 - 11:30</span>
-                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 15:30 - 18:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s3')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
               </div>
               <h3 class="spot-name">奈良公園 ＆ 東大寺 ＆ 萌鹿餵食</h3>
-              <p class="spot-summary">早晨前往奈良公園與親人小鹿互動！購買鹿仙貝（¥200）體驗小鹿點頭討食，漫步至壯觀的世界遺產東大寺大佛殿。</p>
+              <p class="spot-summary">下午來到奈良公園與親人小鹿互動！購買鹿仙貝（¥200）體驗小鹿點頭討食，漫步至壯觀的世界遺產東大寺大佛殿。</p>
               <div class="spot-actions-row">
                 <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Nara+Park+Japan" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
                 <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Nara+Park" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
@@ -1464,64 +1521,8 @@
 
         <div class="transit-ticket">
           <i class="fa-solid fa-train transit-icon"></i>
-          <span>JR 奈良站 ➔ JR 奈良線直達 ➔ 伏見稻荷站</span>
-          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 45 分鐘</span>
-        </div>
-
-        <div class="timeline-item-card">
-          <div class="timeline-pin"><i class="fa-solid fa-torii-gate"></i></div>
-          <div class="spot-card">
-            <div class="spot-card-photo" onclick="openLightbox('./images/fushimi_inari.jpg', '伏見稻荷大社 千本鳥居')">
-              <img src="./images/fushimi_inari.jpg" alt="伏見稻荷大社" loading="lazy">
-              <span class="photo-tag-overlay"><i class="fa-solid fa-torii-gate"></i> 伏見稻荷大社 千本鳥居</span>
-            </div>
-            <div class="spot-card-body">
-              <div class="spot-top-meta">
-                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 12:30 - 14:30</span>
-                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
-              </div>
-              <h3 class="spot-name">伏見稻荷大社（千本鳥居）</h3>
-              <p class="spot-summary">朱紅色千本鳥居長廊、狐狸神使、開運御守與繪馬祈願。</p>
-              <div class="spot-actions-row">
-                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha+Kyoto" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Fushimi+Inari+Taisha" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="transit-step-box">
-          <i class="fa-solid fa-train-subway transit-icon"></i>
-          <span>京阪電車至清水五條 / 祇園四條 ➔ 步行至清水寺</span>
-          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 20 分鐘</span>
-        </div>
-
-        <div class="timeline-item-card highlight">
-          <div class="timeline-pin"><i class="fa-solid fa-vihara"></i></div>
-          <div class="spot-card">
-            <div class="spot-card-photo" onclick="openLightbox('./images/kiyomizu_dera.jpg', '世界文化遺產 清水寺')">
-              <img src="./images/kiyomizu_dera.jpg" alt="清水寺" loading="lazy">
-              <span class="photo-tag-overlay"><i class="fa-solid fa-landmark"></i> 世界文化遺產 清水寺</span>
-            </div>
-            <div class="spot-card-body">
-              <div class="spot-top-meta">
-                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 15:00 - 18:30</span>
-                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s3')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
-              </div>
-              <h3 class="spot-name">清水寺 ＆ 二年坂・三年坂 ＆ 祇園</h3>
-              <p class="spot-summary">登上清水舞台遠眺京都古城全景，探訪音羽靈泉；漫步三年坂老街石板路、品嚐抹茶甜品，漫步至花見小路。</p>
-              <div class="spot-actions-row">
-                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera+Kyoto" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Kiyomizu-dera" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="transit-ticket">
-          <i class="fa-solid fa-train transit-icon"></i>
-          <span>祇園四條（京阪）或 京都站（JR新快速）➔ 返回大阪新今宮</span>
-          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 50 分鐘</span>
+          <span>JR 奈良站 ➔ JR 大和路線快速 直達 ➔ 返回大阪新今宮民宿</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 38 分鐘</span>
         </div>
       </div>
     </div>
@@ -1548,7 +1549,7 @@
           </div>
         </div>
 
-        <div class="transit-step-box">
+        <div class="transit-ticket">
           <i class="fa-solid fa-train-subway transit-icon"></i>
           <span>動物園前站 ➔ 地鐵中央線 ➔ 大阪港站（步行 5 分鐘）</span>
           <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 25 分鐘</span>
@@ -1588,7 +1589,7 @@
       </div>
 
       <div class="timeline-wrapper">
-        <div class="transit-step-box">
+        <div class="transit-ticket">
           <i class="fa-solid fa-train-subway transit-icon"></i>
           <span>動物園前站 ➔ 御堂筋線搭 2 站 ➔ 心齋橋站（7 號出口直達美國村）</span>
           <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 6 分鐘</span>
