@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>大阪關西 7 天 6 夜極致行程 ‧ OSAKA VIBES 2026</title>
+  
+  <!-- Meta for Mobile & SEO -->
+  <meta name="description" content="大阪關西 7 天 6 夜沉浸式行程指南：USJ任天堂世界、道頓堀夜遊、阿倍野HARUKAS、梅田空中庭園、京都清水寺、海遊館鯨鯊，支援雙地圖導航與即時匯率換算。">
+  <meta name="theme-color" content="#080c16">
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans & Noto Sans TC & Zen Antique Soft -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       OSAKA SOUL x SmoothUI Design System
+       ========================================================================== */
+    :root {
+      --bg-kuro: #070a12;
+      --bg-surface: #0e1424;
+      --bg-surface-elevated: #151f38;
+      --bg-card: rgba(18, 26, 46, 0.85);
+      --bg-card-hover: rgba(26, 38, 68, 0.95);
+      --bg-glass: rgba(14, 20, 36, 0.75);
+
+      /* Osaka Electric Neon Palette */
+      --osaka-pink: #ff2a6d;
+      --osaka-cyan: #05d9e8;
+      --osaka-gold: #ffb800;
+      --osaka-amber: #ff6b35;
+      --osaka-purple: #9d4edd;
+      --osaka-matcha: #00e676;
+      --osaka-blue: #3a86ff;
+      
+      --text-pure: #ffffff;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --border-light: rgba(255, 255, 255, 0.08);
+      --border-neon: rgba(5, 217, 232, 0.35);
+      --border-pink: rgba(255, 42, 109, 0.35);
+
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+      
+      --radius-full: 9999px;
+      --radius-2xl: 28px;
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --radius-sm: 6px;
+      
+      --shadow-ambient: 0 20px 50px -15px rgba(0, 0, 0, 0.8);
+      --shadow-neon-cyan: 0 0 25px rgba(5, 217, 232, 0.3);
+      --shadow-neon-pink: 0 0 25px rgba(255, 42, 109, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, sans-serif;
+      background-color: var(--bg-kuro);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-bottom: 100px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Traditional Japanese Asanoha / Wave Grid Ambient Backdrop */
+    .ambient-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      background: 
+        radial-gradient(circle at 10% 15%, rgba(255, 42, 109, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 90% 20%, rgba(5, 217, 232, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(157, 78, 221, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 90%, rgba(255, 184, 0, 0.08) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==========================================================================
+       Hero Section - Real Osaka Atmosphere & Identity
+       ========================================================================== */
+    .hero-banner-card {
+      position: relative;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 42, 109, 0.15);
+      background: #0d1322;
+    }
+
+    .hero-cover {
+      position: relative;
+      width: 100%;
+      height: clamp(260px, 42vw, 360px);
+    }
+
+    .hero-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      filter: brightness(0.75) contrast(1.1);
+      transform: scale(1.02);
+      transition: transform 1.2s var(--ease-spring);
+    }
+
+    .hero-banner-card:hover .hero-cover img {
+      transform: scale(1.06);
+    }
+
+    .hero-gradient-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7, 10, 18, 0.2) 0%, rgba(7, 10, 18, 0.6) 50%, var(--bg-kuro) 100%);
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-top-badges {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .osaka-kanji-badge {
+      font-family: 'Zen Old Mincho', serif;
+      background: rgba(255, 42, 109, 0.25);
+      border: 1px solid var(--osaka-pink);
+      color: #ff85a2;
+      padding: 3px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255, 42, 109, 0.5);
+    }
+
+    .osaka-sub-badge {
+      background: rgba(5, 217, 232, 0.2);
+      border: 1px solid var(--osaka-cyan);
+      color: #72f5ff;
+      padding: 3px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-title span.neon-accent {
+      background: linear-gradient(135deg, #05d9e8 0%, #ff2a6d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 15px rgba(255, 42, 109, 0.4));
+    }
+
+    .hero-desc {
+      color: #cbd5e1;
+      font-size: clamp(0.88rem, 2.2vw, 1rem);
+      font-weight: 500;
+      max-width: 650px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    /* Quick Action Hub under Hero */
+    .quick-action-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .action-btn-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 12px 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s var(--ease-spring);
+      text-decoration: none;
+    }
+
+    .action-btn-chip:hover {
+      background: var(--bg-surface-elevated);
+      border-color: var(--osaka-cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(5, 217, 232, 0.2);
+    }
+
+    .action-btn-chip i {
+      font-size: 1rem;
+      color: var(--osaka-cyan);
+    }
+
+    /* ==========================================================================
+       Currency Converter Widget (JPY ⇄ HKD / TWD)
+       ========================================================================== */
+    .converter-card {
+      background: linear-gradient(145deg, rgba(21, 31, 56, 0.9) 0%, rgba(13, 19, 36, 0.95) 100%);
+      border: 1px solid rgba(0, 230, 118, 0.35);
+      border-radius: var(--radius-2xl);
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-ambient);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .converter-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #00e676, #05d9e8, #ff2a6d);
+    }
+
+    .converter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .converter-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #69f0ae;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mode-switch-pill {
+      display: flex;
+      background: rgba(10, 15, 28, 0.8);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-full);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .mode-tab {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all 0.25s var(--ease-spring);
+    }
+
+    .mode-tab.active {
+      background: #00e676;
+      color: #052613;
+      box-shadow: 0 2px 8px rgba(0, 230, 118, 0.3);
+    }
+
+    .converter-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    @media (max-width: 580px) {
+      .converter-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .converter-icon-circle {
+        transform: rotate(90deg);
+        margin: -4px auto;
+      }
+    }
+
+    .input-box {
+      background: rgba(10, 15, 28, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 12px 16px;
+      transition: all 0.3s var(--ease-spring);
+    }
+
+    .input-box:focus-within {
+      border-color: #00e676;
+      box-shadow: 0 0 20px rgba(0, 230, 118, 0.25);
+    }
+
+    .input-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .input-box input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 900;
+      font-family: inherit;
+      outline: none;
+      width: 100%;
+    }
+
+    .converter-icon-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(0, 230, 118, 0.15);
+      border: 1px solid rgba(0, 230, 118, 0.3);
+      color: #00e676;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin: 0 auto;
+    }
+
+    .quick-chips-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+      align-items: center;
+    }
+
+    .quick-chip-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s var(--ease-spring);
+    }
+
+    .quick-chip-btn:hover {
+      background: rgba(0, 230, 118, 0.2);
+      border-color: #00e676;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       Hotel Base Camp Card
+       ========================================================================== */
+    .hotel-banner {
+      background: linear-gradient(135deg, rgba(28, 38, 64, 0.9) 0%, rgba(15, 21, 38, 0.95) 100%);
+      border: 1px solid rgba(255, 184, 0, 0.4);
+      border-radius: var(--radius-2xl);
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    @media (min-width: 700px) {
+      .hotel-banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .hotel-info-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hotel-icon-badge {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 184, 0, 0.15);
+      border: 1px solid rgba(255, 184, 0, 0.4);
+      color: var(--osaka-gold);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      box-shadow: 0 0 15px rgba(255, 184, 0, 0.2);
+    }
+
+    .hotel-tag {
+      font-size: 0.74rem;
+      color: var(--osaka-gold);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .hotel-name-addr {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .hotel-sub {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .hotel-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ==========================================================================
+       Sticky Day Navigation (SmoothUI Fluid Slider)
+       ========================================================================== */
+    .tabs-sticky-wrapper {
+      position: sticky;
+      top: 14px;
+      z-index: 120;
+      background: rgba(7, 10, 18, 0.94);
+      backdrop-filter: blur(22px);
+      border-radius: var(--radius-2xl);
+      padding: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: 28px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+    }
+
+    .day-tabs-slider {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 2px;
+    }
+
+    .day-tabs-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-item-btn {
+      flex: 1;
+      min-width: 106px;
+      padding: 10px 8px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      border-radius: var(--radius-xl);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      white-space: nowrap;
+      transition: all 0.3s var(--ease-spring);
+    }
+
+    .tab-item-btn .tab-num {
+      font-size: 0.95rem;
+      font-weight: 900;
+      font-family: inherit;
+    }
+
+    .tab-item-btn .tab-sub {
+      font-size: 0.74rem;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    .tab-item-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .tab-item-btn.active {
+      background: linear-gradient(135deg, var(--osaka-pink) 0%, #ff577f 50%, var(--osaka-amber) 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(255, 42, 109, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .tab-item-btn.active .tab-sub {
+      color: #ffe4e6;
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       Day Panels & Timeline Architecture
+       ========================================================================== */
+    .day-panel {
+      display: none;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.35s var(--ease-spring), transform 0.35s var(--ease-spring);
+    }
+
+    .day-panel.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .day-header-box {
+      background: linear-gradient(135deg, rgba(26, 36, 64, 0.8) 0%, rgba(14, 20, 36, 0.9) 100%);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-2xl);
+      padding: 22px 24px;
+      margin-bottom: 26px;
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .day-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .day-main-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .day-badge-pill {
+      background: rgba(5, 217, 232, 0.15);
+      border: 1px solid var(--osaka-cyan);
+      color: #72f5ff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+    }
+
+    .day-itinerary-route {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    /* Timeline Section */
+    .timeline-wrapper {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 24px;
+      bottom: 24px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--osaka-cyan), var(--osaka-pink), rgba(255, 255, 255, 0.08));
+    }
+
+    .timeline-item-card {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .timeline-pin {
+      position: absolute;
+      left: -32px;
+      top: 20px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--bg-kuro);
+      border: 2px solid var(--osaka-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      color: var(--osaka-cyan);
+      z-index: 2;
+      box-shadow: 0 0 12px rgba(5, 217, 232, 0.4);
+      transition: all 0.3s var(--ease-spring);
+    }
+
+    .timeline-item-card.highlight .timeline-pin {
+      border-color: var(--osaka-pink);
+      color: var(--osaka-pink);
+      box-shadow: 0 0 15px rgba(255, 42, 109, 0.6);
+    }
+
+    /* Transit Connector Ticket */
+    .transit-ticket {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(18, 28, 50, 0.65);
+      border: 1px dashed rgba(5, 217, 232, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 12px 18px;
+      margin: 18px 0;
+      color: #bae6fd;
+      font-size: 0.88rem;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    }
+
+    .transit-ticket i.transit-icon {
+      color: var(--osaka-cyan);
+      font-size: 1.15rem;
+    }
+
+    .transit-time-pill {
+      margin-left: auto;
+      background: rgba(5, 217, 232, 0.18);
+      border: 1px solid rgba(5, 217, 232, 0.35);
+      color: #e0f2fe;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    /* Spot Cards with Verified Local Images */
+    .spot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      transition: all 0.35s var(--ease-spring);
+      box-shadow: var(--shadow-ambient);
+      backdrop-filter: blur(14px);
+    }
+
+    .spot-card:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-3px);
+      box-shadow: 0 25px 45px -15px rgba(0, 0, 0, 0.85), 0 0 20px rgba(5, 217, 232, 0.15);
+    }
+
+    .spot-card-photo {
+      width: 100%;
+      height: 230px;
+      position: relative;
+      overflow: hidden;
+      background: #090e1a;
+      cursor: pointer;
+    }
+
+    .spot-card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-spring);
+    }
+
+    .spot-card:hover .spot-card-photo img {
+      transform: scale(1.06);
+    }
+
+    .photo-tag-overlay {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(7, 10, 18, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .photo-zoom-hint {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      color: #e2e8f0;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: all 0.3s var(--ease-spring);
+    }
+
+    .spot-card:hover .photo-zoom-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .spot-card-body {
+      padding: 22px 24px;
+    }
+
+    .spot-top-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .time-slot-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(5, 217, 232, 0.12);
+      border: 1px solid rgba(5, 217, 232, 0.25);
+      color: var(--osaka-cyan);
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .checkin-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-light);
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s var(--ease-spring);
+    }
+
+    .checkin-btn:hover {
+      background: rgba(0, 230, 118, 0.15);
+      color: #00e676;
+      border-color: rgba(0, 230, 118, 0.4);
+    }
+
+    .checkin-btn.done {
+      background: rgba(0, 230, 118, 0.2);
+      border-color: #00e676;
+      color: #00e676;
+    }
+
+    .spot-name {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -0.2px;
+    }
+
+    .spot-summary {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    /* Spot Details Grid */
+    .spot-details-grid {
+      background: rgba(8, 12, 22, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 14px 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: 620px) {
+      .spot-details-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.84rem;
+    }
+
+    .detail-item i {
+      color: var(--osaka-gold);
+      margin-top: 3px;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .detail-lbl {
+      color: var(--text-dim);
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    .detail-val {
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    /* Action Buttons (Dual Maps & Address Copy) */
+    .spot-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .btn-nav-map {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s var(--ease-spring);
+      border: 1px solid transparent;
+    }
+
+    .btn-nav-map:active {
+      transform: scale(0.97);
+    }
+
+    .btn-google {
+      background: rgba(66, 133, 244, 0.15);
+      border-color: rgba(66, 133, 244, 0.4);
+      color: #93c5fd;
+    }
+
+    .btn-google:hover {
+      background: #2563eb;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-apple {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #e2e8f0;
+    }
+
+    .btn-apple:hover {
+      background: #ffffff;
+      color: #070a12;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-copy {
+      background: rgba(157, 78, 221, 0.15);
+      border-color: rgba(157, 78, 221, 0.35);
+      color: #e0aaff;
+    }
+
+    .btn-copy:hover {
+      background: #9d4edd;
+      color: #fff;
+    }
+
+    /* Free Time Card Special Style */
+    .spot-card-free {
+      background: linear-gradient(135deg, rgba(0, 230, 118, 0.12) 0%, rgba(14, 20, 36, 0.85) 100%);
+      border: 1px dashed rgba(0, 230, 118, 0.45);
+      padding: 24px;
+    }
+
+    /* ==========================================================================
+       Photo Lightbox Modal
+       ========================================================================== */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s var(--ease-spring);
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      object-fit: contain;
+    }
+
+    .lightbox-caption {
+      margin-top: 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--ease-spring) 0.25s;
+    }
+
+    .lightbox-close:hover {
+      background: var(--osaka-pink);
+      transform: scale(1.1);
+    }
+
+    /* ==========================================================================
+       Modals / Drawers (Checklist & Japanese Phrases)
+       ========================================================================== */
+    .drawer-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 900;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      transition: opacity 0.3s var(--ease-spring);
+    }
+
+    .drawer-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .drawer-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-2xl);
+      max-width: 600px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    }
+
+    .drawer-title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .drawer-title-text {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .check-list-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .check-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: all 0.2s var(--ease-spring);
+    }
+
+    .check-row:hover {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .check-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #00e676;
+      cursor: pointer;
+    }
+
+    .check-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      flex: 1;
+    }
+
+    .phrase-list-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .phrase-card-item {
+      background: rgba(8, 12, 22, 0.6);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+    }
+
+    .phrase-zh {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .phrase-jp {
+      font-size: 0.86rem;
+      color: var(--osaka-cyan);
+      font-weight: 700;
+    }
+
+    .phrase-ro {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    /* Toast Notifications */
+    .toast-popup {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(50px);
+      background: #00e676;
+      color: #042f1f;
+      font-weight: 800;
+      font-size: 0.88rem;
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s var(--ease-spring);
+    }
+
+    .toast-popup.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-light);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Backdrop -->
+  <div class="ambient-background"></div>
+
+  <div class="container">
+    
+    <!-- Hero Banner with Authentic Osaka Soul -->
+    <div class="hero-banner-card">
+      <div class="hero-cover">
+        <img src="./images/osaka_hero.jpg" alt="道頓堀霓虹不夜城" onerror="this.src='./images/dotonbori_glico.jpg'">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-top-badges">
+            <span class="osaka-kanji-badge">天下の台所 ‧ 浪速之魂</span>
+            <span class="osaka-sub-badge"><i class="fa-solid fa-plane-departure"></i> 7 DAYS 6 NIGHTS</span>
+          </div>
+          <h1 class="hero-title">OSAKA <span class="neon-accent">JOURNEY 2026</span></h1>
+          <p class="hero-desc">大阪關西 7 天 6 夜全景指南 ‧ 點到點通勤耗時 ‧ 雙地圖無縫導航 ‧ 實時雙向匯率</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Utility Bar -->
+    <div class="quick-action-bar">
+      <button class="action-btn-chip" onclick="openDrawer('checklistDrawer')">
+        <i class="fa-solid fa-clipboard-check"></i> 出發行前清單
+      </button>
+      <button class="action-btn-chip" onclick="openDrawer('phrasesDrawer')">
+        <i class="fa-solid fa-language"></i> 常用日語速查
+      </button>
+      <button class="action-btn-chip" onclick="scrollToHotel()">
+        <i class="fa-solid fa-hotel"></i> 全程住宿大本營
+      </button>
+    </div>
+
+    <!-- Currency Converter Widget -->
+    <div class="converter-card">
+      <div class="converter-header">
+        <div class="converter-title">
+          <i class="fa-solid fa-coins"></i> 即時雙向匯率計算器
+        </div>
+        <div class="mode-switch-pill">
+          <button class="mode-tab active" id="btnHKD" onclick="setCurrencyMode('HKD')">JPY ⇄ HKD</button>
+          <button class="mode-tab" id="btnTWD" onclick="setCurrencyMode('TWD')">JPY ⇄ TWD</button>
+        </div>
+      </div>
+      
+      <div class="converter-grid">
+        <div class="input-box">
+          <div class="input-label-row">
+            <span>日圓 (JPY ¥)</span>
+            <span id="rateDisplay" style="color:#00e676; font-weight:700;">1 JPY ≈ 0.0493 HKD</span>
+          </div>
+          <input type="number" id="jpyInput" value="10000" oninput="calculateFromJPY()">
+        </div>
+
+        <div class="converter-icon-circle">
+          <i class="fa-solid fa-right-left"></i>
+        </div>
+
+        <div class="input-box">
+          <div class="input-label-row">
+            <span id="foreignLabel">港幣 (HKD $)</span>
+            <span style="color:var(--text-dim);">換算結果</span>
+          </div>
+          <input type="number" id="foreignInput" value="493" oninput="calculateFromForeign()">
+        </div>
+      </div>
+
+      <div class="quick-chips-bar">
+        <span style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">常用快選：</span>
+        <button class="quick-chip-btn" onclick="setQuickJPY(100)">¥100 (LAMU章魚燒)</button>
+        <button class="quick-chip-btn" onclick="setQuickJPY(500)">¥500 (超商宵夜)</button>
+        <button class="quick-chip-btn" onclick="setQuickJPY(1000)">¥1,000 (拉麵/串炸)</button>
+        <button class="quick-chip-btn" onclick="setQuickJPY(5000)">¥5,000 (免稅門檻)</button>
+        <button class="quick-chip-btn" onclick="setQuickJPY(10000)">¥10,000 (百貨服飾)</button>
+        <button class="quick-chip-btn" onclick="setQuickJPY(30000)">¥30,000 (電器旗艦)</button>
+      </div>
+    </div>
+
+    <!-- Hotel Base Banner -->
+    <div class="hotel-banner" id="hotelSection">
+      <div class="hotel-info-group">
+        <div class="hotel-icon-badge"><i class="fa-solid fa-hotel"></i></div>
+        <div>
+          <div class="hotel-tag">全程住宿大本營</div>
+          <div class="hotel-name-addr">大阪市浪速區惠美須西 2-4-5</div>
+          <div class="hotel-sub">近新今宮站 / 動物園前站 / 惠美須町站（南海電鐵關空直達）</div>
+        </div>
+      </div>
+      <div class="hotel-btns">
+        <button class="btn-nav-map btn-copy" onclick="copyText('大阪府大阪市浪速区恵美須西2-4-5', '民宿地址已複製！可直接出示計程車司機')">
+          <i class="fa-regular fa-copy"></i> 複製日文地址
+        </button>
+        <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=2-ch%C5%8Dme-4-5+Ebisunishi+Naniwa+Ward+Osaka" target="_blank">
+          <i class="fa-solid fa-location-dot"></i> Google 地圖
+        </a>
+        <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=2-chome-4-5+Ebisunishi+Naniwa+Ward+Osaka" target="_blank">
+          <i class="fa-brands fa-apple"></i> Apple 地圖
+        </a>
+      </div>
+    </div>
+
+    <!-- Sticky Smooth Day Navigation Tabs -->
+    <div class="tabs-sticky-wrapper">
+      <div class="day-tabs-slider">
+        <button class="tab-item-btn active" onclick="switchDay(1)">
+          <span class="tab-num">Day 1</span>
+          <span class="tab-sub">26 抵達/難波</span>
+        </button>
+        <button class="tab-item-btn" onclick="switchDay(2)">
+          <span class="tab-num">Day 2</span>
+          <span class="tab-sub">27 USJ/LAMU</span>
+        </button>
+        <button class="tab-item-btn" onclick="switchDay(3)">
+          <span class="tab-num">Day 3</span>
+          <span class="tab-sub">28 阿倍野300</span>
+        </button>
+        <button class="tab-item-btn" onclick="switchDay(4)">
+          <span class="tab-num">Day 4</span>
+          <span class="tab-sub">29 梅田購物</span>
+        </button>
+        <button class="tab-item-btn" onclick="switchDay(5)">
+          <span class="tab-num">Day 5</span>
+          <span class="tab-sub">30 京都古都</span>
+        </button>
+        <button class="tab-item-btn" onclick="switchDay(6)">
+          <span class="tab-num">Day 6</span>
+          <span class="tab-sub">31 海遊館鯨鯊</span>
+        </button>
+        <button class="tab-item-btn" onclick="switchDay(7)">
+          <span class="tab-num">Day 7</span>
+          <span class="tab-sub">1 伴手禮/返程</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 1
+         ========================================================================== -->
+    <div id="day-1" class="day-panel active">
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 1 ‧ 26 號 <span class="day-badge-pill">抵達關西 ＆ 難波夜遊</span></h2>
+        </div>
+        <p class="day-itinerary-route">關西國際機場 ➔ 南海電鐵直達新今宮 ➔ 民宿 Check-in ➔ 道頓堀固力果看板 ＆ 難波居酒屋宵夜</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Spot 1: Airport -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-plane"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/kix_airport.jpg', '關西國際機場（KIX）航廈')">
+              <img src="./images/kix_airport.jpg" alt="關西國際機場" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-plane-arrival"></i> 關西國際機場（KIX）</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 19:30 - 20:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd1_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">關西國際機場 抵達與入境</h3>
+              <p class="spot-summary">班機降落於關西機場，依循指標完成入境審查、領取行李。出海關後前往 2 樓鐵道聯絡橋搭車。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-door-open"></i>
+                  <div><span class="detail-lbl">航廈開放：</span><span class="detail-val">24 小時無休開放</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-qrcode"></i>
+                  <div><span class="detail-lbl">通關提示：</span><span class="detail-val">提前截圖 Visit Japan Web QR Code</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Kansai+International+Airport" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 2: Airport Dinner -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-utensils"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 20:30 - 21:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd1_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">關西機場第一航廈 美食廣場晚餐</h3>
+              <p class="spot-summary">於第一航廈 Tasty Street 或 2F 餐廳區享用抵達日本的第一餐，填飽肚子再出發進市區。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">營業時間：</span><span class="detail-val">約 07:00 - 22:00（各店略有不同）</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-bowl-food"></i>
+                  <div><span class="detail-lbl">推薦美食：</span><span class="detail-val">神座拉麵、本家章魚燒、烏龍麵</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Kansai+Airport+Terminal+1+Restaurants" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Kansai+Airport+Terminal+1" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit Step 1 -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train-subway transit-icon"></i>
+          <span>關西機場站 ➔ 南海電鐵（空港急行 / 特急 Rapi:t）直達 ➔ 新今宮站 ➔ 步行至民宿</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 45 分鐘</span>
+        </div>
+
+        <!-- Spot 3: Dotonbori -->
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-moon"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/dotonbori_glico.jpg', '道頓堀跑跑人看板與霓虹運河')">
+              <img src="./images/dotonbori_glico.jpg" alt="道頓堀夜景" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-camera"></i> 道頓堀霓虹不夜城</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 22:30 以後</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd1_s3')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">道頓堀 ＆ 難波夜遊 ＆ 通天閣散策</h3>
+              <p class="spot-summary">辦理入住後出發展開大阪夜生活！打卡固力果跑跑人霓虹招牌、品嚐深夜章魚燒，逛 24 小時驚安殿堂唐吉訶德。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">營業時間：</span><span class="detail-val">唐吉訶德/部分居酒屋 24 小時營業</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <div><span class="detail-lbl">交通距離：</span><span class="detail-val">步行至通天閣 5 分鐘 / 地鐵至難波 8 分鐘</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Glico+Sign+Osaka" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Dotonbori+Osaka" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 2
+         ========================================================================== -->
+    <div id="day-2" class="day-panel">
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 2 ‧ 27 號 <span class="day-badge-pill">環球影城 ＆ 超狂平價超市</span></h2>
+        </div>
+        <p class="day-itinerary-route">全日狂歡日本環球影城（USJ） ➔ 回程安治川口 LAMU 24H 超市超值大採購</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Transit to USJ -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train transit-icon"></i>
+          <span>新今宮站 ➔ JR 環狀線至西九條 ➔ 轉乘 JR 櫻島線 ➔ 環球城站（Universal City）</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 25 分鐘</span>
+        </div>
+
+        <!-- Spot: USJ -->
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/usj_nintendo.jpg', '日本環球影城 Universal Studios Japan')">
+              <img src="./images/usj_nintendo.jpg" alt="日本環球影城" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-gamepad"></i> 超級任天堂世界 ＆ 哈利波特</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 08:30 - 20:00</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd2_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">日本環球影城（Universal Studios Japan）</h3>
+              <p class="spot-summary">沉浸在超級任天堂世界（瑪利歐賽車、能量手環敲磚塊）、哈利波特魔法世界、小小兵樂園以及刺激的飛天翼龍！</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">開園時間：</span><span class="detail-val">約 08:30 - 21:00（依官方當日公告）</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-lightbulb"></i>
+                  <div><span class="detail-lbl">入園攻略：</span><span class="detail-val">提早 45 分鐘排隊，進園立即開啟 App 抽取整理券</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Universal+Studios+Japan" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit to LAMU -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train transit-icon"></i>
+          <span>環球城站 ➔ 搭乘 JR 櫻島線（1 站）➔ 安治川口站（出站步行 2 分鐘直達）</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 5 分鐘</span>
+        </div>
+
+        <!-- Spot: LAMU Supermarket -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/lamu_supermarket.jpg', 'LAMU 24小時量販超市')">
+              <img src="./images/lamu_supermarket.jpg" alt="日本量販超市" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-store"></i> 24 小時量販神級超市</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 20:30 - 22:00</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd2_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">LAMU 此花店（ラ・ムー 此花店）</h3>
+              <p class="spot-summary">超人氣平價量販超市！壽司便當、炸物熟食、大包裝零食極度划算，門口附設傳說中的 100 円章魚燒與霜淇淋攤。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">營業時間：</span><span class="detail-val">24 小時營業（全年無休）</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-fire"></i>
+                  <div><span class="detail-lbl">必買推薦：</span><span class="detail-val">¥100 章魚燒（PA-KU PA-KU）、宵夜便當</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=LAMU+Konohana+Osaka" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=LAMU+Konohana+Osaka" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit back -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train transit-icon"></i>
+          <span>安治川口站 ➔ JR 櫻島線至西九條 ➔ 轉 JR 環狀線 ➔ 返回新今宮民宿</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 20 分鐘</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 3
+         ========================================================================== -->
+    <div id="day-3" class="day-panel">
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 3 ‧ 28 號 <span class="day-badge-pill">阿倍野摩天商圈 ＆ 悠閒自由行</span></h2>
+        </div>
+        <p class="day-itinerary-route">近鐵百貨旗艦店 ＆ HARUKAS 300 展望 ➔ 下午完全自由探索</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Transit to Abeno -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-person-walking transit-icon"></i>
+          <span>民宿 ➔ 悠閒步行（約 15 分鐘）或 地鐵動物園前站搭 1 站至天王寺 ➔ 阿倍野商圈</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 10～15 分鐘</span>
+        </div>
+
+        <!-- Spot: Abeno -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-building"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/abeno_harukas.jpg', '阿倍野 HARUKAS 300 展望大樓')">
+              <img src="./images/abeno_harukas.jpg" alt="阿倍野 HARUKAS" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-mountain-city"></i> 阿倍野 HARUKAS ＆ 天王寺商圈</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 10:00 - 13:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd3_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">阿倍野 HARUKAS ＆ Q's Mall 購物圈</h3>
+              <p class="spot-summary">全日本知名摩天大樓！逛近鐵百貨總店、Abeno Q's Mall（Uniqlo、GU、Bic Camera），可登上 300 公尺高空透明走廊俯瞰關西平原。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">百貨營業：</span><span class="detail-val">10:00 - 20:00（餐廳街至 22:00 或 23:00）</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-eye"></i>
+                  <div><span class="detail-lbl">HARUKAS 300：</span><span class="detail-val">09:00 - 22:00（最後入場 21:30）</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Abeno+Harukas+Osaka" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Abeno+Harukas" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot: Free time -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-compass"></i></div>
+          <div class="spot-card spot-card-free">
+            <div class="spot-top-meta">
+              <span class="time-slot-chip" style="color:#00e676;"><i class="fa-regular fa-clock"></i> 13:30 以後</span>
+              <button class="checkin-btn" onclick="toggleCheckin(this, 'd3_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+            </div>
+            <h3 class="spot-name"><i class="fa-solid fa-sparkles"></i> 下午完全自由時間</h3>
+            <p class="spot-summary">下午無特定行程拘束，可自由穿梭天王寺公園「芝生廣場」、通天閣商店街吃炸串，或回民宿午休補足體力！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 4
+         ========================================================================== -->
+    <div id="day-4" class="day-panel">
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 4 ‧ 29 號 <span class="day-badge-pill">梅田北區旗艦商圈 ＆ 星空夜景</span></h2>
+        </div>
+        <p class="day-itinerary-route">LUCUA、阪急百貨、友都八喜大採買 ➔ 梅田藍天大廈空中庭園 360° 璀璨夜景</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Transit to Umeda -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train-subway transit-icon"></i>
+          <span>動物園前站 ➔ 搭乘大阪地鐵御堂筋線（直達不用轉車）➔ 梅田站</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 15 分鐘</span>
+        </div>
+
+        <!-- Spot: Umeda Shopping -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-bag-shopping"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/umeda_shopping.jpg', '梅田北區旗艦商圈')">
+              <img src="./images/umeda_shopping.jpg" alt="梅田商圈" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-bag-shopping"></i> LUCUA / 阪急 / 友都八喜</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 10:30 - 18:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd4_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">梅田核心百貨群（LUCUA / 阪急百貨 / Yodobashi）</h3>
+              <p class="spot-summary">大阪最繁華時尚中樞！LUCUA 1100 日系潮牌選物、阪急百貨國際美妝精品、Yodobashi 友都八喜超巨型電器與玩具模型天堂。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">營業時間：</span><span class="detail-val">10:30 - 20:30（友都八喜 09:30 - 22:00）</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div><span class="detail-lbl">美食推薦：</span><span class="detail-val">LUCUA B2F「巴魯地下街」宵夜美食街營業至 23:00</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=LUCUA+osaka" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=LUCUA+osaka" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit to Sky Building -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-person-walking transit-icon"></i>
+          <span>LUCUA / JR 大阪站 ➔ 經地下人行步道 ➔ 梅田藍天大廈</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 10 分鐘</span>
+        </div>
+
+        <!-- Spot: Umeda Sky Building -->
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-city"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/umeda_sky.jpg', '梅田藍天大廈 空中庭園展望台')">
+              <img src="./images/umeda_sky.jpg" alt="梅田藍天大廈" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-star"></i> 空中庭園星光步道</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 18:30 - 21:00</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd4_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">梅田藍天大廈 空中庭園展望台</h3>
+              <p class="spot-summary">搭乘懸空星際手扶梯登上 360 度環形露天展望台，腳踏 Lumi Sky Walk 螢光星空步道，盡收大阪最夢幻百萬夜景。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">營業時間：</span><span class="detail-val">09:30 - 22:30（最後入場 22:00）</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-moon"></i>
+                  <div><span class="detail-lbl">參觀建議：</span><span class="detail-val">日落前半小時抵達，一次飽覽夕陽與璀璨夜景</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Umeda+Sky+Building" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit back -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train-subway transit-icon"></i>
+          <span>梅田站 ➔ 大阪地鐵御堂筋線 ➔ 動物園前站 / 新今宮民宿</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 15 分鐘</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 5
+         ========================================================================== -->
+    <div id="day-5" class="day-panel">
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 5 ‧ 30 號 <span class="day-badge-pill">京都古都精華巡禮</span></h2>
+        </div>
+        <p class="day-itinerary-route">伏見稻荷千本鳥居 ➔ 世界遺產清水寺 ➔ 二年坂・三年坂 ➔ 祇園花見小路</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Transit to Kyoto Inari -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train transit-icon"></i>
+          <span>新今宮 ➔ JR 大阪站 ➔ JR 京都線新快速至京都 ➔ 轉 JR 奈良線至伏見稻荷站</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 60 分鐘</span>
+        </div>
+
+        <!-- Spot: Fushimi Inari -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-torii-gate"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/fushimi_inari.jpg', '京都 伏見稻荷大社 千本鳥居')">
+              <img src="./images/fushimi_inari.jpg" alt="伏見稻荷大社" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-torii-gate"></i> 伏見稻荷大社 千本鳥居</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 09:15 - 12:00</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">伏見稻荷大社（千本鳥居）</h3>
+              <p class="spot-summary">京都殿堂級神聖地標！漫步於朱紅色綿延不絕的千本鳥居長廊，摸摸狐狸神使、祈求開運御守與繪馬祈願。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">境內開放：</span><span class="detail-val">24 小時免費自由參拜</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-shield-heart"></i>
+                  <div><span class="detail-lbl">御守授與：</span><span class="detail-val">約 08:30 - 16:30</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha+Kyoto" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Fushimi+Inari+Taisha" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit to Kiyomizu -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train-subway transit-icon"></i>
+          <span>伏見稻荷站 ➔ 搭乘京阪電車至清水五條站 或 祇園四條站 ➔ 步行/接駁公車至清水寺</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 25 分鐘</span>
+        </div>
+
+        <!-- Spot: Kiyomizu -->
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-vihara"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/kiyomizu_dera.jpg', '世界文化遺產 清水寺')">
+              <img src="./images/kiyomizu_dera.jpg" alt="清水寺" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-landmark"></i> 世界文化遺產 清水寺</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 13:30 - 17:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd5_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">清水寺 ＆ 二年坂・三年坂・祇園</h3>
+              <p class="spot-summary">登上清水舞台遠眺京都古城全景，探訪音羽之瀑三道靈泉；漫步三年坂老街石板路、品嚐宇治抹茶甜品，一路漫步至祇園花見小路。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">清水寺時間：</span><span class="detail-val">06:00 - 18:00</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-store"></i>
+                  <div><span class="detail-lbl">周邊老街：</span><span class="detail-val">約 10:00 - 17:30 陸續打烊</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera+Kyoto" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Kiyomizu-dera" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit back -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train transit-icon"></i>
+          <span>祇園四條站（京阪電車）或 京都站（搭 JR 新快速）➔ 順暢返回大阪新今宮</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 50～60 分鐘</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 6
+         ========================================================================== -->
+    <div id="day-6" class="day-panel">
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 6 ‧ 31 號 <span class="day-badge-pill">悠閒早晨 ＆ 世界級海遊館</span></h2>
+        </div>
+        <p class="day-itinerary-route">上午悠閒自由活動 ➔ 下午前往大阪港海遊館觀賞巨型鯨鯊 ＆ 天保山港灣摩天輪</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Morning Free Time -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-mug-saucer"></i></div>
+          <div class="spot-card spot-card-free">
+            <div class="spot-top-meta">
+              <span class="time-slot-chip" style="color:#00e676;"><i class="fa-regular fa-clock"></i> 09:00 - 13:00</span>
+              <button class="checkin-btn" onclick="toggleCheckin(this, 'd6_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+            </div>
+            <h3 class="spot-name"><i class="fa-solid fa-sparkles"></i> 上午悠閒自由時間</h3>
+            <p class="spot-summary">上午無固定集合行程，可自由補眠、享用早午餐、整理戰利品行李或探訪黑門市場。</p>
+          </div>
+        </div>
+
+        <!-- Transit to Kaiyukan -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train-subway transit-icon"></i>
+          <span>民宿 / 動物園前站 ➔ 搭乘大阪地鐵中央線 ➔ 大阪港站（1 號出口步行 5 分鐘）</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 25 分鐘</span>
+        </div>
+
+        <!-- Spot: Kaiyukan -->
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-fish-fins"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/kaiyukan.jpg', '大阪海遊館 巨型鯨鯊水槽')">
+              <img src="./images/kaiyukan.jpg" alt="大阪海遊館" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-water"></i> 世界級大型水族館 巨型鯨鯊</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip" style="color:var(--osaka-pink);"><i class="fa-regular fa-clock"></i> 13:40 - 17:30</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd6_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">大阪海遊館（Osaka Aquarium Kaiyukan）</h3>
+              <p class="spot-summary">世界級水族館！沿著螺旋狀斜坡一路向下環繞 9 公尺深太平洋巨型大水槽，零距離觀賞巨型鯨鯊、魟魚、企鵝與萌海獺。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">營業時間：</span><span class="detail-val">10:00 - 20:00（最晚入場 19:00）</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-ferry"></i>
+                  <div><span class="detail-lbl">港灣設施：</span><span class="detail-val">天保山 Market Place、大摩天輪</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Osaka+Aquarium+Kaiyukan" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit back -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-train-subway transit-icon"></i>
+          <span>大阪港站 ➔ 大阪地鐵中央線 ➔ 返回新今宮民宿周邊居酒屋晚餐</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 25 分鐘</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 7
+         ========================================================================== -->
+    <div id="day-7" class="day-panel">
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 7 ‧ 1 號 <span class="day-badge-pill">伴手禮名產 ＆ 關空返程</span></h2>
+        </div>
+        <p class="day-itinerary-route">難波/天王寺百貨伴手禮最後衝刺 ➔ 寄放行李 ➔ 搭乘南海電鐵直達關西機場返程</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Transit to Namba -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-person-walking transit-icon"></i>
+          <span>民宿 Check-out 寄放行李 ➔ 步行或搭地鐵 1 站至難波高島屋商圈</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 8～10 分鐘</span>
+        </div>
+
+        <!-- Spot: Souvenirs -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-gift"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/souvenirs.jpg', '關西限定伴手禮與精緻甜品')">
+              <img src="./images/souvenirs.jpg" alt="日本伴手禮甜點" loading="lazy">
+              <span class="photo-tag-overlay"><i class="fa-solid fa-gift"></i> 關西必買名產 ＆ 百貨地下街</span>
+              <span class="photo-zoom-hint"><i class="fa-solid fa-expand"></i> 點擊放大</span>
+            </div>
+            <div class="spot-card-body">
+              <div class="spot-top-meta">
+                <span class="time-slot-chip"><i class="fa-regular fa-clock"></i> 10:00 - 13:00</span>
+                <button class="checkin-btn" onclick="toggleCheckin(this, 'd7_s1')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+              </div>
+              <h3 class="spot-name">買手信（難波高島屋 / 難波 CITY / 天王寺商場）</h3>
+              <p class="spot-summary">於百貨地下街（Depachika）採買關西限定抹茶夾心餅乾、生巧克力、年輪蛋糕、海苔仙貝與各式精美包裝手信禮盒。</p>
+              
+              <div class="spot-details-grid">
+                <div class="detail-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div><span class="detail-lbl">百貨營業：</span><span class="detail-val">10:00 - 20:00</span></div>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-box-open"></i>
+                  <div><span class="detail-lbl">推薦商場：</span><span class="detail-val">高島屋大阪店 B1F、南海 Namba CITY</span></div>
+                </div>
+              </div>
+
+              <div class="spot-actions-row">
+                <a class="btn-nav-map btn-google" href="https://www.google.com/maps/search/?api=1&query=Takashimaya+Osaka+Store" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-nav-map btn-apple" href="https://maps.apple.com/?q=Takashimaya+Osaka" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot: Final Free Time -->
+        <div class="timeline-item-card">
+          <div class="timeline-pin"><i class="fa-solid fa-hourglass-end"></i></div>
+          <div class="spot-card spot-card-free">
+            <div class="spot-top-meta">
+              <span class="time-slot-chip" style="color:#00e676;"><i class="fa-regular fa-clock"></i> 13:00 以後</span>
+              <button class="checkin-btn" onclick="toggleCheckin(this, 'd7_s2')"><i class="fa-regular fa-circle-check"></i> 打卡完成</button>
+            </div>
+            <h3 class="spot-name"><i class="fa-solid fa-sparkles"></i> 最後午餐漫步 ＆ 前往機場</h3>
+            <p class="spot-summary">享用大阪最後一頓美食，隨後返回民宿領取行李，前往新今宮站搭乘南海電鐵直奔機場辦理登機。</p>
+          </div>
+        </div>
+
+        <!-- Transit to Airport -->
+        <div class="transit-ticket">
+          <i class="fa-solid fa-plane-departure transit-icon"></i>
+          <span>新今宮站 ➔ 搭乘南海電鐵（特急 Rapi:t / 空港急行）直達 ➔ 關西國際機場（KIX）</span>
+          <span class="transit-time-pill"><i class="fa-solid fa-stopwatch"></i> 約 35～44 分鐘</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>祝您的關西之旅圓滿順遂！所有景點均支援雙地圖一鍵導航 ✈️</p>
+      <p style="margin-top: 6px; font-size: 0.76rem; opacity: 0.7;">Osaka Vibes Edition ‧ SmoothUI Motion Standard</p>
+    </footer>
+
+  </div>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox(event)"><i class="fa-solid fa-xmark"></i></button>
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Zoomed Photo">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Packing Checklist Drawer -->
+  <div class="drawer-modal" id="checklistDrawer" onclick="closeDrawerOutside(event, 'checklistDrawer')">
+    <div class="drawer-box">
+      <div class="drawer-title-bar">
+        <div class="drawer-title-text"><i class="fa-solid fa-clipboard-check" style="color:#00e676;"></i> 行前必備清單</div>
+        <button class="lightbox-close" style="position:static; width:32px; height:32px;" onclick="closeDrawer('checklistDrawer')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="check-list-group">
+        <label class="check-row"><input type="checkbox" checked> <span class="check-text">護照（效期 6 個月以上）</span></label>
+        <label class="check-row"><input type="checkbox" checked> <span class="check-text">Visit Japan Web 入境 QR Code 填寫並截圖</span></label>
+        <label class="check-row"><input type="checkbox"> <span class="check-text">日本交通卡（ICOCA / Suica 綁定 Apple Pay）</span></label>
+        <label class="check-row"><input type="checkbox"> <span class="check-text">日本 eSIM / 漫遊上網開通</span></label>
+        <label class="check-row"><input type="checkbox"> <span class="check-text">環球影城門票 / 快速通關電子票券</span></label>
+        <label class="check-row"><input type="checkbox"> <span class="check-text">行動電源 ＆ 雙孔 Type-C 充電線</span></label>
+        <label class="check-row"><input type="checkbox"> <span class="check-text">好走的運動鞋（每日步數預估 15,000+）</span></label>
+        <label class="check-row"><input type="checkbox"> <span class="check-text">日幣現金（部分小吃與拉麵投幣機僅收現金）</span></label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Japanese Phrases Drawer -->
+  <div class="drawer-modal" id="phrasesDrawer" onclick="closeDrawerOutside(event, 'phrasesDrawer')">
+    <div class="drawer-box">
+      <div class="drawer-title-bar">
+        <div class="drawer-title-text"><i class="fa-solid fa-language" style="color:var(--osaka-cyan);"></i> 日本旅行實用金句</div>
+        <button class="lightbox-close" style="position:static; width:32px; height:32px;" onclick="closeDrawer('phrasesDrawer')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="phrase-list-grid">
+        <div class="phrase-card-item">
+          <div class="phrase-zh">不好意思 / 借過 / 叫店員</div>
+          <div class="phrase-jp">すみません (Sumimasen)</div>
+          <div class="phrase-ro">常用於點餐、借過或引起注意</div>
+        </div>
+        <div class="phrase-card-item">
+          <div class="phrase-zh">請給我這個（指著菜單）</div>
+          <div class="phrase-jp">これをお願いします (Kore o onegaishimasu)</div>
+          <div class="phrase-ro">點餐必備金句</div>
+        </div>
+        <div class="phrase-card-item">
+          <div class="phrase-zh">請問多少錢？</div>
+          <div class="phrase-jp">いくらですか？ (Ikura desu ka?)</div>
+          <div class="phrase-ro">購物與小吃問價</div>
+        </div>
+        <div class="phrase-card-item">
+          <div class="phrase-zh">結帳買單</div>
+          <div class="phrase-jp">お会計をお願いします (Okaikei o onegaishimasu)</div>
+          <div class="phrase-ro">用餐完畢結帳</div>
+        </div>
+        <div class="phrase-card-item">
+          <div class="phrase-zh">請問廁所在哪裡？</div>
+          <div class="phrase-jp">トイレはどこですか？ (Toire wa doko desu ka?)</div>
+          <div class="phrase-ro">緊急找洗手間</div>
+        </div>
+        <div class="phrase-card-item">
+          <div class="phrase-zh">可以退稅嗎？</div>
+          <div class="phrase-jp">免税できますか？ (Menzei dekimasu ka?)</div>
+          <div class="phrase-ro">藥妝與百貨購物滿五千円退稅</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-popup" id="toastBox">通知訊息</div>
+
+  <!-- Scripts -->
+  <script>
+    // Currency rates
+    let currentCurrencyMode = 'HKD';
+    const RATES = {
+      HKD: 0.0493,
+      TWD: 0.208
+    };
+
+    function setCurrencyMode(mode) {
+      currentCurrencyMode = mode;
+      document.getElementById('btnHKD').classList.toggle('active', mode === 'HKD');
+      document.getElementById('btnTWD').classList.toggle('active', mode === 'TWD');
+      
+      const label = document.getElementById('foreignLabel');
+      const rateSummary = document.getElementById('rateDisplay');
+      
+      if (mode === 'HKD') {
+        label.innerText = '港幣 (HKD $)';
+        rateSummary.innerText = `1 JPY ≈ ${RATES.HKD} HKD`;
+      } else {
+        label.innerText = '新台幣 (TWD NT$)';
+        rateSummary.innerText = `1 JPY ≈ ${RATES.TWD} TWD`;
+      }
+      
+      calculateFromJPY();
+    }
+
+    function calculateFromJPY() {
+      const jpy = parseFloat(document.getElementById('jpyInput').value) || 0;
+      const rate = RATES[currentCurrencyMode];
+      const result = (jpy * rate).toFixed(currentCurrencyMode === 'HKD' ? 1 : 0);
+      document.getElementById('foreignInput').value = result;
+    }
+
+    function calculateFromForeign() {
+      const foreign = parseFloat(document.getElementById('foreignInput').value) || 0;
+      const rate = RATES[currentCurrencyMode];
+      const jpy = Math.round(foreign / rate);
+      document.getElementById('jpyInput').value = jpy;
+    }
+
+    function setQuickJPY(amount) {
+      document.getElementById('jpyInput').value = amount;
+      calculateFromJPY();
+    }
+
+    // Day switching
+    function switchDay(dayNum) {
+      const buttons = document.querySelectorAll('.tab-item-btn');
+      buttons.forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === dayNum - 1);
+      });
+
+      const panels = document.querySelectorAll('.day-panel');
+      panels.forEach((panel) => {
+        panel.classList.remove('active');
+      });
+
+      const activePanel = document.getElementById('day-' + dayNum);
+      if (activePanel) {
+        activePanel.classList.add('active');
+      }
+    }
+
+    // Lightbox
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      img.src = src;
+      cap.innerText = caption || '';
+      modal.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.closest('.lightbox-close')) {
+        document.getElementById('lightboxModal').classList.remove('active');
+      }
+    }
+
+    // Drawers
+    function openDrawer(id) {
+      document.getElementById(id).classList.add('active');
+    }
+
+    function closeDrawer(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    function closeDrawerOutside(e, id) {
+      if (e.target.id === id) {
+        closeDrawer(id);
+      }
+    }
+
+    function scrollToHotel() {
+      const hotelEl = document.getElementById('hotelSection');
+      if (hotelEl) {
+        hotelEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // Copy to clipboard with toast
+    function copyText(text, successMsg) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(successMsg || '已複製至剪貼簿！');
+      }).catch(() => {
+        showToast('複製完成！');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastBox');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // Checkin with LocalStorage
+    function toggleCheckin(btn, spotId) {
+      btn.classList.toggle('done');
+      const isDone = btn.classList.contains('done');
+      if (isDone) {
+        btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> 打卡成功！';
+        showToast('🎉 打卡成功！太棒了！');
+      } else {
+        btn.innerHTML = '<i class="fa-regular fa-circle-check"></i> 打卡完成';
+      }
+      try {
+        localStorage.setItem('checkin_' + spotId, isDone ? '1' : '0');
+      } catch (e) {}
+    }
+
+    // Restore state
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.checkin-btn').forEach((btn) => {
+        const onclickAttr = btn.getAttribute('onclick');
+        const match = onclickAttr && onclickAttr.match(/'([^']+)'\)$/);
+        if (match && match[1]) {
+          const spotId = match[1];
+          try {
+            if (localStorage.getItem('checkin_' + spotId) === '1') {
+              btn.classList.add('done');
+              btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> 打卡成功！';
+            }
+          } catch(e) {}
+        }
+      });
+    });
+  </script>
+</body>
+</html>
