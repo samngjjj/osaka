@@ -1070,22 +1070,6 @@
       </div>
     </div>
 
-    <!-- Quick Utility Bar (田字結構 2x2 Grid + 美食快捷) -->
-    <div class="quick-grid-2x2">
-      <button class="quick-grid-btn" style="border-color:rgba(255,184,0,0.4); background:rgba(255,184,0,0.12);" onclick="switchDay(7)">
-        <i class="fa-solid fa-bowl-food" style="color:var(--neon-gold);"></i> 🍜 10大必吃美食清單
-      </button>
-      <button class="quick-grid-btn" onclick="openSheet('toolsSheet')">
-        <i class="fa-solid fa-clipboard-check"></i> 出發行前清單
-      </button>
-      <button class="quick-grid-btn" onclick="openSheet('hotelSheet')">
-        <i class="fa-solid fa-hotel"></i> 全程住宿大本營
-      </button>
-      <a class="quick-grid-btn" href="https://translate.google.com/?sl=zh-TW&tl=ja&op=translate" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-google"></i> Google 翻譯
-      </a>
-    </div>
-
     <!-- ==========================================================================
          DAY 1 (25號 週二: 抵達關西 ＆ 通天閣 MEGA 唐吉訶德 新世界店)
          ========================================================================== -->
@@ -1823,7 +1807,7 @@
 
   </div>
 
-  <!-- Fixed Bottom App Bar -->
+  <!-- Fixed Bottom App Bar (5 Items) -->
   <nav class="bottom-app-bar">
     <button class="nav-tab-item active" onclick="switchBottomTab('itinerary')">
       <i class="fa-solid fa-calendar-days"></i>
@@ -1837,10 +1821,14 @@
       <i class="fa-solid fa-hotel"></i>
       <span>住宿</span>
     </button>
-    <button class="nav-tab-item" onclick="openSheet('toolsSheet')">
-      <i class="fa-solid fa-toolbox"></i>
-      <span>工具箱</span>
+    <button class="nav-tab-item" onclick="switchDay(7)">
+      <i class="fa-solid fa-bowl-food" style="color:var(--neon-gold);"></i>
+      <span>美食清單</span>
     </button>
+    <a class="nav-tab-item" href="https://translate.google.com/?sl=zh-TW&tl=ja&op=translate" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+      <i class="fa-brands fa-google" style="color:var(--neon-cyan);"></i>
+      <span>翻譯</span>
+    </a>
   </nav>
 
   <!-- Currency Converter Sheet -->
