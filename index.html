@@ -71,6 +71,12 @@
       touch-action: manipulation;
     }
 
+    html, body {
+      overscroll-behavior-x: none;
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, sans-serif;
       background-color: var(--bg-dark);
@@ -80,8 +86,6 @@
       padding-top: calc(var(--safe-top) + 60px);
       padding-bottom: calc(var(--safe-bottom) + 85px);
       overflow-x: hidden;
-      user-select: none;
-      -webkit-user-select: none;
     }
 
     /* Ambient Background Layer */
