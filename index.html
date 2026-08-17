@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="大阪行程">
   <meta name="theme-color" content="#070a12">
-  <meta name="description" content="專為手機打造的大阪關西 9 天 8 夜全方位隨身旅遊指南（25號抵達～2號返程）：每日天氣、星期標註、今晚早瞓建議、即時匯率計算、地鐵轉乘時間、雙地圖一鍵導航。">
+  <meta name="description" content="專為手機打造的大阪關西 9 天 8 夜全方位隨身旅遊指南（25號抵達～2號返程）：星期標註、今晚早瞓建議、即時匯率計算、地鐵轉乘時間、雙地圖一鍵導航。">
 
   <!-- Google Fonts: Plus Jakarta Sans & Noto Sans TC & Zen Old Mincho -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -153,17 +153,17 @@
       letter-spacing: -0.3px;
     }
 
-    .header-weather-pill {
+    .header-status-pill {
       display: flex;
       align-items: center;
       gap: 6px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border-subtle);
-      padding: 4px 10px;
+      background: rgba(5, 217, 232, 0.12);
+      border: 1px solid var(--border-glow-cyan);
+      padding: 4px 12px;
       border-radius: var(--radius-full);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #ffd166;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #72f5ff;
     }
 
     /* Sticky Day Selector Slider (Day 1 to Day 9) */
@@ -329,30 +329,17 @@
       background: rgba(255, 42, 109, 0.15);
       border: 1px solid var(--neon-pink);
       color: #ff8fa3;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 900;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: var(--radius-full);
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-    }
-
-    .day-weather-badge {
-      background: rgba(255, 184, 0, 0.15);
-      border: 1px solid rgba(255, 184, 0, 0.4);
-      color: #ffd166;
-      font-size: 0.78rem;
-      font-weight: 800;
-      padding: 3px 10px;
-      border-radius: var(--radius-full);
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
+      gap: 6px;
     }
 
     .day-summary-title {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 900;
       color: #fff;
       display: flex;
@@ -936,8 +923,8 @@
         <span class="app-kanji-logo">大阪</span>
         <span class="app-title-text">OSAKA 2026</span>
       </div>
-      <div class="header-weather-pill">
-        <i class="fa-solid fa-sun"></i> 關西 ‧ 舒適微風
+      <div class="header-status-pill">
+        <i class="fa-solid fa-plane-departure"></i> 9 DAYS 8 NIGHTS
       </div>
     </div>
 
@@ -991,7 +978,6 @@
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 25 號 (星期二)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 晴時多雲 19°C ~ 26°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-tower-observation" style="color:var(--neon-pink);"></i> Day 1 ‧ 抵達關西 ＆ 通天閣 MEGA Donki</div>
         <p class="day-summary-desc">關西機場 ➔ 南海電鐵直達新今宮 ➔ 民宿 Check-in ➔ 步行 3 分鐘逛通天閣新世界 ＆ MEGA 唐吉訶德 24H 採購</p>
@@ -1078,7 +1064,6 @@
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 26 號 (星期三)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-sun"></i> ☀️ 陽光普照 20°C ~ 27°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-bag-shopping" style="color:var(--neon-pink);"></i> Day 2 ‧ 難波道頓堀 ＆ 梅田購物狂歡</div>
         <p class="day-summary-desc">難波道頓堀打卡 ＆ 心齋橋逛街 ➔ 下午前往梅田核心百貨群（LUCUA、阪急、友都八喜大採買）</p>
@@ -1177,7 +1162,6 @@
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 27 號 (星期四)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-sun"></i> ☀️ 晴朗微風 19°C ~ 26°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--neon-pink);"></i> Day 3 ‧ 環球影城 ＆ LAMU超市</div>
         <p class="day-summary-desc">全日狂歡日本環球影城（USJ） ➔ 回程安治川口 LAMU 24H 量販超市大採購</p>
@@ -1270,7 +1254,6 @@
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 28 號 (星期五)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 舒適多雲 18°C ~ 25°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-utensils" style="color:var(--neon-pink);"></i> Day 4 ‧ 早上黑門市場 ＆ 下午阿倍野</div>
         <p class="day-summary-desc">【合體精華】早上黑門市場美食街現烤和牛生魚片 ➔ 下午阿倍野 HARUKAS 300 展望 ＆ Q's Mall 購物</p>
@@ -1363,7 +1346,6 @@
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 29 號 (星期六)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-sun"></i> ☀️ 清爽晴天 17°C ~ 24°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-torii-gate" style="color:var(--neon-pink);"></i> Day 5 ‧ 伏見稻荷 ➔ 清水寺 ➔ 最後奈良</div>
         <p class="day-summary-desc">上午京都伏見稻荷千本鳥居 ➔ 中午清水寺・三年坂老街 ➔ 下午前往奈良公園親人小鹿餵食 ＆ 東大寺</p>
@@ -1492,17 +1474,13 @@
       </div>
     </div>
 
-    <!-- ==========================================================================
-         DAY 6 (30號 週日: 海遊館)
-         ========================================================================== -->
+    <!-- DAY 6 (30號 週日: 海遊館) -->
     <div id="day-6" class="day-panel">
-      <div class="day-summary-banner">
-        <div class="day-top-meta-row">
-          <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 30 號 (星期日)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-cloud"></i> ⛅ 涼爽多雲 18°C ~ 25°C</span>
+      <div class="day-header-box">
+        <div class="day-header-top">
+          <h2 class="day-main-title">Day 6 ‧ 30 號 (星期日) <span class="day-badge-pill">悠閒早晨 ＆ 世界級海遊館</span></h2>
         </div>
-        <div class="day-summary-title"><i class="fa-solid fa-fish-fins" style="color:var(--neon-pink);"></i> Day 6 ‧ 悠閒早晨 ＆ 世界級海遊館</div>
-        <p class="day-summary-desc">上午悠閒自由活動 ➔ 下午前往大阪港海遊館觀賞巨型鯨鯊 ＆ 天保山港灣摩天輪</p>
+        <p class="day-itinerary-route">上午悠閒自由活動 ➔ 下午前往大阪港海遊館觀賞巨型鯨鯊 ＆ 天保山港灣摩天輪</p>
 
         <!-- 早瞓建議 -->
         <div class="sleep-advice-box">
@@ -1563,14 +1541,11 @@
       </div>
     </div>
 
-    <!-- ==========================================================================
-         DAY 7 (31號 週一: 心齋橋美國村潮流選物自由行)
-         ========================================================================== -->
+    <!-- DAY 7 (31號 週一: 心齋橋美國村潮流選物自由行) -->
     <div id="day-7" class="day-panel">
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 31 號 (星期一)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 晴時多雲 19°C ~ 26°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-shirt" style="color:var(--neon-pink);"></i> Day 7 ‧ 美國村潮流 ＆ 自由血拼</div>
         <p class="day-summary-desc">心齋橋筋精品潮流 ➔ 美國村古著選物 ➔ 難波千日前居酒屋慶祝</p>
@@ -1611,14 +1586,11 @@
       </div>
     </div>
 
-    <!-- ==========================================================================
-         DAY 8 (1號 週二: 臨空城 Outlet 暢貨採買)
-         ========================================================================== -->
+    <!-- DAY 8 (1號 週二: 臨空城 Outlet 暢貨採買) -->
     <div id="day-8" class="day-panel">
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 1 號 (星期二)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-sun"></i> ☀️ 海風晴朗 19°C ~ 26°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-cart-shopping" style="color:var(--neon-pink);"></i> Day 8 ‧ 臨空城 Outlet 暢貨採購</div>
         <p class="day-summary-desc">搭乘南海電鐵直達臨空城 ➔ Rinku Premium Outlets 200+ 國際名牌瘋狂血拼</p>
@@ -1640,12 +1612,12 @@
           <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 35 分鐘</span>
         </div>
 
-        <div class="timeline-spot-item highlight">
-          <div class="timeline-dot"></div>
-          <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/outlet_shopping.jpg', '臨空城 Outlet')">
+        <div class="timeline-item-card highlight">
+          <div class="timeline-pin"><i class="fa-solid fa-tags"></i></div>
+          <div class="spot-card">
+            <div class="spot-card-photo" onclick="openLightbox('./images/outlet_shopping.jpg', '臨空城 Outlet')">
               <img src="./images/outlet_shopping.jpg" alt="臨空城 Outlet" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-tags"></i> 關西最大暢貨中心</span>
+              <span class="photo-tag-overlay"><i class="fa-solid fa-tags"></i> 關西最大暢貨中心</span>
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
@@ -1677,7 +1649,6 @@
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 2 號 (星期三)</span>
-          <span class="day-weather-badge"><i class="fa-solid fa-cloud-sun"></i> 🌤️ 晴朗好天氣 18°C ~ 25°C</span>
         </div>
         <div class="day-summary-title"><i class="fa-solid fa-plane-departure" style="color:var(--neon-pink);"></i> Day 9 ‧ 伴手禮最後衝刺 ＆ 關空返程</div>
         <p class="day-summary-desc">難波/天王寺百貨伴手禮採買 ➔ 民宿 Check-out 領行李 ➔ 南海電鐵直達關西機場搭機返程 ✈️</p>
