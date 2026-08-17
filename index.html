@@ -1051,7 +1051,7 @@
       <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 28 (五) 黑門/阿倍野</button>
       <button class="day-pill-btn" onclick="switchDay(5)">Day 5 ‧ 29 (六) 稻荷/清水/奈良</button>
       <button class="day-pill-btn" onclick="switchDay(6)">Day 6 ‧ 30 (日) 海遊館</button>
-      <button class="day-pill-btn" onclick="switchDay(7)">Day 7 ‧ 31 (一) 美國村自由</button>
+      <button class="day-pill-btn" onclick="switchDay(7)">Day 7 ‧ 31 (一) 自由/美食清單 🍜</button>
       <button class="day-pill-btn" onclick="switchDay(8)">Day 8 ‧ 1 (二) Outlet購物</button>
       <button class="day-pill-btn" onclick="switchDay(9)">Day 9 ‧ 2 (三) 伴手禮/返程</button>
     </div>
@@ -1070,13 +1070,13 @@
       </div>
     </div>
 
-    <!-- Quick Utility Bar (田字結構 2x2 Grid) -->
+    <!-- Quick Utility Bar (田字結構 2x2 Grid + 美食快捷) -->
     <div class="quick-grid-2x2">
-      <button class="quick-grid-btn" onclick="openSheet('toolsSheet')">
-        <i class="fa-solid fa-clipboard-check"></i> 出發行前清單
+      <button class="quick-grid-btn" style="border-color:rgba(255,184,0,0.4); background:rgba(255,184,0,0.12);" onclick="switchDay(7)">
+        <i class="fa-solid fa-bowl-food" style="color:var(--neon-gold);"></i> 🍜 10大必吃美食清單
       </button>
       <button class="quick-grid-btn" onclick="openSheet('toolsSheet')">
-        <i class="fa-solid fa-language"></i> 常用日語速查
+        <i class="fa-solid fa-clipboard-check"></i> 出發行前清單
       </button>
       <button class="quick-grid-btn" onclick="openSheet('hotelSheet')">
         <i class="fa-solid fa-hotel"></i> 全程住宿大本營
@@ -1920,6 +1920,13 @@
       <div class="sheet-header">
         <div class="sheet-title"><i class="fa-solid fa-toolbox" style="color:var(--neon-cyan);"></i> 旅行隨身工具箱</div>
         <button class="sheet-close-btn" onclick="closeSheet('toolsSheet')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-size:0.85rem; font-weight:800; color:#fff; margin-bottom:8px;"><i class="fa-solid fa-utensils" style="color:var(--neon-gold);"></i> 大阪必吃美食清單</div>
+        <button class="btn-taxi-copy" style="background:linear-gradient(135deg, #ffb800 0%, #ff8c00 100%); height:40px; font-size:0.85rem; margin-bottom:8px;" onclick="closeSheet('toolsSheet'); switchDay(7);">
+          <i class="fa-solid fa-bowl-food"></i> 查看 Day 7 10 大必吃美食清單 ➔
+        </button>
       </div>
 
       <div style="margin-bottom:16px;">
