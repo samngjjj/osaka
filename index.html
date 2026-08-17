@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>大阪關西 8 天 7 夜 ‧ 行程隨身指南 (26號~2號)</title>
+  <title>大阪關西 9 天 8 夜 ‧ 行程隨身指南 (25號~2號)</title>
   
   <!-- Mobile Web App & PWA Capabilities -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="大阪行程">
   <meta name="theme-color" content="#070a12">
-  <meta name="description" content="專為手機打造的大阪關西 8 天 7 夜全方位隨身旅遊指南：即時匯率計算、地鐵轉乘時間、雙地圖一鍵導航、計程車地址卡與行程打卡。">
+  <meta name="description" content="專為手機打造的大阪關西 9 天 8 夜全方位隨身旅遊指南（25號抵達～2號返程）：即時匯率計算、地鐵轉乘時間、雙地圖一鍵導航、計程車地址卡與行程打卡。">
 
   <!-- Google Fonts: Plus Jakarta Sans & Noto Sans TC & Zen Old Mincho -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -165,7 +165,7 @@
       color: #ffd166;
     }
 
-    /* Sticky Day Selector Slider */
+    /* Sticky Day Selector Slider (Day 1 ~ Day 9) */
     .day-selector-slider {
       display: flex;
       gap: 6px;
@@ -857,16 +857,17 @@
       </div>
     </div>
 
-    <!-- Horizontal Day Selector Slider (Day 1 to Day 8) -->
+    <!-- Horizontal Day Selector Slider (Day 1 to Day 9) -->
     <div class="day-selector-slider">
-      <button class="day-pill-btn active" onclick="switchDay(1)">Day 1 ‧ 26通天閣Donki</button>
-      <button class="day-pill-btn" onclick="switchDay(2)">Day 2 ‧ 27環球USJ</button>
-      <button class="day-pill-btn" onclick="switchDay(3)">Day 3 ‧ 28阿倍野</button>
-      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 29難波梅田</button>
-      <button class="day-pill-btn" onclick="switchDay(5)">Day 5 ‧ 30奈良鹿/京都</button>
-      <button class="day-pill-btn" onclick="switchDay(6)">Day 6 ‧ 31海遊館</button>
-      <button class="day-pill-btn" onclick="switchDay(7)">Day 7 ‧ 1黑門/購物</button>
-      <button class="day-pill-btn" onclick="switchDay(8)">Day 8 ‧ 2伴手禮/返程</button>
+      <button class="day-pill-btn active" onclick="switchDay(1)">Day 1 ‧ 25抵達Donki</button>
+      <button class="day-pill-btn" onclick="switchDay(2)">Day 2 ‧ 26環球USJ</button>
+      <button class="day-pill-btn" onclick="switchDay(3)">Day 3 ‧ 27黑門/阿倍野</button>
+      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 28難波梅田</button>
+      <button class="day-pill-btn" onclick="switchDay(5)">Day 5 ‧ 29奈良鹿/京都</button>
+      <button class="day-pill-btn" onclick="switchDay(6)">Day 6 ‧ 30海遊館</button>
+      <button class="day-pill-btn" onclick="switchDay(7)">Day 7 ‧ 31美國村自由</button>
+      <button class="day-pill-btn" onclick="switchDay(8)">Day 8 ‧ 1Outlet購物</button>
+      <button class="day-pill-btn" onclick="switchDay(9)">Day 9 ‧ 2伴手禮/返程</button>
     </div>
   </header>
 
@@ -878,7 +879,7 @@
         <img src="./images/osaka_hero.jpg" alt="大阪夜景" onerror="this.src='./images/dotonbori_glico.jpg'">
         <div class="hero-overlay-info">
           <div class="hero-tagline">Kansai Ultimate Journey</div>
-          <div class="hero-headline">關西 8 天 7 夜極致行程</div>
+          <div class="hero-headline">關西 9 天 8 夜極致行程</div>
         </div>
       </div>
     </div>
@@ -900,11 +901,11 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 1 (26號: 通天閣 ＆ MEGA 唐吉訶德 新世界店)
+         DAY 1 (25號: 抵達關西 ＆ 通天閣 MEGA 唐吉訶德 新世界店)
          ========================================================================== -->
     <div id="day-1" class="day-panel active">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-tower-observation" style="color:var(--neon-pink);"></i> Day 1 ‧ 26號 抵達 ＆ 通天閣 MEGA Donki</div>
+        <div class="day-summary-title"><i class="fa-solid fa-tower-observation" style="color:var(--neon-pink);"></i> Day 1 ‧ 25號 抵達關西 ＆ 通天閣 MEGA Donki</div>
         <p class="day-summary-desc">關西機場 ➔ 南海電鐵直達新今宮 ➔ 民宿 Check-in ➔ 步行 3 分鐘逛通天閣新世界 ＆ MEGA 唐吉訶德 24H 採購</p>
       </div>
 
@@ -922,7 +923,7 @@
                 <button class="btn-checkin" onclick="toggleCheckin(this, 'd1_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
               <h3 class="spot-name-heading">關西國際機場 抵達與入境</h3>
-              <p class="spot-desc-text">班機降落，出關後前往 2 樓鐵道聯絡橋搭乘南海電鐵進市區。</p>
+              <p class="spot-desc-text">25 號班機降落，出關後前往 2 樓鐵道聯絡橋搭乘南海電鐵進市區。</p>
               
               <div class="spot-key-info">
                 <div class="info-line"><i class="fa-solid fa-door-open"></i><div><span class="label">開放時間：</span><span class="val">24 小時無休</span></div></div>
@@ -974,11 +975,11 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 2 (27號: USJ ＆ LAMU 超市)
+         DAY 2 (26號: USJ ＆ LAMU 超市)
          ========================================================================== -->
     <div id="day-2" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--neon-pink);"></i> Day 2 ‧ 27號 環球影城 ＆ LAMU超市</div>
+        <div class="day-summary-title"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--neon-pink);"></i> Day 2 ‧ 26號 環球影城 ＆ LAMU超市</div>
         <p class="day-summary-desc">全日狂歡日本環球影城（USJ） ➔ 回程安治川口 LAMU 24H 量販超市大採購</p>
       </div>
 
@@ -1054,18 +1055,52 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 3 (28號: 阿倍野 HARUKAS ＆ 自由行)
+         DAY 3 (27號: 早上黑門市場 ＆ 下午阿倍野 HARUKAS 商圈)
          ========================================================================== -->
     <div id="day-3" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-building" style="color:var(--neon-pink);"></i> Day 3 ‧ 28號 阿倍野商圈 ＆ 悠閒自由行</div>
-        <p class="day-summary-desc">近鐵百貨旗艦店 ＆ HARUKAS 300 展望台 ➔ 下午完全自由探索</p>
+        <div class="day-summary-title"><i class="fa-solid fa-utensils" style="color:var(--neon-pink);"></i> Day 3 ‧ 27號 早上黑門市場 ＆ 下午阿倍野</div>
+        <p class="day-summary-desc">【合體精華】早上黑門市場美食街現烤和牛與生魚片 ➔ 下午阿倍野 HARUKAS 300 展望 ＆ Q's Mall 購物</p>
       </div>
 
       <div class="timeline-container">
         <div class="transit-step-box">
-          <i class="fa-solid fa-person-walking"></i>
-          <span>民宿步行（約 15 分）或 地鐵動物園前站搭 1 站至天王寺</span>
+          <i class="fa-solid fa-train-subway"></i>
+          <span>動物園前站 ➔ 堺筋線搭 2 站 ➔ 日本橋站（10 號出口直達黑門市場）</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
+        </div>
+
+        <div class="timeline-spot-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-cover" onclick="openLightbox('./images/kuromon_market.jpg', '黑門市場美食街')">
+              <img src="./images/kuromon_market.jpg" alt="黑門市場" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-bowl-food"></i> 大阪人的廚房 黑門市場</span>
+            </div>
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 09:30 - 13:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">黑門市場 美食街早午餐巡禮</h3>
+              <p class="spot-desc-text">擁有百年歷史的大阪美食地標！沿路品嚐現烤神戶和牛串、生蠔、海膽、炙燒鮭魚與新鮮草莓白桃。</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">約 09:00 - 17:00</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必吃推薦：</span><span class="val">現烤和牛、海膽生蠔、鰻魚串</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Kuromon+Ichiba+Market" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train-subway"></i>
+          <span>日本橋站 ➔ 轉乘御堂筋線 ➔ 天王寺站（阿倍野商圈）</span>
           <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 10 分鐘</span>
         </div>
 
@@ -1078,8 +1113,8 @@
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
-                <span class="time-badge"><i class="fa-regular fa-clock"></i> 10:00 - 13:30</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <span class="time-badge"><i class="fa-regular fa-clock"></i> 13:30 - 18:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
               <h3 class="spot-name-heading">阿倍野 HARUKAS ＆ Q's Mall 購物圈</h3>
               <p class="spot-desc-text">近鐵百貨總店、Abeno Q's Mall（Uniqlo、GU、Bic Camera），可登上 300 公尺高空透明走廊俯瞰全景。</p>
@@ -1096,27 +1131,15 @@
             </div>
           </div>
         </div>
-
-        <div class="timeline-spot-item">
-          <div class="timeline-dot"></div>
-          <div class="mobile-spot-card spot-card-free">
-            <div class="spot-meta-bar">
-              <span class="time-badge" style="color:var(--neon-green);"><i class="fa-regular fa-clock"></i> 13:30 以後</span>
-              <button class="btn-checkin" onclick="toggleCheckin(this, 'd3_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
-            </div>
-            <h3 class="spot-name-heading"><i class="fa-solid fa-sparkles"></i> 下午完全自由時間</h3>
-            <p class="spot-desc-text">下午無特定拘束，可自由穿梭天王寺公園「芝生廣場」、通天閣商店街吃炸串，或回民宿午休補體力。</p>
-          </div>
-        </div>
       </div>
     </div>
 
     <!-- ==========================================================================
-         DAY 4 (29號: 難波道頓堀 ＆ 梅田購物)
+         DAY 4 (28號: 難波道頓堀 ＆ 梅田購物)
          ========================================================================== -->
     <div id="day-4" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-bag-shopping" style="color:var(--neon-pink);"></i> Day 4 ‧ 29號 難波道頓堀 ＆ 梅田購物狂歡</div>
+        <div class="day-summary-title"><i class="fa-solid fa-bag-shopping" style="color:var(--neon-pink);"></i> Day 4 ‧ 28號 難波道頓堀 ＆ 梅田購物狂歡</div>
         <p class="day-summary-desc">難波道頓堀打卡 ＆ 心齋橋逛街 ➔ 下午前往梅田核心百貨群（LUCUA、阪急、友都八喜大採買）</p>
       </div>
 
@@ -1198,11 +1221,11 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 5 (30號: 早上奈良摸鹿 ＆ 下午京都古都)
+         DAY 5 (29號: 早上奈良摸鹿 ＆ 下午京都古都)
          ========================================================================== -->
     <div id="day-5" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-paw" style="color:var(--neon-pink);"></i> Day 5 ‧ 30號 奈良公園餵鹿 ＆ 京都古都</div>
+        <div class="day-summary-title"><i class="fa-solid fa-paw" style="color:var(--neon-pink);"></i> Day 5 ‧ 29號 奈良公園餵鹿 ＆ 京都古都</div>
         <p class="day-summary-desc">早上前往奈良公園與萌鹿親密互動 ➔ 下午京都伏見稻荷千本鳥居 ➔ 清水寺 ＆ 祇園漫步</p>
       </div>
 
@@ -1318,11 +1341,11 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 6 (31號: 海遊館)
+         DAY 6 (30號: 海遊館)
          ========================================================================== -->
     <div id="day-6" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-fish-fins" style="color:var(--neon-pink);"></i> Day 6 ‧ 31號 悠閒早晨 ＆ 世界級海遊館</div>
+        <div class="day-summary-title"><i class="fa-solid fa-fish-fins" style="color:var(--neon-pink);"></i> Day 6 ‧ 30號 悠閒早晨 ＆ 世界級海遊館</div>
         <p class="day-summary-desc">上午悠閒自由活動 ➔ 下午前往大阪港海遊館觀賞巨型鯨鯊 ＆ 天保山港灣摩天輪</p>
       </div>
 
@@ -1335,7 +1358,7 @@
               <button class="btn-checkin" onclick="toggleCheckin(this, 'd6_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
             </div>
             <h3 class="spot-name-heading"><i class="fa-solid fa-sparkles"></i> 上午悠閒自由時間</h3>
-            <p class="spot-desc-text">上午無固定集合行程，可自由補眠、享用早午餐、整理行李或探訪黑門市場。</p>
+            <p class="spot-desc-text">上午無固定集合行程，可自由補眠、享用早午餐、整理行李或漫步天王寺公園。</p>
           </div>
         </div>
 
@@ -1376,69 +1399,92 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 7 (1號: 黑門市場美食 ＆ 市區狂歡採購)
+         DAY 7 (31號: 心齋橋美國村潮流選物自由行)
          ========================================================================== -->
     <div id="day-7" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-utensils" style="color:var(--neon-pink);"></i> Day 7 ‧ 1號 黑門市場 ＆ 市區自由採買</div>
-        <p class="day-summary-desc">上午黑門市場現烤和牛與生魚片 ➔ 下午心齋橋美國村潮流選品 ＆ 自由血拼補貨</p>
+        <div class="day-summary-title"><i class="fa-solid fa-shirt" style="color:var(--neon-pink);"></i> Day 7 ‧ 31號 美國村潮流 ＆ 自由血拼</div>
+        <p class="day-summary-desc">心齋橋筋精品潮流 ➔ 美國村古著選物 ➔ 難波千日前居酒屋慶祝</p>
       </div>
 
       <div class="timeline-container">
         <div class="transit-step-box">
           <i class="fa-solid fa-train-subway"></i>
-          <span>動物園前站 ➔ 堺筋線搭 2 站 ➔ 日本橋站（10 號出口直達黑門市場）</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
+          <span>動物園前站 ➔ 御堂筋線搭 2 站 ➔ 心齋橋站（7 號出口直達美國村）</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 6 分鐘</span>
         </div>
 
         <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
-          <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/kuromon_market.jpg', '黑門市場美食街')">
-              <img src="./images/kuromon_market.jpg" alt="黑門市場" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-bowl-food"></i> 大阪人的廚房 黑門市場</span>
-            </div>
-            <div class="spot-card-content">
-              <div class="spot-meta-bar">
-                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 10:00 - 13:30</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd7_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
-              </div>
-              <h3 class="spot-name-heading">黑門市場 美食街早午餐巡禮</h3>
-              <p class="spot-desc-text">擁有百年歷史的大阪美食地標！沿路品嚐現烤神戶和牛串、生蠔、海膽、炙燒鮭魚與日本新鮮草莓白桃。</p>
-              
-              <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">約 09:00 - 17:00（各店略有不同）</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必吃推薦：</span><span class="val">現烤和牛、海膽、鰻魚串、鮮搾果汁</span></div></div>
-              </div>
-
-              <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Kuromon+Ichiba+Market" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-spot-item">
-          <div class="timeline-dot"></div>
           <div class="mobile-spot-card spot-card-free">
             <div class="spot-meta-bar">
-              <span class="time-badge" style="color:var(--neon-green);"><i class="fa-regular fa-clock"></i> 14:00 以後</span>
-              <button class="btn-checkin" onclick="toggleCheckin(this, 'd7_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              <span class="time-badge" style="color:var(--neon-green);"><i class="fa-regular fa-clock"></i> 全日自由活動</span>
+              <button class="btn-checkin" onclick="toggleCheckin(this, 'd7_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
             </div>
-            <h3 class="spot-name-heading"><i class="fa-solid fa-bag-shopping"></i> 下午心齋橋美國村 ＆ 自由血拼</h3>
-            <p class="spot-desc-text">難波、心齋橋、美國村古著潮流店最後衝刺補貨！買齊所有藥妝零食，晚上於難波或新今宮居酒屋慶祝旅程！</p>
+            <h3 class="spot-name-heading"><i class="fa-solid fa-bag-shopping"></i> 心齋橋美國村 ＆ 潮流古著探店</h3>
+            <p class="spot-desc-text">漫步三角公園、品嚐甲賀流章魚燒、採買日系潮流潮牌、二手古著與潮流波鞋，享受無拘無束的探索時光！</p>
+            
+            <div class="spot-btn-grid" style="margin-top:12px;">
+              <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=America-mura+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+              <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=America-mura+Osaka" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- ==========================================================================
-         DAY 8 (2號: 買手信 ＆ 關西機場返程 ✈️)
+         DAY 8 (1號: 臨空城 Outlet 暢貨採買)
          ========================================================================== -->
     <div id="day-8" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-plane-departure" style="color:var(--neon-pink);"></i> Day 8 ‧ 2號 伴手禮最後衝刺 ＆ 關空返程</div>
+        <div class="day-summary-title"><i class="fa-solid fa-cart-shopping" style="color:var(--neon-pink);"></i> Day 8 ‧ 1號 臨空城 Outlet 暢貨採購</div>
+        <p class="day-summary-desc">搭乘南海電鐵直達臨空城 ➔ Rinku Premium Outlets 200+ 國際名牌瘋狂血拼</p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train"></i>
+          <span>新今宮站 ➔ 南海空港急行 直達 ➔ 臨空城站（Rinku Town）</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 35 分鐘</span>
+        </div>
+
+        <div class="timeline-spot-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-cover" onclick="openLightbox('./images/outlet_shopping.jpg', '臨空城 Outlet')">
+              <img src="./images/outlet_shopping.jpg" alt="臨空城 Outlet" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-tags"></i> 關西最大暢貨中心</span>
+            </div>
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 11:00 - 18:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd8_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">臨空城 Premium Outlets（Rinku Outlets）</h3>
+              <p class="spot-desc-text">眺望大阪灣海景！擁有超過 250 間國際精品、運動品牌（Nike, Adidas, Coach, Beams）超低折扣！</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">10:00 - 20:00</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-receipt"></i><div><span class="label">退稅優惠：</span><span class="val">服務中心憑護照領取外國遊客優惠券</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Rinku+Premium+Outlets" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Rinku+Premium+Outlets" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 9 (2號: 買手信 ＆ 關西機場返程 ✈️)
+         ========================================================================== -->
+    <div id="day-9" class="day-panel">
+      <div class="day-summary-banner">
+        <div class="day-summary-title"><i class="fa-solid fa-plane-departure" style="color:var(--neon-pink);"></i> Day 9 ‧ 2號 伴手禮最後衝刺 ＆ 關空返程</div>
         <p class="day-summary-desc">難波/天王寺百貨伴手禮採買 ➔ 民宿 Check-out 領行李 ➔ 南海電鐵直達關西機場搭機返程 ✈️</p>
       </div>
 
@@ -1459,7 +1505,7 @@
             <div class="spot-card-content">
               <div class="spot-meta-bar">
                 <span class="time-badge"><i class="fa-regular fa-clock"></i> 10:00 - 13:00</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd8_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd9_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
               <h3 class="spot-name-heading">買手信（難波高島屋 / 難波 CITY）</h3>
               <p class="spot-desc-text">百貨地下街採買關西限定抹茶餅乾、生巧克力、年輪蛋糕與精美伴手禮盒。</p>
@@ -1672,7 +1718,7 @@
       calcSheetJPY();
     }
 
-    // Day switching (Day 1 to Day 8)
+    // Day switching (Day 1 to Day 9)
     function switchDay(dayNum) {
       const btns = document.querySelectorAll('.day-pill-btn');
       btns.forEach((btn, idx) => {
@@ -1695,6 +1741,7 @@
       }
     }
 
+    // Sheets
     function openSheet(id) {
       document.getElementById(id).classList.add('active');
     }
@@ -1709,6 +1756,7 @@
       }
     }
 
+    // Lightbox
     function openLightbox(src, caption) {
       const modal = document.getElementById('lightboxModal');
       const img = document.getElementById('lightboxImg');
