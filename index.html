@@ -103,9 +103,7 @@
       z-index: 1;
     }
 
-    /* ==========================================================================
-       Top App Header (Sticky Navigation)
-       ========================================================================== */
+    /* Top App Header */
     .app-top-header {
       position: fixed;
       top: 0;
@@ -210,9 +208,7 @@
       box-shadow: 0 4px 15px rgba(255, 42, 109, 0.45);
     }
 
-    /* ==========================================================================
-       Hero Destination Banner
-       ========================================================================== */
+    /* Hero Card */
     .hero-card {
       position: relative;
       border-radius: var(--radius-xl);
@@ -259,9 +255,7 @@
       color: #fff;
     }
 
-    /* ==========================================================================
-       Day Panels & Timeline Spots
-       ========================================================================== */
+    /* Day Panels & Timeline Spots */
     .day-panel {
       display: none;
       animation: slideUp 0.35s var(--ease-spring);
@@ -369,7 +363,7 @@
       white-space: nowrap;
     }
 
-    /* Spot Cards (Mobile Ergonomics) */
+    /* Mobile Spot Cards */
     .mobile-spot-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -464,7 +458,7 @@
       margin-bottom: 12px;
     }
 
-    /* Key Information Box */
+    /* Key Info Box */
     .spot-key-info {
       background: rgba(8, 12, 22, 0.6);
       border: 1px solid var(--border-subtle);
@@ -500,7 +494,7 @@
       font-weight: 500;
     }
 
-    /* Mobile 1-Tap Navigation Actions */
+    /* 1-Tap Navigation Actions */
     .spot-btn-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -539,16 +533,13 @@
       color: #f1f5f9;
     }
 
-    /* Free Time Spot Card */
     .spot-card-free {
       background: linear-gradient(135deg, rgba(0, 230, 118, 0.12) 0%, rgba(14, 20, 36, 0.85) 100%);
       border: 1px dashed rgba(0, 230, 118, 0.4);
       padding: 18px;
     }
 
-    /* ==========================================================================
-       Fixed Bottom App Bar (Mobile Thumb Navigation)
-       ========================================================================== */
+    /* Fixed Bottom App Bar */
     .bottom-app-bar {
       position: fixed;
       bottom: 0;
@@ -587,7 +578,6 @@
 
     .nav-tab-item i {
       font-size: 1.25rem;
-      transition: color 0.2s;
     }
 
     .nav-tab-item span {
@@ -604,9 +594,7 @@
       filter: drop-shadow(0 0 8px rgba(255, 42, 109, 0.5));
     }
 
-    /* ==========================================================================
-       Bottom Sheet Modals (Converter, Hotel, Checklist, Phrases)
-       ========================================================================== */
+    /* Bottom Sheets */
     .sheet-backdrop {
       position: fixed;
       inset: 0;
@@ -628,8 +616,8 @@
       width: 100%;
       max-height: 85vh;
       background: var(--bg-sheet);
-      border-top-left-radius: var(--radius-2xl);
-      border-top-right-radius: var(--radius-2xl);
+      border-top-left-radius: var(--radius-xl);
+      border-top-right-radius: var(--radius-xl);
       border-top: 1px solid rgba(255, 255, 255, 0.12);
       padding: 20px 20px calc(var(--safe-bottom) + 20px);
       overflow-y: auto;
@@ -681,17 +669,12 @@
       justify-content: center;
     }
 
-    /* Currency Inputs in Sheet */
     .sheet-input-group {
       background: rgba(7, 10, 18, 0.85);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
       padding: 12px 16px;
       margin-bottom: 12px;
-    }
-
-    .sheet-input-group:focus-within {
-      border-color: var(--neon-green);
     }
 
     .sheet-input-label {
@@ -737,7 +720,6 @@
       border-color: var(--neon-green);
     }
 
-    /* Hotel Taxi Card in Sheet */
     .hotel-taxi-card {
       background: linear-gradient(135deg, rgba(255, 184, 0, 0.15) 0%, rgba(14, 20, 36, 0.9) 100%);
       border: 1px solid rgba(255, 184, 0, 0.4);
@@ -776,7 +758,6 @@
       transform: scale(0.97);
     }
 
-    /* Lightbox Modal */
     .lightbox-modal {
       position: fixed;
       inset: 0;
@@ -798,7 +779,6 @@
       border-radius: var(--radius-lg);
     }
 
-    /* Toast Notification */
     .toast-msg {
       position: fixed;
       top: calc(var(--safe-top) + 70px);
@@ -842,11 +822,11 @@
 
     <!-- Horizontal Day Selector Slider -->
     <div class="day-selector-slider">
-      <button class="day-pill-btn active" onclick="switchDay(1)">Day 1 ‧ 26抵達</button>
+      <button class="day-pill-btn active" onclick="switchDay(1)">Day 1 ‧ 26通天閣Donki</button>
       <button class="day-pill-btn" onclick="switchDay(2)">Day 2 ‧ 27環球USJ</button>
       <button class="day-pill-btn" onclick="switchDay(3)">Day 3 ‧ 28阿倍野</button>
-      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 29梅田北區</button>
-      <button class="day-pill-btn" onclick="switchDay(5)">Day 5 ‧ 30京都古都</button>
+      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 29難波梅田購物</button>
+      <button class="day-pill-btn" onclick="switchDay(5)">Day 5 ‧ 30奈良鹿/京都</button>
       <button class="day-pill-btn" onclick="switchDay(6)">Day 6 ‧ 31海遊館</button>
       <button class="day-pill-btn" onclick="switchDay(7)">Day 7 ‧ 1伴手禮</button>
     </div>
@@ -857,7 +837,7 @@
     <!-- Hero Card -->
     <div class="hero-card">
       <div class="hero-img-box">
-        <img src="./images/osaka_hero.jpg" alt="道頓堀霓虹不夜城" onerror="this.src='./images/dotonbori_glico.jpg'">
+        <img src="./images/osaka_hero.jpg" alt="大阪夜景" onerror="this.src='./images/dotonbori_glico.jpg'">
         <div class="hero-overlay-info">
           <div class="hero-tagline">Kansai Ultimate Journey</div>
           <div class="hero-headline">關西 7 天 6 夜極致行程</div>
@@ -866,16 +846,16 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 1
+         DAY 1 (通天閣 ＆ MEGA 唐吉訶德 新世界店)
          ========================================================================== -->
     <div id="day-1" class="day-panel active">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-plane-arrival" style="color:var(--neon-pink);"></i> Day 1 ‧ 抵達 ＆ 難波夜生活</div>
-        <p class="day-summary-desc">關西機場 ➔ 南海電鐵直達新今宮 ➔ 民宿 Check-in ➔ 道頓堀固力果看板 ＆ 居酒屋宵夜</p>
+        <div class="day-summary-title"><i class="fa-solid fa-tower-observation" style="color:var(--neon-pink);"></i> Day 1 ‧ 抵達 ＆ 通天閣 MEGA Donki</div>
+        <p class="day-summary-desc">關西機場 ➔ 南海電鐵直達新今宮 ➔ 民宿 Check-in ➔ 步行 3 分鐘逛通天閣新世界 ＆ MEGA 唐吉訶德 24H 採購</p>
       </div>
 
       <div class="timeline-container">
-        <!-- Spot 1 -->
+        <!-- Spot 1: Airport -->
         <div class="timeline-spot-item">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
@@ -908,39 +888,68 @@
           </div>
         </div>
 
+        <!-- Spot 2: Airport Dinner -->
+        <div class="timeline-spot-item">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge"><i class="fa-regular fa-clock"></i> 20:30 - 21:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd1_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">關西機場第一航廈 美食街晚餐</h3>
+              <p class="spot-desc-text">第一航廈 2F 餐廳區（神座拉麵、本家章魚燒、壽司）吃飽再出發進市區。</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">約 07:00 - 22:00</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-bowl-food"></i><div><span class="label">推薦美食：</span><span class="val">神座拉麵、章魚燒、烏龍麵</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Kansai+Airport+Terminal+1+Restaurants" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Kansai+Airport+Terminal+1" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Transit 1 -->
         <div class="transit-step-box">
           <i class="fa-solid fa-train-subway"></i>
-          <span>南海電鐵（空港急行 / Rapi:t）直達新今宮</span>
+          <span>南海電鐵直達新今宮 ➔ 步行至民宿 Check-in</span>
           <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 45 分鐘</span>
         </div>
 
-        <!-- Spot 2 -->
+        <!-- Spot 3: Tsutenkaku & MEGA Donki -->
         <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/dotonbori_glico.jpg', '道頓堀跑跑人看板')">
-              <img src="./images/dotonbori_glico.jpg" alt="道頓堀夜景" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-camera"></i> 道頓堀霓虹不夜城</span>
+            <div class="spot-card-cover" onclick="openLightbox('./images/tsutenkaku_donki.jpg', '通天閣與新世界商店街')">
+              <img src="./images/tsutenkaku_donki.jpg" alt="通天閣新世界" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-bag-shopping"></i> 通天閣 ＆ MEGA 唐吉訶德</span>
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
                 <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 22:30 以後</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd1_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd1_s3')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
-              <h3 class="spot-name-heading">道頓堀 ＆ 難波夜遊 ＆ 通天閣</h3>
-              <p class="spot-desc-text">辦理入住後出發展開夜生活！打卡固力果跑跑人霓虹招牌、品嚐深夜章魚燒，逛唐吉訶德。</p>
+              <h3 class="spot-name-heading">通天閣新世界 ＆ MEGA 唐吉訶德（24H）</h3>
+              <p class="spot-desc-text">民宿步行 3 分鐘即達！夜遊新世界通天閣展望鐵塔夜景、體驗巨型河豚與串炸街氛圍，逛 24 小時營業的 MEGA 唐吉訶德 新世界店，補齊宵夜零食、飲料與藥妝！</p>
               
               <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">唐吉訶德 24 小時營業</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-person-walking"></i><div><span class="label">民宿距離：</span><span class="val">通天閣步行 5 分 / 難波地鐵 8 分</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-store"></i><div><span class="label">MEGA Donki：</span><span class="val">24 小時營業（全年無休）</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-person-walking"></i><div><span class="label">步行距離：</span><span class="val">從民宿出發步行僅 3～5 分鐘直達</span></div></div>
               </div>
 
               <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Glico+Sign+Osaka" target="_blank">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=MEGA+Don+Quijote+Shinsekai+Osaka" target="_blank">
                   <i class="fa-solid fa-location-dot"></i> Google 地圖
                 </a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Dotonbori+Osaka" target="_blank">
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=MEGA+Don+Quijote+Shinsekai" target="_blank">
                   <i class="fa-brands fa-apple"></i> Apple 地圖
                 </a>
               </div>
@@ -951,7 +960,7 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 2
+         DAY 2 (USJ ＆ LAMU 超市)
          ========================================================================== -->
     <div id="day-2" class="day-panel">
       <div class="day-summary-banner">
@@ -1041,7 +1050,7 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 3
+         DAY 3 (阿倍野 HARUKAS ＆ 自由行)
          ========================================================================== -->
     <div id="day-3" class="day-panel">
       <div class="day-summary-banner">
@@ -1103,36 +1112,77 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 4
+         DAY 4 (難波道頓堀 ＆ 梅田旗艦商圈購物)
          ========================================================================== -->
     <div id="day-4" class="day-panel">
       <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-bag-shopping" style="color:var(--neon-pink);"></i> Day 4 ‧ 梅田北區商圈 ＆ 星空夜景</div>
-        <p class="day-summary-desc">LUCUA、阪急百貨、友都八喜大採買 ➔ 梅田藍天大廈空中庭園 360° 璀璨夜景</p>
+        <div class="day-summary-title"><i class="fa-solid fa-bag-shopping" style="color:var(--neon-pink);"></i> Day 4 ‧ 難波道頓堀 ＆ 梅田購物狂歡</div>
+        <p class="day-summary-desc">難波道頓堀打卡 ＆ 心齋橋逛街 ➔ 下午前往梅田核心百貨群（LUCUA、阪急、友都八喜大採買）</p>
       </div>
 
       <div class="timeline-container">
+        <!-- Transit to Namba -->
         <div class="transit-step-box">
           <i class="fa-solid fa-train-subway"></i>
-          <span>動物園前站 ➔ 御堂筋線直達 ➔ 梅田站</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 15 分鐘</span>
+          <span>動物園前站 ➔ 御堂筋線搭 2 站直達 ➔ 難波站</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
         </div>
 
-        <!-- Umeda Shopping -->
+        <!-- Spot 1: Dotonbori & Namba & Shinsaibashi -->
+        <div class="timeline-spot-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-cover" onclick="openLightbox('./images/dotonbori_glico.jpg', '道頓堀跑跑人看板')">
+              <img src="./images/dotonbori_glico.jpg" alt="道頓堀夜景" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-camera"></i> 道頓堀固力果 ＆ 心齋橋筋</span>
+            </div>
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 10:00 - 14:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading">道頓堀 ＆ 心齋橋筋 ＆ 難波商圈</h3>
+              <p class="spot-desc-text">經典打卡固力果跑跑人看板、心齋橋筋商店街採買服飾美妝，午餐品嚐道地一蘭拉麵、章魚燒或千日前元祖串炸！</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-store"></i><div><span class="label">商店營業：</span><span class="val">約 10:30 - 20:30 陸續營業</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-utensils"></i><div><span class="label">必吃美食：</span><span class="val">本家章魚燒、一蘭拉麵、元祖串炸</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Glico+Sign+Osaka" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i> Google 地圖
+                </a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Dotonbori+Osaka" target="_blank">
+                  <i class="fa-brands fa-apple"></i> Apple 地圖
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transit to Umeda -->
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train-subway"></i>
+          <span>難波站 ➔ 搭乘御堂筋線直達 ➔ 梅田站</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 8 分鐘</span>
+        </div>
+
+        <!-- Spot 2: Umeda Shopping -->
         <div class="timeline-spot-item">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/umeda_shopping.jpg', '梅田北區商圈')">
+            <div class="spot-card-cover" onclick="openLightbox('./images/umeda_shopping.jpg', '梅田核心百貨群')">
               <img src="./images/umeda_shopping.jpg" alt="梅田商圈" loading="lazy">
               <span class="spot-cover-tag"><i class="fa-solid fa-bag-shopping"></i> LUCUA / 阪急 / 友都八喜</span>
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
-                <span class="time-badge"><i class="fa-regular fa-clock"></i> 10:30 - 18:30</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <span class="time-badge"><i class="fa-regular fa-clock"></i> 15:00 - 21:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
               <h3 class="spot-name-heading">梅田核心百貨群（LUCUA / 阪急 / Yodobashi）</h3>
-              <p class="spot-desc-text">大阪最繁華商圈！LUCUA 日系潮牌選物、阪急美妝精品、Yodobashi 巨型電器玩具旗艦店。</p>
+              <p class="spot-desc-text">大阪最大時尚旗艦地帶！LUCUA 1100 日系潮牌選物、阪急百貨國際精品美妝、友都八喜超大電器城，晚餐於 LUCUA B2F「巴魯地下街」宵夜美食街享用！</p>
               
               <div class="spot-key-info">
                 <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">10:30 - 20:30（友都八喜至 22:00）</span></div></div>
@@ -1152,63 +1202,71 @@
         </div>
 
         <div class="transit-step-box">
-          <i class="fa-solid fa-person-walking"></i>
-          <span>LUCUA ➔ 經地下步道 ➔ 梅田藍天大廈</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 10 分鐘</span>
+          <i class="fa-solid fa-train-subway"></i>
+          <span>梅田站 ➔ 御堂筋線直達 ➔ 返回動物園前 / 新今宮民宿</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 15 分鐘</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DAY 5 (早上奈良摸鹿 ＆ 下午京都古都)
+         ========================================================================== -->
+    <div id="day-5" class="day-panel">
+      <div class="day-summary-banner">
+        <div class="day-summary-title"><i class="fa-solid fa-paw" style="color:var(--neon-pink);"></i> Day 5 ‧ 奈良公園餵鹿 ＆ 京都古都</div>
+        <p class="day-summary-desc">早上前往奈良公園與萌鹿親密互動 ➔ 下午京都伏見稻荷千本鳥居 ➔ 清水寺 ＆ 祇園漫步</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Transit to Nara -->
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train"></i>
+          <span>新今宮 ➔ JR 大和路線快速 直達 ➔ JR 奈良站</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 38 分鐘</span>
         </div>
 
-        <!-- Umeda Sky -->
+        <!-- Spot 1: Nara Deer -->
         <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/umeda_sky.jpg', '梅田藍天大廈')">
-              <img src="./images/umeda_sky.jpg" alt="梅田藍天大廈" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-star"></i> 空中庭園星光步道</span>
+            <div class="spot-card-cover" onclick="openLightbox('./images/nara_deer.jpg', '奈良公園與可愛小鹿')">
+              <img src="./images/nara_deer.jpg" alt="奈良公園小鹿" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-paw"></i> 奈良公園 ＆ 萌鹿互動</span>
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
-                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 18:30 - 21:00</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 08:30 - 11:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd5_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
-              <h3 class="spot-name-heading">梅田藍天大廈 空中庭園展望台</h3>
-              <p class="spot-desc-text">懸空星際手扶梯登上 360 度環形露天展望台，腳踏 Lumi Sky Walk 螢光星空步道看大阪百萬夜景。</p>
+              <h3 class="spot-name-heading">奈良公園 ＆ 東大寺 ＆ 萌鹿餵食</h3>
+              <p class="spot-desc-text">早晨前往奈良公園與上千隻親人小鹿互動！購買鹿仙貝（¥200）體驗小鹿點頭鞠躬討食，漫步至壯觀的世界遺產東大寺大佛殿。</p>
               
               <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">09:30 - 22:30（最後入場 22:00）</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-moon"></i><div><span class="label">參觀建議：</span><span class="val">日落前半小時抵達看夕陽</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-tree"></i><div><span class="label">公園境內：</span><span class="val">24 小時免費自由參觀</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-cookie"></i><div><span class="label">餵鹿提示：</span><span class="val">路邊攤位購買正版鹿仙貝（¥200）</span></div></div>
               </div>
 
               <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building" target="_blank">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Nara+Park+Japan" target="_blank">
                   <i class="fa-solid fa-location-dot"></i> Google 地圖
                 </a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Umeda+Sky+Building" target="_blank">
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Nara+Park" target="_blank">
                   <i class="fa-brands fa-apple"></i> Apple 地圖
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- ==========================================================================
-         DAY 5
-         ========================================================================== -->
-    <div id="day-5" class="day-panel">
-      <div class="day-summary-banner">
-        <div class="day-summary-title"><i class="fa-solid fa-torii-gate" style="color:var(--neon-pink);"></i> Day 5 ‧ 京都古都精華巡禮</div>
-        <p class="day-summary-desc">伏見稻荷千本鳥居 ➔ 世界遺產清水寺 ➔ 二年坂・三年坂 ➔ 祇園花見小路</p>
-      </div>
-
-      <div class="timeline-container">
+        <!-- Transit to Kyoto Inari -->
         <div class="transit-step-box">
           <i class="fa-solid fa-train"></i>
-          <span>新今宮 ➔ JR 大阪 ➔ JR 京都線新快速 ➔ JR 奈良線至伏見稻荷</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 60 分鐘</span>
+          <span>JR 奈良站 ➔ 搭乘 JR 奈良線（直達無須轉乘）➔ 伏見稻荷站</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 45 分鐘</span>
         </div>
 
-        <!-- Fushimi Inari -->
+        <!-- Spot 2: Fushimi Inari -->
         <div class="timeline-spot-item">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
@@ -1218,8 +1276,8 @@
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
-                <span class="time-badge"><i class="fa-regular fa-clock"></i> 09:15 - 12:00</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd5_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <span class="time-badge"><i class="fa-regular fa-clock"></i> 12:30 - 14:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd5_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
               <h3 class="spot-name-heading">伏見稻荷大社（千本鳥居）</h3>
               <p class="spot-desc-text">漫步於朱紅色綿延不絕的千本鳥居長廊，摸摸狐狸神使、祈求開運御守與繪馬祈願。</p>
@@ -1241,13 +1299,14 @@
           </div>
         </div>
 
+        <!-- Transit to Kiyomizu -->
         <div class="transit-step-box">
           <i class="fa-solid fa-train-subway"></i>
           <span>京阪電車至清水五條 / 祇園四條 ➔ 步行至清水寺</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 25 分鐘</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 20 分鐘</span>
         </div>
 
-        <!-- Kiyomizu -->
+        <!-- Spot 3: Kiyomizu -->
         <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
@@ -1257,10 +1316,10 @@
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
-                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 13:30 - 17:30</span>
-                <button class="btn-checkin" onclick="toggleCheckin(this, 'd5_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 15:00 - 18:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd5_s3')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
-              <h3 class="spot-name-heading">清水寺 ＆ 二年坂・三年坂・祇園</h3>
+              <h3 class="spot-name-heading">清水寺 ＆ 二年坂・三年坂 ＆ 祇園</h3>
               <p class="spot-desc-text">登清水舞台遠眺京都，飲音羽之瀑靈泉；走訪老街石板路、品嚐抹茶甜品，一路漫步至花見小路。</p>
               
               <div class="spot-key-info">
@@ -1279,11 +1338,17 @@
             </div>
           </div>
         </div>
+
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train"></i>
+          <span>祇園四條（京阪）或 京都站（JR新快速）➔ 返回大阪新今宮</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 50 分鐘</span>
+        </div>
       </div>
     </div>
 
     <!-- ==========================================================================
-         DAY 6
+         DAY 6 (海遊館)
          ========================================================================== -->
     <div id="day-6" class="day-panel">
       <div class="day-summary-banner">
@@ -1346,7 +1411,7 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 7
+         DAY 7 (伴手禮 ＆ 返程)
          ========================================================================== -->
     <div id="day-7" class="day-panel">
       <div class="day-summary-banner">
@@ -1403,9 +1468,7 @@
 
   </div>
 
-  <!-- ==========================================================================
-       Fixed Bottom App Bar
-       ========================================================================== -->
+  <!-- Fixed Bottom App Bar -->
   <nav class="bottom-app-bar">
     <button class="nav-tab-item active" onclick="switchBottomTab('itinerary')">
       <i class="fa-solid fa-calendar-days"></i>
@@ -1425,9 +1488,7 @@
     </button>
   </nav>
 
-  <!-- ==========================================================================
-       Currency Converter Sheet
-       ========================================================================== -->
+  <!-- Currency Converter Sheet -->
   <div class="sheet-backdrop" id="converterSheet" onclick="closeSheetOutside(event, 'converterSheet')">
     <div class="bottom-sheet">
       <div class="sheet-handle"></div>
@@ -1468,9 +1529,7 @@
     </div>
   </div>
 
-  <!-- ==========================================================================
-       Hotel / Taxi Base Sheet
-       ========================================================================== -->
+  <!-- Hotel / Taxi Base Sheet -->
   <div class="sheet-backdrop" id="hotelSheet" onclick="closeSheetOutside(event, 'hotelSheet')">
     <div class="bottom-sheet">
       <div class="sheet-handle"></div>
@@ -1499,9 +1558,7 @@
     </div>
   </div>
 
-  <!-- ==========================================================================
-       Tools Sheet (Checklist & Phrases)
-       ========================================================================== -->
+  <!-- Tools Sheet -->
   <div class="sheet-backdrop" id="toolsSheet" onclick="closeSheetOutside(event, 'toolsSheet')">
     <div class="bottom-sheet">
       <div class="sheet-handle"></div>
