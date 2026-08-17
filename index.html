@@ -1051,17 +1051,6 @@
       <button class="day-pill-btn" onclick="switchDay(8)">Day 8 ‧ 1 (二) Outlet購物</button>
       <button class="day-pill-btn" onclick="switchDay(9)">Day 9 ‧ 2 (三) 伴手禮/返程</button>
     </div>
-
-    <!-- Swipe Progress & Visual Hint Bar -->
-    <div class="swipe-progress-bar-container">
-      <div class="swipe-progress-track">
-        <div class="swipe-progress-fill" id="swipeProgressFill" style="width: 11.1%;"></div>
-      </div>
-      <div class="swipe-hint-text">
-        <span><i class="fa-solid fa-arrows-left-right" style="color:var(--neon-cyan);"></i> 左右滑動螢幕切換日期</span>
-        <span id="currentDayProgressText" style="color:var(--neon-cyan); font-weight:800;">Day 1 / 9</span>
-      </div>
-    </div>
   </header>
 
   <div class="app-container">
@@ -2049,7 +2038,7 @@
     };
 
     // Day switching (Day 1 to Day 9)
-    window.switchDay = function(dayNum, direction = null) {
+    window.switchDay = function(dayNum) {
       if (dayNum < 1) dayNum = 1;
       if (dayNum > window.TOTAL_DAYS) dayNum = window.TOTAL_DAYS;
       
@@ -2069,26 +2058,14 @@
 
       const panels = document.querySelectorAll('.day-panel');
       panels.forEach(p => {
-        p.classList.remove('active', 'slide-left', 'slide-right');
+        p.classList.remove('active');
       });
 
       const activeP = document.getElementById('day-' + dayNum);
       if (activeP) {
         activeP.classList.add('active');
-        if (direction === 'left') {
-          activeP.classList.add('slide-left');
-        } else if (direction === 'right') {
-          activeP.classList.add('slide-right');
-        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-
-      // Update progress bar
-      const progressPercent = (dayNum / window.TOTAL_DAYS) * 100;
-      const fill = document.getElementById('swipeProgressFill');
-      if (fill) fill.style.width = progressPercent + '%';
-      const text = document.getElementById('currentDayProgressText');
-      if (text) text.innerText = `Day ${dayNum} / 9`;
 
       // Update floating button opacity states
       const prevBtn = document.getElementById('btnPrevDay');
@@ -2099,7 +2076,7 @@
 
     window.prevDay = function() {
       if (window.currentActiveDay > 1) {
-        window.switchDay(window.currentActiveDay - 1, 'right');
+        window.switchDay(window.currentActiveDay - 1);
       } else {
         window.showToast('📍 已是第 1 天行程！');
       }
@@ -2107,7 +2084,7 @@
 
     window.nextDay = function() {
       if (window.currentActiveDay < window.TOTAL_DAYS) {
-        window.switchDay(window.currentActiveDay + 1, 'left');
+        window.switchDay(window.currentActiveDay + 1);
       } else {
         window.showToast('📍 已是最後 1 天返程！');
       }
@@ -2122,63 +2099,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     };
-
-    // Touch & Mouse Swipe Gesture Listener (Left & Right to switch days)
-    let touchStartX = 0;
-    let touchStartY = 0;
-    let touchEndX = 0;
-    let touchEndY = 0;
-    let isMouseDown = false;
-    const SWIPE_MIN_DISTANCE = 45;
-
-    // Touch events for mobile
-    document.addEventListener('touchstart', function(e) {
-      if (e.target.closest('.day-selector-slider') || e.target.closest('.bottom-sheet') || e.target.closest('input')) {
-        return;
-      }
-      touchStartX = e.changedTouches[0].screenX;
-      touchStartY = e.changedTouches[0].screenY;
-    }, { passive: true });
-
-    document.addEventListener('touchend', function(e) {
-      if (e.target.closest('.day-selector-slider') || e.target.closest('.bottom-sheet') || e.target.closest('input')) {
-        return;
-      }
-      touchEndX = e.changedTouches[0].screenX;
-      touchEndY = e.changedTouches[0].screenY;
-      handleSwipeGesture();
-    }, { passive: true });
-
-    // Mouse events for desktop dragging
-    document.addEventListener('mousedown', function(e) {
-      if (e.target.closest('.day-selector-slider') || e.target.closest('.bottom-sheet') || e.target.closest('input') || e.target.closest('button') || e.target.closest('a')) {
-        return;
-      }
-      isMouseDown = true;
-      touchStartX = e.screenX;
-      touchStartY = e.screenY;
-    });
-
-    document.addEventListener('mouseup', function(e) {
-      if (!isMouseDown) return;
-      isMouseDown = false;
-      touchEndX = e.screenX;
-      touchEndY = e.screenY;
-      handleSwipeGesture();
-    });
-
-    function handleSwipeGesture() {
-      const deltaX = touchEndX - touchStartX;
-      const deltaY = touchEndY - touchStartY;
-
-      if (Math.abs(deltaX) > SWIPE_MIN_DISTANCE && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
-        if (deltaX < 0) {
-          window.nextDay();
-        } else {
-          window.prevDay();
-        }
-      }
-    }
 
     // Sheets
     window.openSheet = function(id) {

@@ -1278,17 +1278,6 @@
           <span class="tab-sub">伴手禮/返程</span>
         </button>
       </div>
-
-      <!-- Swipe Progress & Visual Hint Bar -->
-      <div class="swipe-progress-bar-container">
-        <div class="swipe-progress-track">
-          <div class="swipe-progress-fill" id="swipeProgressFill" style="width: 11.1%;"></div>
-        </div>
-        <div class="swipe-hint-text">
-          <span><i class="fa-solid fa-arrows-left-right" style="color:var(--osaka-cyan);"></i> 左右滑動螢幕切換日期</span>
-          <span id="currentDayProgressText" style="color:var(--osaka-cyan); font-weight:800;">Day 1 / 9</span>
-        </div>
-      </div>
     </div>
 
     <!-- DAY 1 (25號 週二) -->
@@ -2193,7 +2182,7 @@
       calculateFromJPY();
     }
 
-    function switchDay(dayNum, direction = null) {
+    function switchDay(dayNum) {
       if (dayNum < 1) dayNum = 1;
       if (dayNum > TOTAL_DAYS) dayNum = TOTAL_DAYS;
 
@@ -2205,32 +2194,22 @@
         const isActive = (idx === dayNum - 1);
         btn.classList.toggle('active', isActive);
         if (isActive) {
-          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          try {
+            btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          } catch(e) {}
         }
       });
 
       const panels = document.querySelectorAll('.day-panel');
       panels.forEach((panel) => {
-        panel.classList.remove('active', 'slide-left', 'slide-right');
+        panel.classList.remove('active');
       });
 
       const activePanel = document.getElementById('day-' + dayNum);
       if (activePanel) {
         activePanel.classList.add('active');
-        if (direction === 'left') {
-          activePanel.classList.add('slide-left');
-        } else if (direction === 'right') {
-          activePanel.classList.add('slide-right');
-        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-
-      // Update progress bar
-      const progressPercent = (dayNum / TOTAL_DAYS) * 100;
-      const fill = document.getElementById('swipeProgressFill');
-      if (fill) fill.style.width = progressPercent + '%';
-      const text = document.getElementById('currentDayProgressText');
-      if (text) text.innerText = `Day ${dayNum} / 9`;
 
       // Update floating button opacity states
       const prevBtn = document.getElementById('btnPrevDay');
@@ -2241,7 +2220,7 @@
 
     function prevDay() {
       if (currentActiveDay > 1) {
-        switchDay(currentActiveDay - 1, 'right');
+        switchDay(currentActiveDay - 1);
       } else {
         showToast('📍 已是第 1 天行程！');
       }
@@ -2249,7 +2228,7 @@
 
     function nextDay() {
       if (currentActiveDay < TOTAL_DAYS) {
-        switchDay(currentActiveDay + 1, 'left');
+        switchDay(currentActiveDay + 1);
       } else {
         showToast('📍 已是最後 1 天返程！');
       }
@@ -2257,43 +2236,6 @@
 
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Touch Swipe Gesture Listener (Left & Right to switch days)
-    let touchStartX = 0;
-    let touchStartY = 0;
-    let touchEndX = 0;
-    let touchEndY = 0;
-    const SWIPE_MIN_DISTANCE = 45;
-
-    document.addEventListener('touchstart', function(e) {
-      if (e.target.closest('.day-tabs-slider') || e.target.closest('.drawer-modal') || e.target.closest('input')) {
-        return;
-      }
-      touchStartX = e.changedTouches[0].screenX;
-      touchStartY = e.changedTouches[0].screenY;
-    }, { passive: true });
-
-    document.addEventListener('touchend', function(e) {
-      if (e.target.closest('.day-tabs-slider') || e.target.closest('.drawer-modal') || e.target.closest('input')) {
-        return;
-      }
-      touchEndX = e.changedTouches[0].screenX;
-      touchEndY = e.changedTouches[0].screenY;
-      handleSwipeGesture();
-    }, { passive: true });
-
-    function handleSwipeGesture() {
-      const deltaX = touchEndX - touchStartX;
-      const deltaY = touchEndY - touchStartY;
-
-      if (Math.abs(deltaX) > SWIPE_MIN_DISTANCE && Math.abs(deltaX) > Math.abs(deltaY) * 1.3) {
-        if (deltaX < 0) {
-          nextDay();
-        } else {
-          prevDay();
-        }
-      }
     }
 
     function openLightbox(src, caption) {
