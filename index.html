@@ -1038,8 +1038,13 @@
         <span class="app-kanji-logo">大阪</span>
         <span class="app-title-text">OSAKA 2026</span>
       </div>
-      <div class="header-status-pill">
-        <i class="fa-solid fa-plane-departure"></i> 9 DAYS 8 NIGHTS
+      <div style="display:flex; align-items:center; gap:8px;">
+        <a href="./itinerary_editor.html" style="text-decoration:none; background:linear-gradient(135deg, var(--neon-pink), #e01e5a); color:#fff; font-size:0.75rem; font-weight:800; padding:4px 10px; border-radius:var(--radius-full); display:flex; align-items:center; gap:5px; box-shadow:0 2px 10px rgba(255,42,109,0.35);">
+          <i class="fa-solid fa-arrows-up-down-left-right"></i> 拖曳排序/文字版
+        </a>
+        <div class="header-status-pill">
+          <i class="fa-solid fa-plane-departure"></i> 9 DAYS
+        </div>
       </div>
     </div>
 
@@ -1048,9 +1053,9 @@
       <button class="day-pill-btn active" onclick="switchDay(1)">Day 1 ‧ 25 (二) 抵達Donki</button>
       <button class="day-pill-btn" onclick="switchDay(2)">Day 2 ‧ 26 (三) 難波梅田</button>
       <button class="day-pill-btn" onclick="switchDay(3)">Day 3 ‧ 27 (四) 環球USJ</button>
-      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 28 (五) 黑門/阿倍野</button>
+      <button class="day-pill-btn" onclick="switchDay(4)">Day 4 ‧ 28 (五) 木津/勝尾寺/箕面</button>
       <button class="day-pill-btn" onclick="switchDay(5)">Day 5 ‧ 29 (六) 稻荷/清水/奈良</button>
-      <button class="day-pill-btn" onclick="switchDay(6)">Day 6 ‧ 30 (日) 海遊館</button>
+      <button class="day-pill-btn" onclick="switchDay(6)">Day 6 ‧ 30 (日) 大阪城/PIZZA/海遊館</button>
       <button class="day-pill-btn" onclick="switchDay(7)">Day 7 ‧ 31 (一) 自由/美食清單 🍜</button>
       <button class="day-pill-btn" onclick="switchDay(8)">Day 8 ‧ 1 (二) Outlet購物</button>
       <button class="day-pill-btn" onclick="switchDay(9)">Day 9 ‧ 2 (三) 伴手禮/返程</button>
@@ -1347,15 +1352,15 @@
     </div>
 
     <!-- ==========================================================================
-         DAY 4 (28號 週五: 早上黑門市場 ＆ 下午阿倍野 HARUKAS 商圈 - 原 Day 3)
+         DAY 4 (28號 週五: 早上木津市場 ＆ 勝尾寺 ＆ 箕面大瀑布 ＆ 夜晚自由時間)
          ========================================================================== -->
     <div id="day-4" class="day-panel">
       <div class="day-summary-banner">
         <div class="day-top-meta-row">
           <span class="day-date-weekday-pill"><i class="fa-regular fa-calendar"></i> 28 號 (星期五)</span>
         </div>
-        <div class="day-summary-title"><i class="fa-solid fa-utensils" style="color:var(--neon-pink);"></i> Day 4 ‧ 早上黑門市場 ＆ 下午阿倍野</div>
-        <p class="day-summary-desc">【合體精華】早上黑門市場美食街現烤和牛生魚片 ➔ 下午阿倍野 HARUKAS 300 展望 ＆ Q's Mall 購物</p>
+        <div class="day-summary-title"><i class="fa-solid fa-mountain-sun" style="color:var(--neon-pink);"></i> Day 4 ‧ 早上木津市場 ＆ 勝尾寺 ＆ 箕面大瀑布</div>
+        <p class="day-summary-desc">早上木津市場海鮮早市 ➔ 勝運之寺勝尾寺（滿山達摩不倒翁） ➔ 箕面大瀑布森林健行 ➔ 夜晚難波心齋橋自由時間</p>
 
         <!-- 早瞓建議 -->
         <div class="sleep-advice-box urgent">
@@ -1368,71 +1373,107 @@
       </div>
 
       <div class="timeline-container">
-        <div class="transit-step-box">
-          <i class="fa-solid fa-train-subway"></i>
-          <span>動物園前站 ➔ 堺筋線搭 2 站 ➔ 日本橋站（10 號出口直達黑門市場）</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 5 分鐘</span>
-        </div>
-
+        <!-- 1. 木津市場 -->
         <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/kuromon_market.jpg', '黑門市場美食街')">
-              <img src="./images/kuromon_market.jpg" alt="黑門市場" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-bowl-food"></i> 大阪人的廚房 黑門市場</span>
+            <div class="spot-card-cover" onclick="openLightbox('./images/kuromon_market.jpg', '木津卸賣市場')">
+              <img src="./images/kuromon_market.jpg" alt="木津市場" loading="lazy">
+              <span class="spot-cover-tag"><i class="fa-solid fa-fish"></i> 07:30 傳統海鮮批發早市</span>
             </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
-                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 09:30 - 13:00</span>
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 07:30 - 09:30</span>
                 <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
-              <h3 class="spot-name-heading">黑門市場 美食街早午餐巡禮</h3>
-              <p class="spot-desc-text">擁有百年歷史的大阪美食地標！沿路品嚐現烤神戶和牛串、生蠔、海膽、炙燒鮭魚與新鮮草莓白桃。</p>
+              <h3 class="spot-name-heading">木津卸賣市場（木津市場）海鮮早市</h3>
+              <p class="spot-desc-text">大阪在地人的百年海鮮批發早市！沿路品嚐現切鮮甜黑鮪魚大腹、現剖海膽、炙燒鰻魚與新鮮哈密瓜草莓水果攤。</p>
               
               <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">約 09:00 - 17:00</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必吃推薦：</span><span class="val">現烤和牛、海膽生蠔、鰻魚串</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">約 06:00 - 11:00（早市限定）</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">必吃推薦：</span><span class="val">現切黑鮪魚、海鮮丼、現剖海膽</span></div></div>
               </div>
 
               <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Kuromon+Ichiba+Market" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Kizu+Wholesale+Market+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Kizu+Wholesale+Market" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
               </div>
             </div>
           </div>
         </div>
 
         <div class="transit-step-box">
-          <i class="fa-solid fa-train-subway"></i>
-          <span>日本橋站 ➔ 轉乘御堂筋線 ➔ 天王寺站（阿倍野商圈）</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 10 分鐘</span>
+          <i class="fa-solid fa-bus"></i>
+          <span>大國町/難波 ➔ 御堂筋線至箕面萱野站 ➔ 轉乘勝尾寺直達巴士</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 65 分鐘</span>
         </div>
 
-        <div class="timeline-spot-item">
+        <!-- 2. 勝尾寺 -->
+        <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
           <div class="mobile-spot-card">
-            <div class="spot-card-cover" onclick="openLightbox('./images/abeno_harukas.jpg', '阿倍野 HARUKAS')">
-              <img src="./images/abeno_harukas.jpg" alt="阿倍野 HARUKAS" loading="lazy">
-              <span class="spot-cover-tag"><i class="fa-solid fa-mountain-city"></i> 阿倍野 HARUKAS ＆ 天王寺</span>
-            </div>
             <div class="spot-card-content">
               <div class="spot-meta-bar">
-                <span class="time-badge"><i class="fa-regular fa-clock"></i> 13:30 - 18:00</span>
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 10:40 - 13:00</span>
                 <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s2')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
               </div>
-              <h3 class="spot-name-heading">阿倍野 HARUKAS ＆ Q's Mall 購物圈</h3>
-              <p class="spot-desc-text">近鐵百貨總店、Abeno Q's Mall（Uniqlo、GU、Bic Camera），可登上 300 公尺高空透明走廊俯瞰全景。</p>
+              <h3 class="spot-name-heading"><i class="fa-solid fa-torii-gate" style="color:var(--neon-pink);"></i> 勝尾寺（勝運之寺 ＆ 滿山達摩不倒翁）</h3>
+              <p class="spot-desc-text">全日本超靈驗「勝運之寺」！山林寺院中擺滿了數萬個祈願達摩不倒翁，購買達摩御神籤、親自為不倒翁點眼祈求事業學業成功！</p>
               
               <div class="spot-key-info">
-                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">百貨營業：</span><span class="val">10:00 - 20:00（餐廳至 23:00）</span></div></div>
-                <div class="info-line"><i class="fa-solid fa-eye"></i><div><span class="label">展望台：</span><span class="val">HARUKAS 300 (09:00 - 22:00)</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">參拜時間：</span><span class="val">08:00 - 17:00</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-shield-heart"></i><div><span class="label">祈願特色：</span><span class="val">勝運達摩不倒翁、勝運守</span></div></div>
               </div>
 
               <div class="spot-btn-grid">
-                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Abeno+Harukas+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
-                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Abeno+Harukas" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Katsuo-ji+Temple+Minoh" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Katsuo-ji+Temple" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- 3. 箕面大瀑布 -->
+        <div class="timeline-spot-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-green);"><i class="fa-regular fa-clock"></i> 13:00 - 15:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s3')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading"><i class="fa-solid fa-water" style="color:var(--neon-cyan);"></i> 箕面大瀑布 ＆ 箕面公園森林步道</h3>
+              <p class="spot-desc-text">入選日本瀑布百選的自然名瀑！沿著清幽川流森林步道健行，吸收負離子芬多精，沿途品嚐名物「現炸紅葉楓葉天婦羅」。</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-leaf"></i><div><span class="label">必吃名產：</span><span class="val">現炸楓葉天婦羅（炸紅葉餅乾）</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-person-walking"></i><div><span class="label">步道路況：</span><span class="val">平緩鋪裝步道，清幽好走</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Minoh+Waterfall+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Minoh+Waterfall" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="transit-step-box">
+          <i class="fa-solid fa-train"></i>
+          <span>阪急箕面站 ➔ 阪急寶塚線/御堂筋線 ➔ 返回難波/心齋橋市區</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 45 分鐘</span>
+        </div>
+
+        <!-- 4. 夜晚自由時間 -->
+        <div class="timeline-spot-item">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card spot-card-free">
+            <div class="spot-meta-bar">
+              <span class="time-badge" style="color:var(--neon-gold);"><i class="fa-regular fa-clock"></i> 17:00 - 21:30</span>
+              <button class="btn-checkin" onclick="toggleCheckin(this, 'd4_s4')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+            </div>
+            <h3 class="spot-name-heading"><i class="fa-solid fa-moon"></i> 夜晚自由時間（難波 / 心齋橋美食漫步）</h3>
+            <p class="spot-desc-text">返回市區後自由探索，可品嚐燒肉、居酒屋或拉麵美食，逛街採買後提早回民宿休息。</p>
           </div>
         </div>
       </div>
@@ -1573,13 +1614,13 @@
       </div>
     </div>
 
-    <!-- DAY 6 (30號 週日: 海遊館) -->
+    <!-- DAY 6 (30號 週日: 上午大阪城 ＆ Henry's PIZZA ＆ 海遊館) -->
     <div id="day-6" class="day-panel">
       <div class="day-header-box">
         <div class="day-header-top">
-          <h2 class="day-main-title">Day 6 ‧ 30 號 (星期日) <span class="day-badge-pill">悠閒早晨 ＆ 世界級海遊館</span></h2>
+          <h2 class="day-main-title">Day 6 ‧ 30 號 (星期日) <span class="day-badge-pill">大阪城 ＆ Henry's PIZZA ＆ 海遊館</span></h2>
         </div>
-        <p class="day-itinerary-route">上午悠閒自由活動 ➔ 下午前往大阪港海遊館觀賞巨型鯨鯊 ＆ 天保山港灣摩天輪</p>
+        <p class="day-itinerary-route">上午大阪城歷史巡禮 ➔ 中午 Henry's PIZZA 美式手工披薩 ➔ 下午海遊館觀賞巨型鯨鯊 ＆ 天保山夜景</p>
 
         <!-- 早瞓建議 -->
         <div class="sleep-advice-box">
@@ -1592,22 +1633,60 @@
       </div>
 
       <div class="timeline-container">
-        <div class="timeline-spot-item">
+        <!-- 1. 大阪城 -->
+        <div class="timeline-spot-item highlight">
           <div class="timeline-dot"></div>
-          <div class="mobile-spot-card spot-card-free">
-            <div class="spot-meta-bar">
-              <span class="time-badge" style="color:var(--neon-green);"><i class="fa-regular fa-clock"></i> 09:00 - 13:00</span>
-              <button class="btn-checkin" onclick="toggleCheckin(this, 'd6_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+          <div class="mobile-spot-card">
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-pink);"><i class="fa-regular fa-clock"></i> 09:00 - 11:30</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd6_s1')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading"><i class="fa-solid fa-chess-rook" style="color:var(--neon-pink);"></i> 大阪城天守閣 ＆ 大阪城公園</h3>
+              <p class="spot-desc-text">大阪最具代表性的歷史文化地標！登上天守閣頂層展望台俯瞰大阪全景，漫步極樂橋、城郭護城河與巨石石垣打卡拍照。</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">天守閣開放：</span><span class="val">09:00 - 17:00（公園 24H 免費）</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-camera"></i><div><span class="label">必拍角度：</span><span class="val">極樂橋前天守閣倒影</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Osaka+Castle" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
             </div>
-            <h3 class="spot-name-heading"><i class="fa-solid fa-sparkles"></i> 上午悠閒自由時間</h3>
-            <p class="spot-desc-text">上午無固定集合行程，可自由補眠、享用早午餐、整理行李或漫步天王寺公園。</p>
+          </div>
+        </div>
+
+        <!-- 2. Henry's PIZZA -->
+        <div class="timeline-spot-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="mobile-spot-card">
+            <div class="spot-card-content">
+              <div class="spot-meta-bar">
+                <span class="time-badge" style="color:var(--neon-gold);"><i class="fa-regular fa-clock"></i> 11:30 - 13:00</span>
+                <button class="btn-checkin" onclick="toggleCheckin(this, 'd6_pizza')"><i class="fa-regular fa-circle-check"></i> 打卡</button>
+              </div>
+              <h3 class="spot-name-heading"><i class="fa-solid fa-pizza-slice" style="color:var(--neon-gold);"></i> Henry's PIZZA（人氣紐約風美式披薩名店）</h3>
+              <p class="spot-desc-text">大阪超紅潮流美式紐約薄皮披薩店！由日本知名藝術家 VERDY 設計店裝，薄脆餅皮、爆濃牽絲起司、經典 Pepperoni 臘腸披薩與水牛城辣雞翅！</p>
+              
+              <div class="spot-key-info">
+                <div class="info-line"><i class="fa-solid fa-clock"></i><div><span class="label">營業時間：</span><span class="val">11:30 - 22:00</span></div></div>
+                <div class="info-line"><i class="fa-solid fa-fire"></i><div><span class="label">推薦必點：</span><span class="val">Pepperoni 經典臘腸披薩、水牛城雞翅</span></div></div>
+              </div>
+
+              <div class="spot-btn-grid">
+                <a class="btn-map-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=Henry's+PIZZA+Osaka" target="_blank"><i class="fa-solid fa-location-dot"></i> Google 地圖</a>
+                <a class="btn-map-action btn-apple-maps" href="https://maps.apple.com/?q=Henry's+PIZZA+Osaka" target="_blank"><i class="fa-brands fa-apple"></i> Apple 地圖</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="transit-step-box">
           <i class="fa-solid fa-train-subway"></i>
-          <span>動物園前站 ➔ 地鐵中央線 ➔ 大阪港站（1號出口步行5分鐘）</span>
-          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 25 分鐘</span>
+          <span>谷町四丁目站 ➔ 地鐵中央線直達 ➔ 大阪港站（1號出口步行5分鐘）</span>
+          <span class="transit-duration"><i class="fa-solid fa-stopwatch"></i> 20 分鐘</span>
         </div>
 
         <div class="timeline-spot-item highlight">
